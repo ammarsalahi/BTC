@@ -1,5 +1,7 @@
 # BTC
 
-#for run project: 
- # npm i
- #npm run dev
+for run project: 
+
+npm i
+
+npm run dev
