@@ -1,7 +1,8 @@
 import React from 'react'
+import Navbar from '../elements/global/navbar'
 
-export default function index() {
+export default function Index() {
   return (
-    <div>index</div>
+    <Navbar />
   )
 }
