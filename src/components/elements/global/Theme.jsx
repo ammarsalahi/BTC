@@ -52,7 +52,7 @@ const LightTheme=createTheme({
             contrastText:"#000"
         },
         purple:{
-            main:"rgb(216, 58, 255)",
+            main:"rgb(167, 52, 196)",
             contrastText:"#000"
         },
         grey:{
