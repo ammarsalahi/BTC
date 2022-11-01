@@ -11,15 +11,15 @@ export default function Navbar({modeprop}) {
   },[modeprop]);
 
   const handleMode=(event)=>{
-    if(mode==='dark'){
-      setMode("light")
+    if(mode===true){
+      setMode(false)
     }else{
-      setMode("dark")
+      setMode(true)
     }
   }
   return (
     <Box>
-      <AppBar sx={{height:"60px",backgroundColor:"#332f2f"}}>
+      <AppBar sx={{height:"60px"}} color="dark">
         <Toolbar sx={{width:"100%"}}>
             <Typography variant="h5" component="div" sx={{color:'gold',mr:4}}>
               BTC
@@ -33,7 +33,7 @@ export default function Navbar({modeprop}) {
               <Button color='golding'>Login</Button>
               <Button variant="contained" color="golding" sx={{mx:'15px'}}>register</Button>
             <IconButton onClick={handleMode}>
-             {mode==="dark"?<DarkMode sx={{color:"white"}}/>:<LightMode sx={{color:"gold"}}/>}
+             {mode===true?<DarkMode sx={{color:"white"}}/>:<LightMode sx={{color:"gold"}}/>}
             </IconButton>
             </Box>
         </Toolbar>
