@@ -9,7 +9,7 @@ const DarkTheme = createTheme({
         contrastText:"#000"
     },
     dark:{
-        main:"rgb(15, 15, 15)",
+        main:"#121212",
         contrastText:"#fff"
     },
     light:{

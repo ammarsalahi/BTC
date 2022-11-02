@@ -53,14 +53,14 @@ export default function ListCoinSearching() {
             InputProps={{
                 startAdornment:(
                     <InputAdornment position='start'>
-                    <Search/>
+                    <Search fontSize="small"/>
                     </InputAdornment>
                 ),
-                style:{height:"30px"}
+                style:{height:"25px"}
             }}
             
         /> 
-        <Box className="d-flex justify-content-between gx-0">
+        <Box className="d-flex justify-content-between gx-0 pt-1">
           <IconButton>
             <ArrowBackIos/>
           </IconButton>

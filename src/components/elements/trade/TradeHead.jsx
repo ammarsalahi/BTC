@@ -11,19 +11,19 @@ export default function TradeHead() {
           primary={
             <Typography variant="h5">BTC/USDT</Typography>
           }
-          secondary={<Link><CurrencyBitcoinOutlined color="warning" fontSize="small"/> Bitcon Price</Link>}
+          secondary={<Link sx={{color:"gold"}}><CurrencyBitcoinOutlined color="warning" fontSize="small"/> Bitcon Price</Link>}
         />
       </div>
       <div className="col-lg-3 col-md-6 col-6 row">
         <ListItemText 
           className='col-6'
-          primary={<Typography variant="P" sx={{fontSize:"20px",color:"red"}}>20,637.99</Typography>}
+          primary={<Typography variant="P" color="error" sx={{fontSize:"20px"}}>20,637.99</Typography>}
           secondary={<Typography sx={{fontSize:"12px"}}>$20,637.99</Typography>}
         />
         <ListItemText  
           className='col-6'
           primary={<Typography variant="p" sx={{fontSize:"14px"}}>24h changes</Typography>}
-          secondary={<Typography sx={{fontSize:"12px",color:"red"}}>-86.10 -0.42%</Typography>}
+          secondary={<Typography color="error" sx={{fontSize:"12px"}}>-86.10 -0.42%</Typography>}
           secondaryTypographyProps={{}}
         />
       </div>
