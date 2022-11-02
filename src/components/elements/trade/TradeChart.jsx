@@ -8,8 +8,7 @@ export default function TradeChart() {
       <TradingViewWidget
         symbol="BINANCE:BTCUSDT"
         theme={Themes.DARK}
-        timezone="Asia/Tehran"
-        locale="fa_IR"
+        locale="en"
         autosize
         // style={{height:"500px"}}
       />

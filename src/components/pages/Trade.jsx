@@ -19,7 +19,7 @@ export default function Trade() {
                 <PriceList/>
               </div>
               <div className="col-lg-8">
-                {/* <TradeChart/> */}
+               <TradeChart/>
                 <SpotTabs/>
               </div>
             </div>
