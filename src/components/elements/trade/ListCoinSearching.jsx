@@ -47,7 +47,8 @@ const trs={
 export default function ListCoinSearching() {
   return (
     <div>
-      <TextField
+      <div className='d-flex jusitfy-content-center align-items-center'>
+        <TextField
             size="small"
             fullWidth
             color='warning'
@@ -57,31 +58,19 @@ export default function ListCoinSearching() {
                     <Search fontSize="small"/>
                     </InputAdornment>
                 ),
-                style:{height:"25px"}
+                style:{height:"35px"}
             }}
             
         /> 
-        <Box className="d-flex justify-content-between gx-0 pt-1">
-          <IconButton>
-            <ArrowBackIos/>
-          </IconButton>
-          <Swiper
-            spaceBetween={1}
-            slidesPerView={4}
-           
-            >
+      </div>
+      
+        <Box className="d-flex justify-content-between gx-0 pt-2 overflow-auto" sx={{width:"auto"}}>
              
              {coins.map((coin,idx)=>(
-                <SwiperSlide key={idx}>
-                    <Button>
+                    <Button color="warning">
                         {coin.name}
                     </Button>
-                </SwiperSlide>
              ))}   
-            </Swiper>
-            <IconButton>
-            <ArrowForwardIos/>
-          </IconButton>
         </Box>
             
 

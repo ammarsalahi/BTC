@@ -21,9 +21,9 @@ export default function TradeFooter() {
     setValue(newValue);
   };
   return (
+    <Box >
     <Box>
-    <Box>
-      <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+      <Tabs value={value} onChange={handleChange}  aria-label="basic tabs example">
         <Tab label="Open Orders(0)" {...a11yProps(0)} />
         <Tab label="Order History" {...a11yProps(1)} />
         <Tab label="Trade History" {...a11yProps(2)} />

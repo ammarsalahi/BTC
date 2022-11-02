@@ -25,7 +25,7 @@ export default function CoinPriceTabs({data}) {
     setValue(newValue);
   };
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: 'auto' }}>
     <Box sx={{px:2}}>
       <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
         <Tab label="Market Trade" {...a11yProps(0)} />
