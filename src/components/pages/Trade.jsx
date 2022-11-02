@@ -27,9 +27,7 @@ export default function Trade() {
         <div className="col-lg-3 col-md-4 col-12 gx-0 pt-2">
             <ListCoinSearching/>
         </div>
-        <div className="col-12">
-          <TradeFooter/>
-        </div>
+        
       </div>
     </div>
   )

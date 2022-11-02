@@ -24,7 +24,6 @@ export default function TradeHead() {
           className='col-6'
           primary={<Typography variant="p" sx={{fontSize:"14px"}}>24h changes</Typography>}
           secondary={<Typography color="error" sx={{fontSize:"12px"}}>-86.10 -0.42%</Typography>}
-          secondaryTypographyProps={{}}
         />
       </div>
       <div className="col-lg-3 col-md-6 col-6 row">
