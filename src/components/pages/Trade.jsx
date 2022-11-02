@@ -4,10 +4,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ListCoinSearching from '../elements/trade/ListCoinSearching'
 import PriceList from '../elements/trade/PriceList'
-// import TradeChart from '../elements/trade/TradeChart'
+import TradeChart from '../elements/trade/TradeChart'
 import TradeHead from '../elements/trade/TradeHead'
 import SpotTabs from '../elements/trade/SpotTabs'
-// import TradeFooter from '../elements/trade/TradeFooter'
+import TradeFooter from '../elements/trade/TradeFooter'
 export default function Trade() {
   return (
     <div>
@@ -19,7 +19,7 @@ export default function Trade() {
                 <PriceList/>
               </div>
               <div className="col-lg-8">
-               {/* <TradeChart/> */}
+               <TradeChart/>
                 <SpotTabs/>
               </div>
             </div>
@@ -28,7 +28,7 @@ export default function Trade() {
             <ListCoinSearching/>
         </div>
         <div className="col-12">
-          {/* <TradeFooter/> */}
+          <TradeFooter/>
         </div>
       </div>
     </div>

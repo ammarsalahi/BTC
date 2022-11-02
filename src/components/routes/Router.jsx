@@ -20,11 +20,11 @@ export default function Router() {
   // }
   const pagerouter= createBrowserRouter([
     {
-        path:"index",
+        path:"/",
         element:<PrivateRoute> <Index/> </PrivateRoute>
     },
     {
-      path:"/",
+      path:"/trade",
       element:<PrivateRoute> <Trade/> </PrivateRoute>
     },
   ])  

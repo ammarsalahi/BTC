@@ -25,7 +25,7 @@ const data=[
     createData("1INCH/BTC","0.040442","+1.23"),
     createData("1INCH/BTC","0.040442","+1.23"),
     createData("1INCH/BTC","0.040442","+1.23"),
-    createData("1INCH/BTC","0.040442","+1.23"),
+
 ]
 const coins=[
     createData('Margin'),
@@ -84,7 +84,7 @@ export default function ListCoinSearching() {
         </Box>
             
 
-        <TableContainer className='overflow-auto' sx={{height:"350px"}}>
+        <TableContainer className='overflow-auto'>
           <Table>
             <TableHead>
                 <TableRow sx={trs}>

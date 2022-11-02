@@ -10,6 +10,7 @@ export default function TradeChart() {
         theme={Themes.DARK}
         locale="en"
         autosize
+        height="auto"
         // style={{height:"500px"}}
       />
     </div>

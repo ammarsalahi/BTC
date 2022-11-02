@@ -47,11 +47,11 @@ export default function LimitForm({coin}) {
                 />
                     <Slider
                       aria-label="Small steps"
-                      defaultValue={0.00000005}
-                      step={0.00000001}
+                      defaultValue={0.005}
+                      step={0.001}
                       marks
-                      min={-0.5}
-                      max={0.1}
+                      min={0.5}
+                      max={1}
                       sx={mstyle}
                       color="warning"
                       valueLabelDisplay="auto"
