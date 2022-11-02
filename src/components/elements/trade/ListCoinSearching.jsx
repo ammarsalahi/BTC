@@ -50,6 +50,7 @@ export default function ListCoinSearching() {
       <TextField
             size="small"
             fullWidth
+            color='warning'
             InputProps={{
                 startAdornment:(
                     <InputAdornment position='start'>
