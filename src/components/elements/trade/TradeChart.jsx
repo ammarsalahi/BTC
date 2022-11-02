@@ -6,7 +6,7 @@ export default function TradeChart() {
   return (
     <div>
       <TradingViewWidget
-        symbol="NASDAQ:AAPL"
+        symbol="BTCUSDT"
         theme={Themes.DARK}
         locale="en"
         height="400"
