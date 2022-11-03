@@ -10,6 +10,28 @@ export default function LimitForm({ coin }) {
   const mstylerange = {
     m: 1,
   }
+  const marks = [
+    {
+      value: 25,
+      // label: '25%',
+    },
+    {
+      value: 50,
+      // label: '20°C',
+    },
+    {
+      value: 75,
+      // label: '37°C',
+    },
+    {
+      value: 100,
+      // label: '100°C',
+    },
+  ];
+
+  function valuetext(value) {
+    return `${value}%`;
+  }
   return (
     <div className='pe-4 pt-2'>
       <Box className='d-flex'>
@@ -50,16 +72,14 @@ export default function LimitForm({ coin }) {
             style: { fontSize: 14 }
           }}
         />
+       
         <Slider
-          defaultValue={50}
-          step={25}
-          marks
-          min={25}
-          max={100}
-          sx={mstylerange}
-          color="warning"
-          size="large"
-          
+            aria-label="Always visible"
+            defaultValue={80}
+            getAriaValueText={valuetext}
+            step={1}
+            marks={marks}
+            valueLabelDisplay="auto"
         />
         <Button
           variant="contained"
