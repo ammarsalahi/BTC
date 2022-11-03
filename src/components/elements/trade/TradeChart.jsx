@@ -9,7 +9,7 @@ export default function TradeChart() {
         symbol="BTCUSDT"
         theme={Themes.DARK}
         locale="fa_IR"
-        height="485"
+        height="300"
         width="auto"
         // style={{height:"500px"}}
       />
