@@ -1,17 +1,27 @@
-/* .container-btc{
-    padding-top: 65px !important;
-} */
+@font-face {
+    font-family: 'IBM-FONT';
+    src: local('IBM-FONT'), url(../fonts/IBMPlexSansCondensed-Regular.ttf) format('truetype');
+  }
+  
 a{
     color:grey !important;
 }
 .body{
-
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-family: "IBM-FONT" !important;
 } 
 
 @media (min-width:0px) and (max-width:768px) {
     .container-btc{
         padding: 20px 2px !important;
+    }
+    div#tranding{
+       order: 1;
+    }
+    div#price{
+        order: 2;
+    }
+    div#coinsearch{
+        order: 3;
     }
 }
 @media all and (min-width:768px) {
@@ -22,6 +32,7 @@ a{
         border-right: 1px solid grey ;
         margin: 1% 0px;
      }
+     
 }
 
 ::-webkit-scrollbar {

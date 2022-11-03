@@ -3,7 +3,8 @@ import {Box,Button,Typography,FormGroup,TextField,InputAdornment,Slider} from '@
 
 export default function LimitForm({coin}) {
   const mstyle={
-    m:1
+    m:1,
+    color:"gold"
   }
   return (
     <div className='px-2 pt-2'>
