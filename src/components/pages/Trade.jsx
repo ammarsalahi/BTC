@@ -11,7 +11,7 @@ import TradeFooter from '../elements/trade/TradeFooter'
 export default function Trade() {
   return (
     <div>
-        <div className="container-fluid row gx-0">
+        <div className="container-fluid row gx-0 noscroll">
           <div className="col-lg-7 col-md-6 col-12 gx-0">
             <div className="w-100 p-2 borderbottom">
             <TradeChart/>

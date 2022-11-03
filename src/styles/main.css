@@ -85,3 +85,8 @@ a.spacial{
 .bccc{
   color:#161515;
 }
+@media all and (min-width:1280px){
+  .noscroll{
+    overflow: hidden !important;
+  }
+}
