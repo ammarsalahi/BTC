@@ -31,6 +31,12 @@ export default function Trade() {
           <TradeFooter/>
         </div>
       </div>
+      <hr/>
+      <div className='container-fluid row'>
+          <div className="col-12">
+            <TradeFooter/>
+          </div>
+      </div>
     </div>
   )
 }

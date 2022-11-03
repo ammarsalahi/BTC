@@ -6,11 +6,11 @@ export default function TradeChart() {
   return (
     <div>
       <TradingViewWidget
-        symbol="BINANCE:BTCUSDT"
+        symbol="BTCUSDT"
         theme={Themes.DARK}
         locale="en"
-        autosize
-        height="auto"
+        height="400"
+        width="auto"
         // style={{height:"500px"}}
       />
     </div>
