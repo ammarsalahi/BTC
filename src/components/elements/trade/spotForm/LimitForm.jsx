@@ -87,9 +87,9 @@ export default function LimitForm({ coin }) {
             aria-label="Always visible"
             defaultValue={80}
             getAriaValueText={valuetext}
-            step={5}
+            step={1}
             marks={marks}
-            valueLabelDisplay="on"
+            valueLabelDisplay="auto"
         />
         <Button
           variant="contained"
