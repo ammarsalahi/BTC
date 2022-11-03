@@ -84,12 +84,12 @@ export default function LimitForm({ coin }) {
           valueLabelDisplay="auto"
         /> */}
         <Slider
-          aria-label="Custom marks"
-          defaultValue={20}
-          getAriaValueText={valuetext}
-          step={10}
-          valueLabelDisplay="auto"
-          marks={marks}
+            aria-label="Always visible"
+            defaultValue={80}
+            getAriaValueText={valuetext}
+            step={5}
+            marks={marks}
+            valueLabelDisplay="on"
         />
         <Button
           variant="contained"
