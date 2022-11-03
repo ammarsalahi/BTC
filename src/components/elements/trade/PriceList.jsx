@@ -52,7 +52,7 @@ export default function PriceList() {
           </Table>
         </TableContainer>
         </Box>
-        <Box className="d-flex justify-content-between py-2" sx={{px:"5%"}}>
+        <Box className="d-flex justify-content-between py-2" sx={{px:"11%"}}>
             <Box className="d-flex align-items-center">
               <Typography variant="p" sx={{fontSize:"16px",color:"green"}}>
                 20,637.99 <ArrowUpward fontSize="16px"/>
