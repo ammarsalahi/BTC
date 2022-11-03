@@ -9,7 +9,7 @@ import Navbar from '../elements/global/navbar';
 import CssBaseline from '@mui/material/CssBaseline';
 export default function Router() {
 
-  const [mode , setMode] = useState('dark')
+  // const [mode , setMode] = useState('dark')
   // const handleMode=(event)=>{
   //   console.log(mode)
   //   if(mode==='dark'){
@@ -20,11 +20,11 @@ export default function Router() {
   // }
   const pagerouter= createBrowserRouter([
     {
-        path:"/",
+        path:"/index",
         element:<PrivateRoute> <Index/> </PrivateRoute>
     },
     {
-      path:"/trade",
+      path:"/",
       element:<PrivateRoute> <Trade/> </PrivateRoute>
     },
   ])  
