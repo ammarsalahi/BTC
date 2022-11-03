@@ -16,7 +16,33 @@ const DarkTheme = createTheme({
         main:"#fff",
         contrastText:"#000"
     },
+
   },
+  components:{
+     MuiButton:{
+        styleOverrides:{
+            root:{
+                textTransform:"none"
+            }
+        }
+     },
+    MuiTab:{
+        styleOverrides:{
+            root:{
+                textTransform:"none",
+                '&.Mui-selected':{
+                    color:"orange"
+                },
+                '&.MuiTabs-indicator':{
+                    backgroundColor:'orange'
+                }
+            },
+            selected:{
+                textTransform:"none",
+            }
+        }
+    },
+  }
 });
 
 

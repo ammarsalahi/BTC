@@ -26,6 +26,14 @@ const data=[
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
 ]
+
+const getidx=(idx)=>{
+    if(idx % 2==0){
+      return true
+    }else{
+      return false;
+    }
+}
   
 export default function PriceList() {
   return (
@@ -40,10 +48,10 @@ export default function PriceList() {
                     <TableCell>Changes</TableCell>
                 </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
                         <TableRow key={idx} sx={trs}>
-                        <TableCell sx={{color:"green"}}>{d.price}</TableCell>
+                        <TableCell sx={getidx(idx)?{color:"green"}:{color:'red'}}>{d.price}</TableCell>
                         <TableCell>{d.amount}</TableCell>
                         <TableCell>{d.total}</TableCell>
                         </TableRow>
@@ -52,12 +60,12 @@ export default function PriceList() {
           </Table>
         </TableContainer>
         </Box>
-        <Box className="d-flex justify-content-between py-2" sx={{px:"11%"}}>
+        <Box className="d-flex justify-content-between py-2" sx={{pl:"9%",pr:"12%"}}>
             <Box className="d-flex align-items-center">
               <Typography variant="p" sx={{fontSize:"16px",color:"green"}}>
-                20,637.99 <ArrowUpward fontSize="16px"/>
+                20,637.99 <ArrowUpward fontSize="small"/>
               </Typography>
-              <Typography variant="p" sx={{fontSize:"11px",color:"grey"}}>
+              <Typography variant="p" sx={{fontSize:"11px",color:"grey",mx:1}}>
                 $20,637.99
               </Typography>
             </Box>
@@ -66,7 +74,7 @@ export default function PriceList() {
         <Box>
         <TableContainer>
           <Table>
-            <TableBody>
+            <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
                         <TableRow key={idx} sx={trs}>
                         <TableCell sx={{color:"red"}}>{d.price}</TableCell>

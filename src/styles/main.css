@@ -6,6 +6,9 @@
 a{
     color:grey !important;
 }
+a.spacial{
+  color:orange !important;
+}
 .body{
     font-family: "IBM-FONT" !important;
 } 
@@ -13,6 +16,13 @@ a{
 @media (min-width:0px) and (max-width:768px) {
     .container-btc{
         padding: 20px 2px !important;
+    }
+    .searchpadding{
+      padding-top: 30px;
+    }
+    .bordering{
+      border-bottom: 1px solid grey ;
+        margin: 1%;
     }
     div#tranding{
        order: 1;
@@ -32,6 +42,16 @@ a{
         border-right: 1px solid grey ;
         margin: 1% 0px;
      }
+    .bordering{
+      border-right: 1px solid grey ;
+    }
+    .borderingl{
+      border-left: 1px solid grey ;
+    }
+    .border-bottom{
+      border-bottom: 1px solid grey;
+      margin-inline: 3px;
+    }
      
 }
 
@@ -54,3 +74,6 @@ a{
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(117, 117, 117); 
   }
+.MuiTabs-indicator{
+  background-color: orange !important;
+}

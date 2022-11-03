@@ -42,11 +42,11 @@ const coins=[
 ]
 
 const trs={
-    '& td,& th': { border: 0 ,p:1,pl:2,textAlign:"center",fontSize:"11px"},
+    '& td,& th': { border: 0 ,p:1,textAlign:"center",fontSize:"11px"},
 }
 export default function ListCoinSearching() {
   return (
-    <div>
+    <div className='searchpadding'>
       <div className='d-flex jusitfy-content-center align-items-center'>
         <TextField
             size="small"

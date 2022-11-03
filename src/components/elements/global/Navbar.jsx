@@ -1,11 +1,29 @@
 import { DarkMode, LightMode ,Menu as MenuIcon } from '@mui/icons-material'
 import { AppBar, Toolbar, Typography,Box,IconButton,Button} from '@mui/material'
 import React,{useState,useEffect} from 'react'
+import MenuItemsComponents from './MenuItemsComponents';
 
-
+const cryptoitem=[
+  {"name":"Bitcoin"},
+  {"name":"USDT"},
+  {"name":"DOGE"},
+  {"name":"Binance"}
+]
+const tradeitem=[
+  {"name":"Spot"},
+  {"name":"Margin"},
+]
 export default function Navbar({open}) {
-
-  
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [items, setitems] = useState([]);
+  const openm = Boolean(anchorEl);
+    const handleClick =(data)=>(event) => {
+        setAnchorEl(event.currentTarget);
+        setitems(data)
+    };
+      const handleClose = () => {
+        setAnchorEl(null);
+      };
   return (
     <Box>
       <AppBar sx={{height:"60px"}} color="dark" position="static">
@@ -15,9 +33,9 @@ export default function Navbar({open}) {
               BTC
             </Typography>
              <Box className='d-lg-block d-md-block d-none '>
-             <Button color="inherit">BuyCrypto</Button>
+             <Button color="inherit" onClick={handleClick(cryptoitem)}>BuyCrypto</Button>
              <Button color="inherit" sx={{mx:'15px'}}>Markets</Button>
-             <Button color="inherit">Trade</Button>
+             <Button color="inherit" onClick={handleClick(tradeitem)}>Trade</Button>
              </Box>
           </Box>
             
@@ -34,7 +52,12 @@ export default function Navbar({open}) {
               <MenuIcon/>
             </IconButton>
             </Box>
-            
+            <MenuItemsComponents
+             open={openm}
+             anchorEl={anchorEl}
+             handleClose={handleClose}
+             items={items}
+            />
         </Toolbar>
       </AppBar>
     </Box>

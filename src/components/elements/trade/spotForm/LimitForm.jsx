@@ -4,12 +4,11 @@ import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider }
 export default function LimitForm({ coin }) {
   const mstyle = {
     m: 1,
-    color: "gold",
+    color: "orange",
     ml: 0
   }
   const mstylerange = {
     m: 1,
-    color: "gold",
   }
   return (
     <div className='pe-4 pt-2'>
@@ -52,15 +51,14 @@ export default function LimitForm({ coin }) {
           }}
         />
         <Slider
-          aria-label="Small steps"
-          defaultValue={0.005}
-          step={0.001}
+          defaultValue={50}
+          step={25}
           marks
-          min={0.5}
-          max={1}
+          min={25}
+          max={100}
           sx={mstylerange}
           color="warning"
-          valueLabelDisplay="auto"
+          size="large"
         />
         <Button
           variant="contained"

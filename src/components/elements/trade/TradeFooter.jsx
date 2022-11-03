@@ -29,7 +29,17 @@ export default function TradeFooter() {
         <Tab label="Funds" {...a11yProps(3)} />
         <Tab label="positions(0)" {...a11yProps(4)} />
       </Tabs>
+      <Box>
+        <TabPanel>
+          <Box sx={{py:"9%"}} className="d-flex justify-content-center">
+              <Typography>
+                <Link className='spacial'>Login</Link> or <Link className='spacial'>Register</Link> for Trade
+              </Typography>
+          </Box>
+        </TabPanel>
+      </Box>
     </Box>
+
 
   )
 }

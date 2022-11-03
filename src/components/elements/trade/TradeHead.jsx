@@ -4,7 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 export default function TradeHead() {
   return (
-    <div className="mb-2 text-center">
+    <div className="mb-2 text-center border-bottom ">
     <div className="row">
       <div className="col-lg-2 col-md-5 col-12 gr-0 border-right">
         <ListItemText 
