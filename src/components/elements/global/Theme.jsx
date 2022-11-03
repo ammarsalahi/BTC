@@ -31,7 +31,8 @@ const DarkTheme = createTheme({
             root:{
                 textTransform:"none",
                 '&.Mui-selected':{
-                    color:"orange"
+                    color:"orange",
+                    backgroundColor:"#161515",
                 },
                 '&.MuiTabs-indicator':{
                     backgroundColor:'orange'

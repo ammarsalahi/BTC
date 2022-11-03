@@ -13,8 +13,8 @@ export default function LimitForm({ coin }) {
   return (
     <div className='pe-4 pt-2'>
       <Box className='d-flex'>
-        <Typography>Avbl-</Typography>
-        <Typography>{coin}</Typography>
+        <Typography fontSize={13}>Avbl-</Typography>
+        <Typography fontSize={13}>{coin}</Typography>
       </Box>
       <FormGroup>
         <TextField
@@ -59,6 +59,7 @@ export default function LimitForm({ coin }) {
           sx={mstylerange}
           color="warning"
           size="large"
+          
         />
         <Button
           variant="contained"

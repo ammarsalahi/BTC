@@ -8,8 +8,8 @@ export default function TradeChart() {
       <TradingViewWidget
         symbol="BTCUSDT"
         theme={Themes.DARK}
-        locale="en"
-        height="400"
+        locale="fa_IR"
+        height="485"
         width="auto"
         // style={{height:"500px"}}
       />

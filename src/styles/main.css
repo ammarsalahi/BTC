@@ -15,14 +15,13 @@ a.spacial{
 
 @media (min-width:0px) and (max-width:768px) {
     .container-btc{
-        padding: 20px 2px !important;
+        padding: 20px 0px !important;
     }
     .searchpadding{
       padding-top: 30px;
     }
     .bordering{
-      border-bottom: 1px solid grey ;
-        margin: 1%;
+      border-bottom: 1px solid #3b3b3b; 
     }
     div#tranding{
        order: 1;
@@ -36,23 +35,23 @@ a.spacial{
 }
 @media all and (min-width:768px) {
     .container-btc{
-        padding: 20px 10px !important;
+        padding: 20px 0px !important;
     }
     .border-right{
-        border-right: 1px solid grey ;
-        margin: 1% 0px;
+        border-right: 1px solid #3b3b3b; 
      }
     .bordering{
-      border-right: 1px solid grey ;
+      border-right: 1px solid #3b3b3b; 
     }
     .borderingl{
-      border-left: 1px solid grey ;
+      border-left: 1px solid #3b3b3b ;
     }
-    .border-bottom{
-      border-bottom: 1px solid grey;
-      margin-inline: 3px;
+    .borderbottom{
+      border-bottom: 1px solid #3b3b3b;
     }
-     
+    .searchpadding{
+      padding-top: 20px;
+    } 
 }
 
 ::-webkit-scrollbar {
@@ -74,6 +73,15 @@ a.spacial{
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(117, 117, 117); 
   }
+
 .MuiTabs-indicator{
-  background-color: orange !important;
+  background-color: transparent !important;
+}
+
+.bordertop{
+   border-top: 1px solid #3b3b3b;
+}
+
+.bccc{
+  color:#161515;
 }

@@ -4,18 +4,13 @@ import {TableContainer,Table,TableBody,TableRow,TableHead ,TableCell} from '@mui
 import { ArrowUpward } from '@mui/icons-material';
 import {Link} from 'react-router-dom'
 const trs={
-    '& td,& th': { border: 0 ,p:0.5,textAlign:"center",fontSize:"11px"},
+    '& td,& th': { border: 0 ,py:0.5,px:0,textAlign:"left",fontSize:"11px"},
 }
 
 function createData(price,amount,total) {
     return {price,amount,total};
 }
 const data=[
-    createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
@@ -37,9 +32,8 @@ const getidx=(idx)=>{
   
 export default function PriceList() {
   return (
-    <div>
-        <Box>
-        <TableContainer>
+    <div className="px-2">
+        <TableContainer sx={{width:"auto"}}>
           <Table>
             <TableHead>
                 <TableRow sx={trs}>
@@ -57,21 +51,20 @@ export default function PriceList() {
                         </TableRow>
                     ))}
             </TableBody>
+
           </Table>
         </TableContainer>
-        </Box>
-        <Box className="d-flex justify-content-between py-2" sx={{pl:"9%",pr:"12%"}}>
+        <Box className="d-flex  py-2 gx-0">
             <Box className="d-flex align-items-center">
-              <Typography variant="p" sx={{fontSize:"16px",color:"green"}}>
+              <Typography variant="p" sx={{fontSize:"14px",color:"green",pr:1}}>
                 20,637.99 <ArrowUpward fontSize="small"/>
               </Typography>
-              <Typography variant="p" sx={{fontSize:"11px",color:"grey",mx:1}}>
+              <Typography variant="p" sx={{fontSize:"11px",color:"grey"}}>
                 $20,637.99
               </Typography>
             </Box>
-            <Link>more</Link>
+            <Link style={{paddingLeft:"10%"}}>more</Link>
         </Box>
-        <Box>
         <TableContainer>
           <Table>
             <TableBody sx={{cursor:"pointer"}}>
@@ -85,7 +78,6 @@ export default function PriceList() {
             </TableBody>
           </Table>
         </TableContainer>
-        </Box>
     </div>
   )
 }

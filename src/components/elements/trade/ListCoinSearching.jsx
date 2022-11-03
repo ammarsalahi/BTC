@@ -25,7 +25,12 @@ const data=[
     createData("1INCH/BTC","0.040442","+1.23"),
     createData("1INCH/BTC","0.040442","+1.23"),
     createData("1INCH/BTC","0.040442","+1.23"),
-
+    createData("1INCH/BTC","0.040442","+1.23"),
+    createData("1INCH/BTC","0.040442","+1.23"),
+    createData("1INCH/BTC","0.040442","+1.23"),
+    createData("1INCH/BTC","0.040442","+1.23"),
+    createData("1INCH/BTC","0.040442","+1.23"),
+    createData("1INCH/BTC","0.040442","+1.23"),
 ]
 const coins=[
     createData('Margin'),
@@ -42,12 +47,12 @@ const coins=[
 ]
 
 const trs={
-    '& td,& th': { border: 0 ,p:1,textAlign:"center",fontSize:"11px"},
+    '& td,& th': { border: 0 ,p:.4,textAlign:"center",fontSize:"11px"},
 }
 export default function ListCoinSearching() {
   return (
-    <div className='searchpadding'>
-      <div className='d-flex jusitfy-content-center align-items-center'>
+    <div>
+      {/* <div className='d-flex jusitfy-content-center align-items-center'>
         <TextField
             size="small"
             fullWidth
@@ -62,9 +67,9 @@ export default function ListCoinSearching() {
             }}
             
         /> 
-      </div>
+      </div> */}
       
-        <Box className="d-flex justify-content-between gx-0 pt-2 overflow-auto" sx={{width:"auto"}}>
+        {/* <Box className="d-flex justify-content-between gx-0 pt-2 overflow-auto" sx={{width:"auto"}}>
              
              {coins.map((coin,idx)=>(
                     <Button color="warning">
@@ -93,8 +98,8 @@ export default function ListCoinSearching() {
                     ))}
             </TableBody>
           </Table>
-        </TableContainer>
-        <Box sx={{mt:2}}>
+        </TableContainer> */}
+        <Box sx={{mt:1}}>
           <CoinPriceTabs data={data}/>
         </Box>
         

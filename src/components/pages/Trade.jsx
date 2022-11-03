@@ -10,32 +10,28 @@ import SpotTabs from '../elements/trade/SpotTabs'
 import TradeFooter from '../elements/trade/TradeFooter'
 export default function Trade() {
   return (
-    <div className='container-btc'>
-      <div className="container-fluid row m-0">
-        <div className="col-lg-9 col-md-8 col-12 g-0">
-          <TradeHead />
-          <div className="row g-0">
-            <div className="col-lg-4 col-md-5 col-12 gx-0 bordering" id="price">
-              <PriceList />
+    <div>
+        <div className="container-fluid row gx-0">
+          <div className="col-lg-7 gx-0">
+            <div className="w-100 p-2 borderbottom">
+            <TradeChart/>
             </div>
-            <div className="col-lg-8 col-md-7 col-12 gx-0 d-flex justify-content-center align-items-center px-1" id="tranding">
-              <div className='w-100'>
-                <TradeChart />
-                <SpotTabs />
-              </div>
+            <TradeFooter/>
+
+          </div> 
+          <div className="col-lg-5 gx-0 row borderingl">
+            <div className="col-6 overflow-auto borderbottom ">
+              <PriceList/>
+            </div>
+            <div className="col-6 gx-0 overflow-auto borderbottom borderingl">
+           <ListCoinSearching />
+            </div>
+            <div className="col-12 gx-0">
+              <SpotTabs/>
             </div>
           </div>
+         
         </div>
-        <div className="col-lg-3 col-md-4 col-12 gx-0 px-2 borderingl" id="coinsearch">
-          <ListCoinSearching />
-        </div>
-      </div>
-      <hr />
-      <div className='container-fluid row'>
-        <div className="col-12 overflow-auto">
-          <TradeFooter />
-        </div>
-      </div>
     </div>
   )
 }

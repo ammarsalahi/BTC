@@ -4,9 +4,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 export default function TradeHead() {
   return (
-    <div className="mb-2 text-center border-bottom ">
+    <div className="text-center py-3 ">
     <div className="row">
-      <div className="col-lg-2 col-md-5 col-12 gr-0 border-right">
+      <div className="col-lg-2 col-md-5 col-12 gx-0 border-right">
         <ListItemText 
           primary={
             <Typography variant="h6">BTC/USDT</Typography>
