@@ -25,8 +25,7 @@ export default function CoinPriceTabs() {
     <Box>
       <Tabs value={value} onChange={handleChange}>
         <Tab label="Spot" {...a11yProps(0)} />
-        <Tab label="Cross 3x" {...a11yProps(1)} />
-        <Tab label="Isolate 10x" {...a11yProps(2)} />
+      
       </Tabs>
     </Box>
     <TabPanel value={value} index={0}>
@@ -36,36 +35,6 @@ export default function CoinPriceTabs() {
           <Button color="warning">Stop-Limit</Button>
         </Box>
         <Box className="row px-2">
-          <div className='col-lg-6 col-12 g-0'>
-            <LimitForm  coin="USDT"/>
-          </div>
-          <div className="col-lg-6 col-12 g-0">
-          <LimitForm coin="BTC"/>
-          </div>
-        </Box>
-    </TabPanel>
-    <TabPanel value={value} index={1}>
-    <Box className="d-flex">
-    <Button color="warning">Limit</Button>
-          <Button color="warning">Market</Button>
-          <Button color="warning">Stop-Limit</Button>
-        </Box>
-        <Box className="row">
-          <div className='col-lg-6 col-12 g-0'>
-            <LimitForm  coin="USDT"/>
-          </div>
-          <div className="col-lg-6 col-12 g-0">
-          <LimitForm coin="BTC"/>
-          </div>
-        </Box>
-    </TabPanel>
-    <TabPanel value={value} index={2}>
-    <Box className="d-flex">
-          <Button color="warning">Limit</Button>
-          <Button color="warning">Market</Button>
-          <Button color="warning">Stop-Limit</Button>
-        </Box>
-        <Box className="row">
           <div className='col-lg-6 col-12 g-0'>
             <LimitForm  coin="USDT"/>
           </div>
