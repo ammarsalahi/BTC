@@ -49,9 +49,9 @@ export default function Navbar({open}) {
              
 
              <Box className='d-lg-block d-md-block d-none '>
-             <Button color="inherit" onClick={handleClickBtc} startIcon={<CurrencyBitcoin color="warning"/>}>
+             {/* <Button color="inherit" onClick={handleClickBtc} startIcon={<CurrencyBitcoin color="warning"/>}>
                BTC/USDT
-              </Button>
+              </Button> */}
              <Button color="inherit" onClick={handleClick(cryptoitem)}>BuyCrypto</Button>
              <Button color="inherit" sx={{mx:'15px'}}>Markets</Button>
              <Button color="inherit" onClick={handleClick(tradeitem)}>Trade</Button>
