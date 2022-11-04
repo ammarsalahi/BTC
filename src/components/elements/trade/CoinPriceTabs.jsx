@@ -7,7 +7,8 @@ import Box from '@mui/material/Box';
 import {TableContainer,Table,TableBody,TableRow,TableHead,TableCell } from '@mui/material'
 
 const trs={
-  '& td,& th': { border: 0 ,py:1,px:0,textAlign:"left",fontSize:"11px"},
+  '& td,& th': { border: 0 ,py:1,px:0.5,textAlign:"left",fontSize:"11px"},
+  '&:hover':{backgroundColor:"grey"}
 }
 
 function createData(name,price,changes) {

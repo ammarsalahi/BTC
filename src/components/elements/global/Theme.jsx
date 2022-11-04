@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 
-const DarkTheme = createTheme({
+const Theme = createTheme({
   palette: {
     mode: 'dark',
     golding:{
@@ -9,11 +9,47 @@ const DarkTheme = createTheme({
         contrastText:"#000"
     },
     dark:{
-        main:"#121212",
+        main:"rgb(15, 15, 15)",
         contrastText:"#fff"
     },
     light:{
         main:"#fff",
+        contrastText:"#000"
+    },
+    primary:{
+        main:"rgb(29, 82, 255)",
+        contrastText:"#000"
+    },
+    secondary:{
+        main:"rgb(255, 55, 55)",
+        contrastText:"#000"
+    },
+    green:{
+        main:"rgb(0, 255, 76)",
+        contrastText:"#000"
+    },
+    yellow:{
+        main:"rgb(209, 255, 43)",
+        contrastText:"#000"
+    },
+    purple:{
+        main:"rgb(167, 52, 196)",
+        contrastText:"#000"
+    },
+    grey:{
+        main:"rgb(128, 128, 128)",
+        contrastText:"#000"
+    },
+    pink:{
+        main:"rgb(255, 62, 136)",
+        contrastText:"#000"
+    },
+    orange:{
+        main:"rgb(255, 94, 0)",
+        contrastText:"#000"
+    },
+    brown:{
+        main:"rgb(143, 95, 63)",
         contrastText:"#000"
     },
 
@@ -31,7 +67,7 @@ const DarkTheme = createTheme({
             root:{
                 textTransform:"none",
                 '&.Mui-selected':{
-                    color:"orange",
+                    color:"#fff",
                     backgroundColor:"#161515",
                 },
                 '&.MuiTabs-indicator':{
@@ -47,65 +83,4 @@ const DarkTheme = createTheme({
 });
 
 
-const LightTheme=createTheme({
-    palette:{
-        mode:"light",
-        golding:{
-            main:"#e5c233",
-            contrastText:"#000"
-        },
-        dark:{
-            main:"rgb(15, 15, 15)",
-            contrastText:"#fff"
-        },
-        light:{
-            main:"#fff",
-            contrastText:"#000"
-        },
-        primary:{
-            main:"rgb(29, 82, 255)",
-            contrastText:"#000"
-        },
-        secondary:{
-            main:"rgb(255, 55, 55)",
-            contrastText:"#000"
-        },
-        green:{
-            main:"rgb(0, 255, 76)",
-            contrastText:"#000"
-        },
-        yellow:{
-            main:"rgb(209, 255, 43)",
-            contrastText:"#000"
-        },
-        purple:{
-            main:"rgb(167, 52, 196)",
-            contrastText:"#000"
-        },
-        grey:{
-            main:"rgb(128, 128, 128)",
-            contrastText:"#000"
-        },
-        pink:{
-            main:"rgb(255, 62, 136)",
-            contrastText:"#000"
-        },
-        orange:{
-            main:"rgb(255, 94, 0)",
-            contrastText:"#000"
-        },
-        brown:{
-            main:"rgb(143, 95, 63)",
-            contrastText:"#000"
-        },
-
-        
-
-    },
-    
-})
-
-export {
-    LightTheme,
-    DarkTheme,
-  }
+export default Theme;

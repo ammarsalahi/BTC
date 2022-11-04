@@ -4,7 +4,8 @@ import {TableContainer,Table,TableBody,TableRow,TableHead ,TableCell} from '@mui
 import { ArrowUpward } from '@mui/icons-material';
 import {Link} from 'react-router-dom'
 const trs={
-    '& td,& th': { border: 0 ,py:0.5,px:0,textAlign:"left",fontSize:"11px"},
+    '& td,& th': { border: 0 ,p:0.5,textAlign:"left",fontSize:"11px"},
+    '&:hover':{backgroundColor:"grey"}
 }
 
 function createData(price,amount,total) {
