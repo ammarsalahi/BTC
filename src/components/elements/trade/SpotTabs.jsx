@@ -22,13 +22,12 @@ export default function CoinPriceTabs() {
   };
   return (
     <Box sx={{py:1,px:0.5}}>
-    <Box>
+    {/* <Box>
       <Tabs value={value} onChange={handleChange}>
         <Tab label="Spot" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid orange"}} />
       
       </Tabs>
-    </Box>
-    <TabPanel value={value} index={0}>
+    </Box> */}
         <Box className="d-flex py-1">
           <Button color="warning">Limit</Button>
           <Button color="warning">Market</Button>
@@ -42,7 +41,6 @@ export default function CoinPriceTabs() {
           <LimitForm coin="BTC"/>
           </div>
         </Box>
-    </TabPanel>
    </Box>
   )
  } 
