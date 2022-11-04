@@ -88,5 +88,6 @@ a.spacial{
 @media all and (min-width:1280px){
   .noscroll{
     overflow: hidden !important;
+    height: 100%;
   }
 }

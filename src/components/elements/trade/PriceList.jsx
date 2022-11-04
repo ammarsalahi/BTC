@@ -18,8 +18,7 @@ const data=[
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
+   
 ]
 
 const getidx=(idx)=>{
@@ -63,7 +62,7 @@ export default function PriceList() {
                 $20,637.99
               </Typography>
             </Box>
-            <Link style={{paddingLeft:"10%"}}>more</Link>
+            <Link style={{paddingLeft:"10%",fontSize:"11px"}}>more</Link>
         </Box>
         <TableContainer>
           <Table>

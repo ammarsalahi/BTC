@@ -14,7 +14,7 @@ function a11yProps(index) {
     'aria-controls': `simple-tabpanel-${index}`,
   };
 }
-export default function TradeFooter() {
+export default function TradeFooter({height}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -31,7 +31,7 @@ export default function TradeFooter() {
       </Tabs>
       <Box>
         <TabPanel>
-          <Box sx={{py:"130px"}} className="d-flex justify-content-center">
+          <Box sx={{py:"15%"}} className="d-flex justify-content-center">
               <Typography>
                 <Link className='spacial'>Login</Link> or <Link className='spacial'>Register</Link> for Trade
               </Typography>

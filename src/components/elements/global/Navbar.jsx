@@ -40,7 +40,7 @@ export default function Navbar({open}) {
     };
   return (
     <Box>
-      <AppBar sx={{height:"60px"}} color="dark" position="static">
+      <AppBar sx={{height:"55px"}} color="dark" position="static">
         <Toolbar sx={{width:"auto"}}>
           <Box  sx={{flexGrow:1,display:"flex"}}>
             <Typography variant="h5" component="div" sx={{color:'orange',mr:4}}>
@@ -49,9 +49,9 @@ export default function Navbar({open}) {
              
 
              <Box className='d-lg-block d-md-block d-none '>
-             <Button color="inherit" onClick={handleClickBtc} startIcon={<CurrencyBitcoin color="warning"/>}>
-               BTC/USDT
-              </Button>
+             <Button color="inherit" onClick={handleClickBtc}>
+              BTCUSDT
+             </Button>
              <Button color="inherit" onClick={handleClick(cryptoitem)}>BuyCrypto</Button>
              <Button color="inherit" sx={{mx:'15px'}}>Markets</Button>
              <Button color="inherit" onClick={handleClick(tradeitem)}>Trade</Button>
