@@ -6,7 +6,7 @@ import Trade from '../pages/Trade'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
 import PrivateRoute from './PrivateRoute';
-import {DarkTheme,LightTheme} from '../elements/global/Theme';
+import Theme from '../elements/global/Theme';
 import Navbar from '../elements/global/navbar';
 import CssBaseline from '@mui/material/CssBaseline';
 export default function Router() {
@@ -39,7 +39,7 @@ export default function Router() {
     },
   ])  
   return (
-    <ThemeProvider theme={DarkTheme} >
+    <ThemeProvider theme={Theme} >
         <CssBaseline />
         <RouterProvider router={pagerouter}/>
     </ThemeProvider>
