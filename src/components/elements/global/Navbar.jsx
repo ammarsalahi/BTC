@@ -60,7 +60,7 @@ export default function Navbar({open}) {
              <Button color="inherit" sx={{mx:'15px'}}>Markets</Button>
              <Button color="inherit" onClick={handleClick(tradeitem)}>Trade</Button> */}
              </Box>
-             <Box className='d-lg-block d-md-block d-none'>
+             <Box className='d-lg-block d-md-none d-none'>
                  <div className='d-flex pb-2'>
                  <ListItemText 
                    className='mx-3'
@@ -109,7 +109,7 @@ export default function Navbar({open}) {
                  <DarkMode sx={{color:"white"}}/>
             </IconButton>
             <Box className="d-lg-none d-md-none d-block ">
-            <IconButton color="warning" onClick={open}>
+            <IconButton color="inherit" onClick={open}>
               <MenuIcon/>
             </IconButton>
             </Box>

@@ -33,7 +33,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
         {children}
         {onClose ? (
           <IconButton
-            color="warning"
+            color="inherit"
             aria-label="close"
             onClick={onClose}
             sx={{
@@ -55,11 +55,8 @@ BootstrapDialogTitle.propTypes = {
   };
 
 const buttonStyle={
-    borderRadius:"8px",my:"1%",height:"60px",color:"orange",
-    "&:hover":{
-        backgroundColor:"orange",
-        color:"#fff"
-    }
+    borderRadius:"8px",my:"1%",height:"60px",
+   
 }
 export default function SideMenu({open,close}) {
 
