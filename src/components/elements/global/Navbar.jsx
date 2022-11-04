@@ -63,7 +63,7 @@ export default function Navbar({open}) {
              <Box className='d-lg-block d-md-none d-none'>
                  <div className='d-flex pb-2'>
                  <ListItemText 
-                   className='mx-3'
+                   className='mx-4'
                     primary={<Typography variant="P" color="error" fontSize={15}>20,637.99</Typography>}
                     secondary={<Typography fontSize={11}>$20,637.99</Typography>}
                   />
@@ -73,7 +73,7 @@ export default function Navbar({open}) {
                   />
               
                   <ListItemText 
-                  className='mx-3'
+                  className='mx-4'
                     primary={<Typography variant="p" fontSize={13}>24h High</Typography>}
                     secondary="20,822.00"
                     secondaryTypographyProps={{fontSize:"11px"}}
@@ -85,7 +85,7 @@ export default function Navbar({open}) {
                   />
               
                   <ListItemText 
-                  className='mx-3'
+                  className='mx-4'
                     primary={<Typography variant="p" fontSize={11}>24h Volume(BTC)</Typography>}
                     secondary="314,570.58"
                     secondaryTypographyProps={{fontSize:"11px"}}

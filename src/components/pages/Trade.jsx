@@ -12,9 +12,15 @@ import CoinPriceTabs from '../elements/trade/CoinPriceTabs'
 export default function Trade() {
   const [pageheight,setPageHeight]=useState('');
   const [rowheight,setRowHeight]=useState('');
+  const [row2height,setRow2Height]=useState('');
+  const [row3height,setRow3Height]=useState('');
+
   const getHeightofScreen=()=>{
-    setPageHeight(window.innerHeight-55);
-    setRowHeight((window.innerHeight)/2)
+    let size=window.innerHeight;
+    setPageHeight(size-55);
+    setRowHeight(size-(size/2.8))
+    setRow2Height(size-(size/2+50))
+    setRow3Height((size-rowheight)/4.1)
   }
   useEffect(()=>{
     getHeightofScreen()
@@ -24,29 +30,30 @@ export default function Trade() {
 
   return (
     <div className='container-fluid' style={{height:pageheight}}>
-                  {/* <TradeHead/> */}
 
        <div className="row">
-          <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12">
-            
+          <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12 p-0">
+            <div className="w-100">
             <TradeChart sizing={rowheight} />
+            </div>
+            <div className='bordertop'>
+            <TradeFooter height={row3height}/>
+            </div>
+           
           </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row overflow-auto" style={{height:rowheight}}>
-            <div className="col-lg-6 col-md-6 col-12 gx-0">
+          <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row  gx-0 borderingl h-100" >
+            <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-auto " style={{height:row2height}}>
               <PriceList/>
             </div>
-            <div className="col-lg-6 col-md-6 col-12 gx-0">
+            <div className="col-lg-6 col-md-6 col-12 gx-0 overflow-auto" style={{height:row2height}}>
               <CoinPriceTabs/>
             </div>
+            <div className="col-12">
+              <SpotTabs/>
+            </div>
           </div>
-       </div>
-       <div className="row">
-        <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12" >
-          <TradeFooter height={rowheight}/>
-        </div>
-        <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col1">
-          <SpotTabs/>
-        </div>
+
+        
        </div>
 
     </div>

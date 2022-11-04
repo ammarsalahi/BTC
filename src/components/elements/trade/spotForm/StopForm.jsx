@@ -33,7 +33,7 @@ export default function StopForm({coin}) {
         return `${value}%`;
       }
   return (
-    <div className='pe-4 pt-2'>
+    <div className='pt-2'>
     <Box className='d-flex'>
         <Typography fontSize={13}>Avbl-</Typography>
         <Typography fontSize={13}>{coin}</Typography>
@@ -87,7 +87,7 @@ export default function StopForm({coin}) {
             style: { fontSize: 14 }
         }}
         />
-
+<div className='px-1'>
 <Slider
     aria-label="Always visible"
     defaultValue={80}
@@ -96,6 +96,8 @@ export default function StopForm({coin}) {
     marks={marks}
     valueLabelDisplay="auto"
 />
+</div>
+
 <Button
   variant="contained"
   color="dark"

@@ -33,7 +33,7 @@ export default function LimitForm({ coin }) {
     return `${value}%`;
   }
   return (
-    <div className='pe-4 pt-2'>
+    <div className='pt-2'>
       <Box className='d-flex'>
         <Typography fontSize={13}>Avbl-</Typography>
         <Typography fontSize={13}>{coin}</Typography>
@@ -71,20 +71,22 @@ export default function LimitForm({ coin }) {
           }}
         />
        
-        <Slider
-            aria-label="Always visible"
-            defaultValue={80}
-            getAriaValueText={valuetext}
-            step={1}
-            marks={marks}
-            valueLabelDisplay="auto"
-        />
+          <div className='px-1'>
+            <Slider
+                aria-label="Always visible"
+                defaultValue={80}
+                getAriaValueText={valuetext}
+                step={1}
+                marks={marks}
+                valueLabelDisplay="auto"
+            />
+            </div>
         <Button
           variant="contained"
           color="dark"
           sx={mstyle}
         >
-          Login or Register Now
+          Login or Register
         </Button>
       </FormGroup>
     </div>

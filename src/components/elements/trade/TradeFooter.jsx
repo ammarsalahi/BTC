@@ -21,17 +21,15 @@ export default function TradeFooter({height}) {
     setValue(newValue);
   };
   return (
-    <Box className="pt-2">
+    <Box>
       <Tabs value={value} onChange={handleChange}  aria-label="basic tabs example">
         <Tab label="Open Orders(0)" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid #fff"}} />
         <Tab label="Order History" {...a11yProps(1)} sx={value===1 && {borderTop:"2px solid #fff"}} />
         <Tab label="Trade History" {...a11yProps(2)} sx={value===2 && {borderTop:"2px solid #fff"}} />
-        <Tab label="Funds" {...a11yProps(3)} sx={value===3 && {borderTop:"2px solid #fff"}} />
-        <Tab label="positions(0)" {...a11yProps(4)} sx={value===4 && {borderTop:"2px solid #fff"}} />
       </Tabs>
       <Box>
         <TabPanel>
-          <Box sx={{py:"15%"}} className="d-flex justify-content-center">
+          <Box sx={{py:`${height}px`}} className="d-flex justify-content-center">
               <Typography>
                 <Link>Login</Link> or <Link>Register</Link> for Trade
               </Typography>

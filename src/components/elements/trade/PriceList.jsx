@@ -45,7 +45,7 @@ export default function PriceList() {
             <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
                         <TableRow key={idx} sx={trs}>
-                        <TableCell sx={getidx(idx)?{color:"rgb(14, 203, 129)"}:{color:'rgb(246, 70, 93)'}}>{d.price}</TableCell>
+                        <TableCell sx={getidx(idx)?{color:"#05c48e"}:{color:'#df473d'}}>{d.price}</TableCell>
                         <TableCell>{d.amount}</TableCell>
                         <TableCell>{d.total}</TableCell>
                         </TableRow>
@@ -70,7 +70,7 @@ export default function PriceList() {
             <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
                         <TableRow key={idx} sx={trs}>
-                        <TableCell sx={{color:"rgb(246, 70, 93)"}}>{d.price}</TableCell>
+                        <TableCell sx={{color:"#df473d"}}>{d.price}</TableCell>
                         <TableCell>{d.amount}</TableCell>
                         <TableCell>{d.total}</TableCell>
                         </TableRow>
