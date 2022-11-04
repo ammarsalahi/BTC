@@ -5,33 +5,32 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import {TableContainer,Table,TableBody,TableRow,TableHead,TableCell } from '@mui/material'
-import TabPanel from '../global/TabPanel';
-const trs={
-  '& td,& th': { border: 0 ,py:1,textAlign:"center",fontSize:"10px"},
-}
-const trs2={
-  '& td,& th': { border: 0 ,py:1,textAlign:"left",fontSize:"10px"},
-}
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
-export default function CoinPriceTabs({data}) {
-  const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+const trs={
+  '& td,& th': { border: 0 ,py:1,px:0,textAlign:"left",fontSize:"11px"},
+}
+
+function createData(name,price,changes) {
+  return {  name,price,changes};
+}
+
+const data=[
+  createData("Bitcoin","$20,728,00","+1.23"),
+  createData("Ethereum","$1,900,010","+1.25"),
+  createData("USD","$3,009,120","+1"),
+  createData("Bitcoin","$20,728,00","+1.23"),
+  createData("Ethereum","$1,900,010","+1.25"),
+  createData("USD","$3,009,120","+1"),
+  createData("Bitcoin","$20,728,00","+1.23"),
+  createData("Ethereum","$1,900,010","+1.25"),
+  createData("USD","$3,009,120","+1"),
+  createData("Bitcoin","$20,728,00","+1.23"),
+  createData("Ethereum","$1,900,010","+1.25"),
+]
+export default function CoinPriceTabs() {
+
   return (
     <Box sx={{ width: 'auto' }}>
-    {/* <Box>
-      <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-        <Tab label="Market Trade" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid orange"}}/>
-        <Tab label="My Trade" {...a11yProps(1)} sx={value===1 && {borderTop:"2px solid orange"}}/>
-      </Tabs>
-    </Box> */}
     <TableContainer className='overflow-auto'>
           <Table>
             <TableHead>

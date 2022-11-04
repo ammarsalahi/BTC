@@ -18,8 +18,7 @@ const data=[
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
+   
 ]
 
 const getidx=(idx)=>{
@@ -56,14 +55,14 @@ export default function PriceList() {
         </TableContainer>
         <Box className="d-flex  py-2 gx-0">
             <Box className="d-flex align-items-center">
-              <Typography variant="p" sx={{fontSize:"14px",color:"green",pr:1}}>
+              <Typography variant="p" sx={{fontSize:"13px",color:"green"}}>
                 20,637.99 <ArrowUpward fontSize="small"/>
               </Typography>
               <Typography variant="p" sx={{fontSize:"11px",color:"grey"}}>
                 $20,637.99
               </Typography>
             </Box>
-            <Link style={{paddingLeft:"10%"}}>more</Link>
+            <Link style={{paddingLeft:"10%",fontSize:"11px"}}>more</Link>
         </Box>
         <TableContainer>
           <Table>

@@ -34,7 +34,7 @@ export default function CoinPriceTabs() {
           <Button color="warning">Market</Button>
           <Button color="warning">Stop-Limit</Button>
         </Box>
-        <Box className="row px-2 pb-2">
+        <Box className="row px-2">
           <div className='col-lg-6 col-12 g-0'>
             <LimitForm  coin="USDT"/>
           </div>
