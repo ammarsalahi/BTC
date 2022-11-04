@@ -12,14 +12,14 @@ export default function Trade() {
   return (
     <div>
         <div className="container-fluid row gx-0 noscroll">
-          <div className="col-lg-7 col-md-6 col-12 gx-0">
+          <div className="col-lg-8 col-md-6 col-12 gx-0">
             <div className="w-100 p-2 borderbottom">
             <TradeChart/>
             </div>
             <TradeFooter/>
 
           </div> 
-          <div className="col-lg-5 col-md-6 col-12 gx-0 row borderingl">
+          <div className="col-lg-4 col-md-6 col-12 gx-0 row borderingl">
             <div className="col-lg-6 col-md-6 col-12 overflow-auto borderbottom "  style={{height:"310px"}}>
               <PriceList/>
             </div>

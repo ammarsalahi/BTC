@@ -45,7 +45,7 @@ export default function PriceList() {
             <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
                         <TableRow key={idx} sx={trs}>
-                        <TableCell sx={getidx(idx)?{color:"green"}:{color:'red'}}>{d.price}</TableCell>
+                        <TableCell sx={getidx(idx)?{color:"rgb(14, 203, 129)"}:{color:'rgb(246, 70, 93)'}}>{d.price}</TableCell>
                         <TableCell>{d.amount}</TableCell>
                         <TableCell>{d.total}</TableCell>
                         </TableRow>
@@ -56,7 +56,7 @@ export default function PriceList() {
         </TableContainer>
         <Box className="d-flex  py-2 gx-0">
             <Box className="d-flex align-items-center">
-              <Typography variant="p" sx={{fontSize:"14px",color:"green",pr:1}}>
+              <Typography variant="p" sx={{fontSize:"14px",color:"rgb(14, 203, 129)",pr:1}}>
                 20,637.99 <ArrowUpward fontSize="small"/>
               </Typography>
               <Typography variant="p" sx={{fontSize:"11px",color:"grey"}}>
@@ -70,7 +70,7 @@ export default function PriceList() {
             <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
                         <TableRow key={idx} sx={trs}>
-                        <TableCell sx={{color:"red"}}>{d.price}</TableCell>
+                        <TableCell sx={{color:"rgb(246, 70, 93)"}}>{d.price}</TableCell>
                         <TableCell>{d.amount}</TableCell>
                         <TableCell>{d.total}</TableCell>
                         </TableRow>
