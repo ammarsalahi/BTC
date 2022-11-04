@@ -31,7 +31,7 @@ export default function TradeFooter({height}) {
       </Tabs>
       <Box>
         <TabPanel>
-          <Box sx={{py:"15%"}} className="d-flex justify-content-center">
+          <Box sx={{py:`${height}px`}} className="d-flex justify-content-center">
               <Typography>
                 <Link>Login</Link> or <Link>Register</Link> for Trade
               </Typography>

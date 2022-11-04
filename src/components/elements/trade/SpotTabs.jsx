@@ -18,13 +18,68 @@ function a11yProps(index) {
 }
 export default function CoinPriceTabs() {
   const [value, setValue] = React.useState(0);
+  const [btn, setbtn] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
     <Box sx={{py:1,px:0.5}}>
-    <Box>
+      <Tabs value={value} onChange={handleChange}>
+        <Tab label="Spot" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid #fff"}} />
+      </Tabs>
+      <TabPanel value={value} index={0}>
+         <Box>
+          <div className="d-flex">
+            <Button color="inherit" sx={btn===0?{my:2,mx:1,border:1}:{my:2,mx:1}} onClick={()=>{setbtn(0)}}>
+              Limit
+            </Button>
+            <Button color="inherit" sx={btn===1?{my:2,mx:1,border:1}:{my:2,mx:1}} onClick={()=>{setbtn(1)}}>
+            Market
+            </Button>
+            <Button color="inherit" sx={btn===2?{my:2,mx:1,border:1}:{my:2,mx:1}} onClick={()=>{setbtn(2)}}>
+              Stop
+            </Button>
+          </div>
+          <div className="pt-2">
+            {btn===0 && 
+            <Box className="row">
+            <div className='col-lg-6 col-12 g-0'>
+              <LimitForm  coin="USDT"/>
+            </div>
+            <div className="col-lg-6 col-12 g-0">
+            <LimitForm coin="BTC"/>
+            </div>
+          </Box>
+            }
+            {btn===1 && 
+            <Box className="row">
+            <div className='col-lg-6 col-12 g-0'>
+              <MarketForm  coin="USDT"/>
+            </div>
+            <div className="col-lg-6 col-12 g-0">
+            <MarketForm coin="BTC"/>
+            </div>
+          </Box>
+          
+            }
+            {btn===2 && 
+            <Box className="row">
+            <div className='col-lg-6 col-12 g-0'>
+              <StopForm  coin="USDT"/>
+            </div>
+            <div className="col-lg-6 col-12 g-0">
+            <StopForm coin="BTC"/>
+            </div>
+          </Box>
+            
+            }
+          </div>
+         </Box>
+      
+      </TabPanel>
+
+    {/* <Box>
       <Tabs value={value} onChange={handleChange}>
         <Tab label="Limit" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid #fff"}} />
         <Tab label="Market" {...a11yProps(0)} sx={value===1 && {borderTop:"2px solid #fff"}} />
@@ -32,35 +87,14 @@ export default function CoinPriceTabs() {
       </Tabs>
     </Box>
     <TabPanel value={value} index={0}>
-        <Box className="row px-2">
-          <div className='col-lg-6 col-12 g-0'>
-            <LimitForm  coin="USDT"/>
-          </div>
-          <div className="col-lg-6 col-12 g-0">
-          <LimitForm coin="BTC"/>
-          </div>
-        </Box>
+        
     </TabPanel>
     <TabPanel value={value} index={1}>
-        <Box className="row px-2">
-          <div className='col-lg-6 col-12 g-0'>
-            <MarketForm  coin="USDT"/>
-          </div>
-          <div className="col-lg-6 col-12 g-0">
-          <MarketForm coin="BTC"/>
-          </div>
-        </Box>
+        
     </TabPanel>
     <TabPanel value={value} index={2}>
-        <Box className="row px-2">
-          <div className='col-lg-6 col-12 g-0'>
-            <StopForm  coin="USDT"/>
-          </div>
-          <div className="col-lg-6 col-12 g-0">
-          <StopForm coin="BTC"/>
-          </div>
-        </Box>
-    </TabPanel>
+        
+    </TabPanel> */}
    </Box>
   )
  } 

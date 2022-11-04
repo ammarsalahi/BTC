@@ -44,8 +44,8 @@ export default function CoinPriceTabs() {
             <TableBody>
                     {data.map((d,idx)=>(
                         <TableRow key={idx} sx={trs}>
-                        <TableCell sx={{color:'green'}}>{d.name}</TableCell>
-                        <TableCell>{d.price}</TableCell>
+                        <TableCell >{d.name}</TableCell>
+                        <TableCell sx={{color:'#008800'}}>{d.price}</TableCell>
                         <TableCell>{d.changes}</TableCell>
                         </TableRow>
                     ))}

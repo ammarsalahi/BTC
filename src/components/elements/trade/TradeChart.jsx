@@ -5,7 +5,7 @@ import TradingViewWidget, { Themes } from 'react-tradingview-widget';
 export default function TradeChart({sizing}) {
   
   return (
-    <div className="pl-3">
+    <div className="pr-2">
       <TradingViewWidget
         symbol="BTCUSDT"
         theme={Themes.DARK}
