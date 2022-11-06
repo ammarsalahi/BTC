@@ -52,6 +52,10 @@ const Theme = createTheme({
         main:"rgb(143, 95, 63)",
         contrastText:"#000"
     },
+    btn:{
+        main:"rgb(71, 77, 87)",
+        contrastText:"#000"
+    },
 
   },
   components:{

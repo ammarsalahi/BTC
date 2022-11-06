@@ -6,16 +6,16 @@ export default function Register() {
     return (
         <div>
             <Container component="form" maxWidth="sm">
-            <Box sx={{ height: '60vh' }} margin="15%">
-            <TextField label="Email or phone number" color="secondary" fullWidth sx={{height:'7ch', marginY:'1%'}}/>
-            <TextField label="Password" color="secondary" type="password" fullWidth sx={{height:'7ch', marginY:'1%'}}/>
-            <TextField label="Repeat password" color="secondary" type="password" fullWidth sx={{height:'7ch', marginY:'1%'}}/>
+                <Box sx={{ height: '60vh' }} margin="15%">
+                    <TextField label="Email or phone number" color="secondary" fullWidth sx={{height:'7ch', marginY:'1%'}}/>
+                    <TextField label="Password" color="secondary" type="password" fullWidth sx={{height:'7ch', marginY:'1%'}}/>
+                    <TextField label="Repeat password" color="secondary" type="password" fullWidth sx={{height:'7ch', marginY:'1%'}}/>
 
-            <Button variant="contained" fullWidth sx={{height:'7ch', marginY:'1%'}} color="primary">Login</Button>
-            <hr />
-            <Button variant="contained" fullWidth sx={{height:'7ch', marginY:'2%'}} color="primary"><GoogleIcon />  Login width Google</Button>
-            <Button variant="contained" fullWidth sx={{height:'7ch', marginY:'1%'}} color="primary"><AppleIcon />  Login width Apple</Button>
-            </Box>
+                    <Button variant="outlined" fullWidth sx={{height:'7ch', marginY:'1%'}} color="inherit">Login</Button>
+                    <hr />
+                    <Button variant="contained" fullWidth sx={{height:'7ch', marginY:'2%'}} color="primary"><GoogleIcon />  Login width Google</Button>
+                    <Button variant="contained" fullWidth sx={{height:'7ch', marginY:'1%'}} color="primary"><AppleIcon />  Login width Apple</Button>
+                </Box>
             </Container>
         </div>
     )
