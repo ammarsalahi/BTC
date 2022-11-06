@@ -46,7 +46,7 @@ const handlePassword = ()=>{
                   <IconButton
                   onClick={handleShow}
                   >
-                   
+                   {show?<VisibilityOff/>: <Visibility/>}
                   </IconButton>
                 </InputAdornment>
             ),
@@ -63,7 +63,7 @@ const handlePassword = ()=>{
                   <IconButton
                   onClick={handleShow}
                   >
-                   
+                   {show?<VisibilityOff/>: <Visibility/>}
                   </IconButton>
                 </InputAdornment>
             ),
