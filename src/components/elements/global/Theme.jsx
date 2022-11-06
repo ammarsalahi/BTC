@@ -29,7 +29,7 @@ const Theme = createTheme({
         contrastText:"#000"
     },
     yellow:{
-        main:"rgb(209, 255, 43)",
+        main:"#FCD535",
         contrastText:"#000"
     },
     purple:{
