@@ -37,6 +37,10 @@ export default function Router() {
       path:"/register",
       element: <Register/> 
     },
+    {
+      path:"/landing",
+      element: <Landing/>
+    },
   ])  
   return (
     <ThemeProvider theme={Theme} >
