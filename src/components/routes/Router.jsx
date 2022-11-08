@@ -4,6 +4,7 @@ import { Route,createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Index from '../pages/Index';
 import Trade from '../pages/Trade'
 import Login from '../pages/Login'
+import Landing from '../pages/Landing';
 import Register from '../pages/Register'
 import PrivateRoute from './PrivateRoute';
 import Theme from '../elements/global/Theme';
@@ -39,7 +40,7 @@ export default function Router() {
     },
     {
       path:"/landing",
-      element: <Landing/>
+      element: <PrivateRoute> <Landing/> </PrivateRoute>
     },
   ])  
   return (
