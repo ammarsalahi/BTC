@@ -1,11 +1,10 @@
-import React from "react";
-import landing from "../../assets/landing.png";
+import React from 'react'
 
-const Landing = () => {
+export default function Landing() {
   return (
     <div className="vw-100 h-100 bg-white">
       <div
-        className="vw-100 "
+        className="vw-100 pt-3"
         style={{ backgroundColor: "rgb(247, 248, 250)", height:"440px" }}
       >
         <div
@@ -34,7 +33,7 @@ const Landing = () => {
             <div className="row w-100 m-0">
               <div className="col-sm-8 col-12 p-0">
                 <input
-                  class="form-control w-100 inline-block "
+                  className="form-control w-100 inline-block "
                   type="text"
                   placeholder="Phone/Email"
                   aria-label="default input example"
@@ -42,7 +41,7 @@ const Landing = () => {
               </div>
               <button
                 type="button"
-                class="btn btn-primary mx-sm-3 my-sm-0 my-3 mx-0 col-sm-2 col-12"
+                className="btn btn-primary mx-sm-3 my-sm-0 my-3 mx-0 col-sm-2 col-12"
               >
                 Register
               </button>
@@ -50,7 +49,6 @@ const Landing = () => {
           </div>
           <div className="col-lg d-none h-100 d-lg-flex align-items-center justify-content-center">
             <img
-              src={landing}
               className=" h-100 mx-auto"
               style={{ width: "85%" }}
             />
@@ -82,4 +80,3 @@ const Landing = () => {
   );
 };
 
-export default Landing;
