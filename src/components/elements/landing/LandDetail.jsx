@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 export default function LandDetail() {
   return (
       <Box sx={{ py: 5 }} className="land-detail">
-        <Box className="row text-start">
+        <Box className="row text-center">
           <div className="col-lg-3 col-6">
             <Typography variant="h4" component="div">
               $1 Billion
