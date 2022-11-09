@@ -10,7 +10,6 @@ import PrivateRoute from './PrivateRoute';
 import Theme from '../elements/global/Theme';
 import Navbar from '../elements/global/navbar';
 import CssBaseline from '@mui/material/CssBaseline';
-import Landing from '../pages/Landing';
 export default function Router() {
 
   // const [mode , setMode] = useState('dark')
@@ -43,10 +42,7 @@ export default function Router() {
       path:"/register",
       element: <Register/> 
     },
-    {
-      path:"/landing",
-      element: <PrivateRoute> <Landing/> </PrivateRoute>
-    },
+   
   ])  
   return (
     <ThemeProvider theme={Theme} >
