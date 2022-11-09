@@ -30,7 +30,7 @@ export default function CoinPriceTabs() {
       </Tabs>
       <TabPanel value={value} index={0}>
          <Box>
-          <div className="d-flex">
+          <div className="d-flex pt-2">
             <Button color="inherit" sx={btn===0?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(0)}}>
               Limit
             </Button>
@@ -78,23 +78,6 @@ export default function CoinPriceTabs() {
          </Box>
       
       </TabPanel>
-
-    {/* <Box>
-      <Tabs value={value} onChange={handleChange}>
-        <Tab label="Limit" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid #fff"}} />
-        <Tab label="Market" {...a11yProps(0)} sx={value===1 && {borderTop:"2px solid #fff"}} />
-        <Tab label="Stop" {...a11yProps(0)} sx={value===2 && {borderTop:"2px solid #fff"}} />
-      </Tabs>
-    </Box>
-    <TabPanel value={value} index={0}>
-        
-    </TabPanel>
-    <TabPanel value={value} index={1}>
-        
-    </TabPanel>
-    <TabPanel value={value} index={2}>
-        
-    </TabPanel> */}
    </Box>
   )
  } 

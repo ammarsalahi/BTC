@@ -9,6 +9,9 @@ a{
 a.spacial{
   color:orange !important;
 }
+a.logo{
+  color:#fff !important;
+}
 .body{
     font-family: "IBM-FONT" !important;
 } 
@@ -32,6 +35,24 @@ a.spacial{
     div#coinsearch{
         order: 3;
     }
+
+    .landlist-m{
+      padding-inline: 14px;
+    }
+    .land-title{
+      padding-top: 10%;
+    }
+    .land-detail{
+      padding-left: 3%;
+    }
+    .land-head{
+      margin-left: 3% !important;
+      margin-right: 4% !important;
+    }
+    .head-style{
+      min-width: 240px;
+      max-width: 250px;
+    }
 }
 @media all and (min-width:768px) {
     .container-btc{
@@ -52,6 +73,15 @@ a.spacial{
     .searchpadding{
       padding-top: 20px;
     } 
+    .landlist-m{
+      padding-inline: 10%;
+    }
+    .land-detail{
+      padding-left: 10%;
+    }
+    .land-head{
+      margin-left: 20% !important;
+    }
 }
 
 ::-webkit-scrollbar {

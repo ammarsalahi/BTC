@@ -1,8 +1,9 @@
-import { Apps, CurrencyBitcoin, DarkMode, LightMode ,Menu as MenuIcon, MenuBook } from '@mui/icons-material'
+import { Apps, DarkMode, KeyboardArrowDown, LightMode ,Menu as MenuIcon,Language } from '@mui/icons-material'
 import { AppBar, Toolbar, Typography,Box,IconButton,Button,ListItemText} from '@mui/material'
 import React,{useState,useEffect} from 'react'
 import BTCUSDT from './BTCUSDT';
 import MenuItemsComponents from './MenuItemsComponents';
+import {useLocation,useNavigate,Link} from 'react-router-dom'
 
 const menui=[
   {"name":"ByCrypto"},
@@ -20,7 +21,8 @@ export default function Navbar({open}) {
   const [items, setitems] = useState([]);
   const openm = Boolean(anchorEl);
   const openbtc = Boolean(anchorEl2);
-
+  let location=useLocation();
+  let navigate=useNavigate();
     const handleClick =(data)=>(event) => {
       setAnchorEl(event.currentTarget);
       setitems(data)
@@ -39,29 +41,33 @@ export default function Navbar({open}) {
     };
   return (
     <Box>
-      <AppBar sx={{height:"55px"}} color="dark" position="static">
+      <AppBar sx={{height:"60px"}} color="dark" position="static">
         <Toolbar sx={{width:"auto"}}>
-          <Box  sx={{flexGrow:1,display:"flex"}}>
-            <Typography variant="h5" component="div" sx={{color:'orange',mr:2,pt:1}}>
-              BTC
+          <Box  sx={{flexGrow:1}} className='d-flex align-items-center'>
+            <Typography variant="h5" className="logo" component={Link} to="/"
+            sx={{mr:4,cursor:"pointer",textDecoration: "none",boxShadow: "none"}}
+            >
+              BitMnc
             </Typography>
              
 
-             <Box className='d-lg-block d-md-block d-none pt-2'>
-                  <IconButton onClick={handleClick(menui)}>
+            {location.pathname==='/trade'?<Box className='d-lg-block d-md-block d-none'>
+                 <IconButton onClick={handleClick(menui)}>
                     <Apps/>
                   </IconButton>
                   <Button color="inherit" sx={{fontSize:"15px"}} onClick={handleClickBtc}>
                    BTC/USDT
                   </Button> 
-                 
-                 
-             {/* <Button color="inherit" onClick={handleClick(cryptoitem)}>BuyCrypto</Button>
-             <Button color="inherit" sx={{mx:'15px'}}>Markets</Button>
-             <Button color="inherit" onClick={handleClick(tradeitem)}>Trade</Button> */}
-             </Box>
-             <Box className='d-lg-block d-md-none d-none'>
-                 <div className='d-flex pb-2'>
+             </Box>:
+             <Box className='d-lg-block d-md-block d-none'>
+            <Button color="inherit">BuyCrypto</Button>
+             <Button color="inherit" sx={{mx:'15px'}}>Discover</Button>
+             <Button color="inherit" onClick={()=>navigate('/trade')}>Trade</Button>
+             <Button color="inherit" sx={{mx:'15px'}}>Grow</Button>
+
+              </Box>}
+             {location.pathname==='/trade' && <Box className='d-lg-block d-md-none d-none pt-2'>
+                 <div className='d-flex pb-1'>
                  <ListItemText 
                    className='mx-4'
                     primary={<Typography variant="P" color="error" fontSize={15}>20,637.99</Typography>}
@@ -97,7 +103,7 @@ export default function Navbar({open}) {
                   /> 
                  </div>
                  
-             </Box>
+             </Box>}
           </Box>
             
             <Box className="d-flex justify-content-between d-lg-block d-md-block d-none ">
@@ -107,6 +113,9 @@ export default function Navbar({open}) {
             </Box>  
             <IconButton>
                  <DarkMode sx={{color:"white"}}/>
+            </IconButton>
+            <IconButton>
+                 <Language sx={{color:"white"}}/>
             </IconButton>
             <Box className="d-lg-none d-md-none d-block ">
             <IconButton color="inherit" onClick={open}>
