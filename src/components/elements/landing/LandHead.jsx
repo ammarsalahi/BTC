@@ -1,71 +1,72 @@
 import React from 'react'
-import {Button,TextField,Typography,Box} from '@mui/material'
+import { Button, TextField, Typography, Box } from '@mui/material'
 import landing from '../../../assets/landing.png';
-import space2 from '../../../assets/Space.png';
+import space2 from '../../../assets/2.png';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination,EffectFlip,Navigation,Autoplay } from 'swiper';
+import SwiperCore, { Pagination, EffectFlip, Navigation, Autoplay } from 'swiper';
 
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-SwiperCore.use([Pagination,Navigation,EffectFlip,Autoplay]);
+SwiperCore.use([Pagination, Navigation, EffectFlip, Autoplay]);
 
 export default function LandHead() {
-  return (
-    <Box className="row">
-            <div className="col-lg-6 col-12">
-            <Box sx={{mt:"14%"}}>
-                <Typography className='land-head' variant="h3" gutterBottom>Trade at BitMnc<br />Invest in the Future</Typography>
-                <Typography className='land-head' variant="h6">Buy, trade, and hold 50+ cryptocurrencies on BitMnc</Typography>
-                <Box sx={{ mt:8}} className='land-head'>
-                    <div className="row">
-                        <div className="col-12">
-                            <Button variant="contained" size="large"  color="green" sx={{px:3,fontSize:"large",fontWeight:"bold",cursor:"pointer"}} >
-                                Get Started
-                            </Button>
+    return (
+        <Box className="row align-items-center">
+            <div className="col-lg-5 col-12">
+                <Box>
+                    <Typography className='land-head' variant="h3" gutterBottom>Trade at BitMnc<br />Invest in the Future</Typography>
+                    <Typography className='land-head' variant="h6">Buy, trade, and hold 50+ cryptocurrencies on BitMnc</Typography>
+                    <Box sx={{ mt: 8 }} className='land-head'>
+                        <div className="row">
+                            <div className="col-8 text-center">
+                                <Button variant="contained" size="large" color="green" sx={{ px: 6, fontSize: "large", fontWeight: "bold", cursor: "pointer", '&:hover':{backgroundColor:"#3b3b3b"}}} >
+                                    Get Started
+                                </Button>
+                            </div>
                         </div>
-                    </div>
+                    </Box>
                 </Box>
-            </Box>
             </div>
 
-            <div className="col-lg-6 d-lg-block d-none">
-            <Swiper
-            effect="fade"
-            spaceBetween={60}
-            slidesPerView={1}
-            loop={true}
-            pagination={{
-                clickable: true,
-              }}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: false,
-            }}
-            
-            >
-            <SwiperSlide>
-                <Box
-                    component="img"
-                    sx={{
-                    height: 500,
-                    width: 600,
+            <div className="col-lg-7 d-lg-block d-none">
+                <Swiper
+                    className='text-center'
+                    effect="fade"
+                    spaceBetween={60}
+                    slidesPerView={1}
+                    loop={true}
+                    // pagination={{
+                    //     clickable: true,
+                    //   }}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
                     }}
-                    src={landing}
-                />
-            </SwiperSlide> 
-            <SwiperSlide>
-                <Box
-                    component="img"
-                    sx={{
-                    height: 500,
-                    width: 700,
-                    }}
-                    src={space2}
-                />
-            </SwiperSlide>  
-        </Swiper>    
-            {/* <Box
+
+                >
+                    <SwiperSlide>
+                        <Box
+                            component="img"
+                            sx={{
+                                height: 500,
+                                width: 600,
+                            }}
+                            src={landing}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Box
+                            component="img"
+                            sx={{
+                                height: 500,
+                                width: 700,
+                            }}
+                            src={space2}
+                        />
+                    </SwiperSlide>
+                </Swiper>
+                {/* <Box
                 component="img"
                 sx={{
                 height: 500,
@@ -75,5 +76,5 @@ export default function LandHead() {
             /> */}
             </div>
         </Box>
-  )
+    )
 }
