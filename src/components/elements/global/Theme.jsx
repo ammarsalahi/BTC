@@ -29,7 +29,7 @@ const Theme = createTheme({
         contrastText:"#fff"
     },
     yellow:{
-        main:"rgb(209, 255, 43)",
+        main:"#FCD535",
         contrastText:"#000"
     },
     purple:{
@@ -50,6 +50,10 @@ const Theme = createTheme({
     },
     brown:{
         main:"rgb(143, 95, 63)",
+        contrastText:"#000"
+    },
+    btn:{
+        main:"rgb(71, 77, 87)",
         contrastText:"#000"
     },
 
