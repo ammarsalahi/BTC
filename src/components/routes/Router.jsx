@@ -7,17 +7,26 @@ import Login from '../pages/Login'
 import Register from '../pages/Register'
 import PrivateRoute from './PrivateRoute';
 import {DarkTheme,LightTheme} from '../elements/global/Theme';
+import Navbar from '../elements/global/navbar';
+import CssBaseline from '@mui/material/CssBaseline';
 export default function Router() {
 
-  const [mode , setMode] = useState(false)
-
+  // const [mode , setMode] = useState('dark')
+  // const handleMode=(event)=>{
+  //   console.log(mode)
+  //   if(mode==='dark'){
+  //     setMode('light')
+  //   }else{
+  //     setMode('dark')
+  //   }
+  // }
   const pagerouter= createBrowserRouter([
     {
-        path:"/",
+        path:"/index",
         element:<PrivateRoute> <Index/> </PrivateRoute>
     },
     {
-      path:"/trade",
+      path:"/",
       element:<PrivateRoute> <Trade/> </PrivateRoute>
     },
     {
@@ -30,8 +39,9 @@ export default function Router() {
     },
   ])  
   return (
-    <ThemeProvider theme={mode? DarkTheme : LightTheme}>
-      <RouterProvider router={pagerouter}/>
+    <ThemeProvider theme={DarkTheme} >
+        <CssBaseline />
+        <RouterProvider router={pagerouter}/>
     </ThemeProvider>
   )
 }
