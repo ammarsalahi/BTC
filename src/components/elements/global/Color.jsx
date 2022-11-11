@@ -8,6 +8,7 @@ const Color=[
     {"name":"pink","code":"rgb(255, 62, 136)"},
     {"name":"orange","code":"rgb(255, 94, 0)"},
     {"name":"brown","code":"rgb(143, 95, 63)"},
+    {"name":"dark","code":"#000"},
 ]
 
 export default Color;
