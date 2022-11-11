@@ -29,7 +29,8 @@ export default function MobileNumber() {
             }}/>
             </FormGroup>
 
-            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'7ch', marginY:'6%'}} color="yellow" >Login</Button>
+            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'7ch', marginY:'6%'}} color="yellow" >Sign up</Button>
+            <Typography variant="h6" color="#000" sx={{fontSize:17}}>Already have an account? <Link href="/login">Login</Link></Typography>
         </div>
     )
 }
