@@ -13,14 +13,14 @@ SwiperCore.use([Pagination, Navigation, EffectFlip, Autoplay]);
 export default function LandHead() {
     return (
         <Box className="row align-items-center">
-            <div className="col-lg-5 col-12">
+            <div className="col-lg-5 col-12 text-start">
                 <Box>
                     <Typography className='land-head' variant="h3" gutterBottom>Trade at BitMnc<br />Invest in the Future</Typography>
-                    <Typography className='land-head' variant="h6">Buy, trade, and hold 50+ cryptocurrencies on BitMnc</Typography>
+                    <Typography className='land-head' variant="h6">Buy, trade, and hold +200 cryptocurrencies on BitMnc</Typography>
                     <Box sx={{ mt: 8 }} className='land-head'>
                         <div className="row">
-                            <div className="col-8 text-center">
-                                <Button variant="contained" size="large" color="green" sx={{ px: 6, fontSize: "large", fontWeight: "bold", cursor: "pointer", '&:hover':{backgroundColor:"#3b3b3b"}}} >
+                            <div className="col-12 text-center">
+                                <Button variant="contained" size="large" color="light" sx={{ px: 7, py: 2, fontSize: "large", fontWeight: "bold", cursor: "pointer", '&:hover': { backgroundColor: "#3b3b3b" } }} >
                                     Get Started
                                 </Button>
                             </div>
@@ -49,8 +49,8 @@ export default function LandHead() {
                         <Box
                             component="img"
                             sx={{
-                                height: 500,
-                                width: 600,
+                                height: 450,
+                                width: 550,
                             }}
                             src={landing}
                         />
@@ -59,8 +59,8 @@ export default function LandHead() {
                         <Box
                             component="img"
                             sx={{
-                                height: 500,
-                                width: 700,
+                                height: 450,
+                                width: 450,
                             }}
                             src={space2}
                         />
