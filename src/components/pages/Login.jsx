@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
-import {Button , Box ,TextField ,Container,Typography} from '@mui/material';
+import {Button , Box ,TextField ,Container,Typography, InputAdornment} from '@mui/material';
 import PasswordStrengthBar from 'react-password-strength-bar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import {Link} from 'react-router-dom'
-import { QrCode } from '@mui/icons-material';
+import { QrCode, Visibility, VisibilityOff } from '@mui/icons-material';
 import qrcode from '../../assets/qrcode.png';
 
 export default function Login() {
@@ -15,14 +15,18 @@ export default function Login() {
       });
 
       const [password, setPassword] = useState("")
+      const [typing,setTyping]=useState("password");
+      const handlePassword=(props)=>()=>{
+        setTyping(props)
+      }
     return (
-        <div className="d-flex justify-content-center align-items-center" style={{height:"100vh"}}>
-            <Container component="form" maxWidth="md" sx={{bgcolor:"#fff",p:5,width:700}}>
+        <div className="d-flex justify-content-center align-items-center card-container">
+            <Container component="form" className="login-container" maxWidth="md">
             
                 <Box className="row">
                     <Box className="col-lg-8 col-md-8 col-12">
                         <Box className="d-flex justify-content-center align-items-center my-4">
-                        <Typography variant="h4" color="#000" sx={{mb:4}}>Welcome to BitMnc</Typography>
+                          <Typography variant="h4" color="#000" sx={{mb:4}}>Welcome to BitMnc</Typography>
                         </Box>
                         <TextField label="Phone/Email/Sub-Account" color="dark" fullWidth 
                         focused sx={{textcolor:"#000",height:'7ch', my:1}} 
@@ -34,9 +38,16 @@ export default function Login() {
                         <TextField onChange={(e)=>setPassword(e.target.value)} 
                         label="password" color="dark" fullWidth focused 
                         sx={{textcolor:"#000",height:'7ch', my:1}} 
-                        variant="filled" type="password" 
-                        inputProps={{
-                            style:{color:"black"}
+                        variant="filled" type={typing}
+                        InputProps={{
+                            style:{color:"black"},
+                            endAdornment:(
+                                <InputAdornment position="end" sx={{py:0}}>
+                                  {typing==="password"
+                                  ?<Visibility sx={{color:"#000",cursor:"pointer"}} onClick={handlePassword('type')}/>
+                                  :<VisibilityOff sx={{color:"#000",cursor:"pointer"}} onClick={handlePassword('password')}/>}
+                                </InputAdornment>
+                            )
                         }}/>
                         <Box className="d-flex justify-content-end align-items-center">
                             <Link>forget password?</Link>
@@ -47,7 +58,7 @@ export default function Login() {
                         </Box>
                     </Box>
 
-                    <Box className="col-lg-4 col-md-4 col-12 pt-4">
+                    <Box className="col-lg-4 col-md-4 d-lg-block d-md-block d-none pt-4">
                         <Box className="d-flex justify-content-center align-items-center">
                             <Typography variant="p" component="div" color="#000">
                                 QR Code Expired

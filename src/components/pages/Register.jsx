@@ -58,11 +58,10 @@ export default function FullWidthTabs() {
   };
 
   return (
-     <div className="d-flex justify-content-center align-items-center" style={{height:"100vh"}}>
+     <div className="d-flex justify-content-center align-items-center card-container">
         
-        <Container component="form" maxWidth="sm">
-            <Box sx={{ minWidth: 275 }}>
-            <Box variant="outlined" sx={{bgcolor:"#fff",px:3,pt:2.5}}>
+        <Container component="form" maxWidth="sm" className="register-container">
+            <Box variant="outlined">
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
               <Box className="d-flex justify-content-center align-items-center">
               <Typography variant="h4" color="#000" sx={{mb:4}}>Create account</Typography>
@@ -78,10 +77,9 @@ export default function FullWidthTabs() {
             <TabPanel value={value} index={1}>
             <EmailAddress />
             </TabPanel>
-              <Box className="d-flex justify-content-center align-items-center pb-3">
+              <Box className="d-flex justify-content-center align-items-center">
                   <Typography variant="p" component="div" color="#000">Already Have Account? <Link to="/login">login</Link></Typography>
               </Box>
-            </Box>
             </Box>
         </Container>
      </div>
