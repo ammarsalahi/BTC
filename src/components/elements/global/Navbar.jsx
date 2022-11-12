@@ -52,7 +52,7 @@ export default function Navbar({ open }) {
         <Toolbar sx={{ width: "auto" }}>
           <Box sx={{ flexGrow: 1 }} className='d-flex align-items-center'>
             <Typography variant="h5" className="logo" component={Link} to="/"
-              sx={{ mr: 4, cursor: "pointer", textDecoration: "none", boxShadow: "none" }}
+              sx={{ mr: 4, cursor: "pointer", textDecoration: "none", boxShadow: "none" ,backgroundImage:"none"}}
             >
               BitMnc
             </Typography>
