@@ -1,6 +1,5 @@
 import { Button, Typography ,Box, TableContainer, Table, TableHead, TableRow, TableCell, TableBody} from '@mui/material'
 import React from 'react'
-
 import {ReactComponent as binance} from '../../../assets/icons/binance.svg'
 import {ReactComponent as bitcoin} from '../../../assets/icons/bitcoin.svg'
 import {ReactComponent as eth} from '../../../assets/icons/eth.svg'
@@ -11,13 +10,15 @@ const trs={
 }
 const trs2={
   '& td,& th': { border: 0,px:1},
-  '&:hover':{backgroundColor:"#3b3b3b"}
+  '&:hover':{backgroundColor:"rgb(43, 49, 57)"}
 }
 const headstyle={
   minWidth:"120px",
-  maxWidth:"150px"
+  maxWidth:"150px",
 }
-
+const colorgray = {
+  color: "rgb(132, 142, 156)"
+}
 function createData(name,nick,lastprice,changes,market,icon){
   return {name,nick,lastprice,changes,market,icon}
 }
@@ -32,10 +33,10 @@ const rows=[
 ]
 export default function CurrencyList() {
   return (
-    <Box sx={{py:5,minWidth:"100%"}} className="landlist-m ">
+    <Box sx={{py:5}} className="landlist-m container">
       <div className="d-lg-block d-md-block d-none">
       <Box className=" d-flex justify-content-between " sx={{mb:4}}>
-        <Typography variant="h5" className="head-style">
+        <Typography sx={{fontSize:"40px" , fontWeight: "600"}} className="head-style">
             Popular cryptocurrencies
         </Typography>
         <Button color="inherit" className="head-style">
@@ -59,10 +60,10 @@ export default function CurrencyList() {
             <Table>
                 <TableHead>
                     <TableRow sx={trs}>
-                        <TableCell className="text-start head-style">name</TableCell>
-                        <TableCell className="text-center head-style">Last Price</TableCell>
-                        <TableCell className="text-center head-style">24h Changes</TableCell>
-                        <TableCell className="text-end head-style">Market Cup</TableCell>
+                        <TableCell className="text-start head-style" style={colorgray}>name</TableCell>
+                        <TableCell className="text-center head-style" style={colorgray}>Last Price</TableCell>
+                        <TableCell className="text-center head-style" style={colorgray}>24h Changes</TableCell>
+                        <TableCell className="text-end head-style" style={colorgray}>Market Cup</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>

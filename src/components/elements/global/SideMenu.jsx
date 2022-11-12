@@ -90,10 +90,10 @@ export default function SideMenu({open,close}) {
                     Trade
                     </ListItem>
                     <ListItem button sx={buttonStyle}  onClick={close}>
-                        Login
+                        log in
                     </ListItem>
-                    <ListItem button component={Link} to="/register" className="logo" sx={buttonStyle}  onClick={close}>
-                    Register
+                    <ListItem button sx={buttonStyle}  onClick={close}>
+                    sign up
                     </ListItem>
                 </List>
             </Box>

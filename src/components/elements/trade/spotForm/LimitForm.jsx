@@ -86,7 +86,7 @@ export default function LimitForm({ coin }) {
           color="dark"
           sx={mstyle}
         >
-          Login or Register
+          log in or sign up
         </Button>
       </FormGroup>
     </div>
