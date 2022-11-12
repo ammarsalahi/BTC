@@ -7,33 +7,7 @@ import Box from '@mui/material/Box';
 import OpenOrders from '../elements/orders/OpenOrders';
 import OrderHistory from '../elements/orders/OrderHistory';
 import TradeHistory from '../elements/orders/TradeHistory';
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 ,width:"100vh"}}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
+import TabPanel from '../elements/global/TabPanel';
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
@@ -50,31 +24,29 @@ export default function Orders() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, display: 'flex',height:"100vh"}}
+      sx={{height:"100vh"}}
+      className="container-fluid row gx-0"
     >
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider',width:250 }}
-      >
-        <Tab label="Open Orders" sx={{py:3}} {...a11yProps(0)} />
-        <Tab label="Order History" sx={{py:3}} {...a11yProps(1)} />
-        <Tab label="Trade History" sx={{py:3}} {...a11yProps(2)} />
-       
-      </Tabs>
-      <TabPanel value={value} index={0}>
-         <OpenOrders/>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <OrderHistory/>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <TradeHistory/>
-      </TabPanel>
-      
+     <Box className='col-lg-3 g-0' sx={{borderRight:'1px solid',borderColor: 'divider'}}>
+        <Tabs
+            orientation="vertical"
+            variant="scrollable"
+            value={value}
+            onChange={handleChange}
+            aria-label="Vertical tabs example"
+            sx={{width:"100%" }}
+          >
+            <Tab label="Open Orders" sx={{py:3}} {...a11yProps(0)} />
+            <Tab label="Order History" sx={{py:3}} {...a11yProps(1)} />
+            <Tab label="Trade History" sx={{py:3}} {...a11yProps(2)} />
+          
+          </Tabs>
+     </Box>
+      <Box className="col-lg-9 gx-0" sx={{height:"100vh"}}>
+       {value===0 && <OpenOrders/>}
+       {value===1 && <OrderHistory/>}
+       {value===2 && <TradeHistory/>}
+      </Box>
     </Box>
   );
 }

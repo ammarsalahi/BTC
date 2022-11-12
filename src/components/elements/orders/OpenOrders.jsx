@@ -1,13 +1,31 @@
 import React from 'react'
-import { Container,Box ,Typography, Select, TextField} from '@mui/material'
+import { Container,Box ,Typography, Select, TextField, MenuItem, Button} from '@mui/material'
 
 export default function OpenOrders() {
    
    const filter=[
-      {"value":"all","label":"all"}
+      {value:"all",label:"all"}
    ]
+   const currencies = [
+    {
+      value: 'USD',
+      label: '$',
+    },
+    {
+      value: 'EUR',
+      label: '€',
+    },
+    {
+      value: 'BTC',
+      label: '฿',
+    },
+    {
+      value: 'JPY',
+      label: '¥',
+    },
+  ];
   return (
-    <Container className="container-fluid" >
+    <Box className="container-fluid p-4">
         <Box className="row">
         <Typography>Spot</Typography>
             <Typography variant="h4">
@@ -17,21 +35,49 @@ export default function OpenOrders() {
         <Box className="row mt-5">
            <div className="col-12 d-flex justify-content-between align-items-center">
                 <Box className="d-flex">
-                  <TextField sx={{mx:1}}
+                  <TextField sx={{mx:1,width:'180px'}}
                     placeholder="filter" 
-                    fullWidth
+                    label="filter"
                     select
-                    options={filter}
-                  />
+                  >
+                    {filter.map((item,idx)=>(
+                        <MenuItem value={item.value} key={idx}>
+                           {item.label}
+                        </MenuItem>
+                    ))}
+                  </TextField>
                  
-                  <Select sx={{mx:1}}>
-                  </Select>
-                  <Select sx={{mx:1}}>
-                  </Select>
+                  <TextField sx={{mx:1,width:'180px'}}
+                    placeholder="filter" 
+                    
+                    label="filter"
+                    select
+                  >
+                    {filter.map((item,idx)=>(
+                        <MenuItem value={item.value} key={idx}>
+                           {item.label}
+                        </MenuItem>
+                    ))}
+                  </TextField>
+                  <TextField sx={{mx:1,width:'180px'}}
+                    placeholder="filter" 
+                    
+                    label="filter"
+                    select
+                  >
+                    {filter.map((item,idx)=>(
+                        <MenuItem value={item.value} key={idx}>
+                           {item.label}
+                        </MenuItem>
+                    ))}
+                  </TextField>
                 </Box>
+                <Button variant="contained" disabled>
+                    Clear All Filters
+                </Button>
            </div>
         </Box>   
-    </Container>
+    </Box>
   )
 }
 
