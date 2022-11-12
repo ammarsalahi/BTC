@@ -23,6 +23,7 @@ export default function Navbar({open}) {
   const openbtc = Boolean(anchorEl2);
   let location=useLocation();
   let navigate=useNavigate();
+  
     const handleClick =(data)=>(event) => {
       setAnchorEl(event.currentTarget);
       setitems(data)
