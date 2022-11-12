@@ -5,8 +5,9 @@ import { Card ,Container ,AppBar , Tabs , Tab , Typography , Box } from '@mui/ma
 import { useTheme } from '@mui/material/styles';
 import MobileNumber from '../elements/register/MobileNumber'
 import EmailAddress from '../elements/register/EmailAddress';
-
-
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import {Link} from 'react-router-dom'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -41,7 +42,11 @@ function a11yProps(index) {
 }
 
 export default function FullWidthTabs() {
-  const theme = useTheme();
+  const lightTheme = createTheme({
+    palette: {
+      mode: 'light',
+    },
+  });
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -54,6 +59,7 @@ export default function FullWidthTabs() {
 
   return (
      <div className="d-flex justify-content-center align-items-center" style={{height:"100vh"}}>
+        
         <Container component="form" maxWidth="sm">
             <Box sx={{ minWidth: 275 }}>
             <Box variant="outlined" sx={{bgcolor:"#fff",px:3,pt:2.5}}>
@@ -62,7 +68,7 @@ export default function FullWidthTabs() {
               <Typography variant="h4" color="#000" sx={{mb:4}}>Create account</Typography>
               </Box>
             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                <Tab label="Mobile number" sx={{color:"#000"}} {...a11yProps(0)} />
+                <Tab label="Mobile number" sx={{color:"#000",ml:3}} {...a11yProps(0)} />
                 <Tab label="Email address" sx={{color:"#000"}} {...a11yProps(1)} />
             </Tabs>
             </Box>
@@ -72,6 +78,9 @@ export default function FullWidthTabs() {
             <TabPanel value={value} index={1}>
             <EmailAddress />
             </TabPanel>
+              <Box className="d-flex justify-content-center align-items-center pb-3">
+                  <Typography variant="p" component="div" color="#000">Already Have Account? <Link to="/login">login</Link></Typography>
+              </Box>
             </Box>
             </Box>
         </Container>

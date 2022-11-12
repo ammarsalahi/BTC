@@ -13,16 +13,6 @@ import Navbar from '../elements/global/navbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import SpotOrder from '../pages/SpotOrder';
 export default function Router() {
-
-  // const [mode , setMode] = useState('dark')
-  // const handleMode=(event)=>{
-  //   console.log(mode)
-  //   if(mode==='dark'){
-  //     setMode('light')
-  //   }else{
-  //     setMode('dark')
-  //   }
-  // }
   const pagerouter= createBrowserRouter([
     {
         path:"/index",
