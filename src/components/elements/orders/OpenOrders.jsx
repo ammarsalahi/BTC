@@ -36,8 +36,9 @@ export default function OpenOrders() {
            <div className="col-12 d-flex justify-content-between align-items-center">
                 <Box className="d-flex">
                   <TextField sx={{mx:1,width:'180px'}}
-                    placeholder="filter" 
-                    label="filter"
+                    color="light"
+                    label="Filter"
+                    size="small"
                     select
                   >
                     {filter.map((item,idx)=>(
@@ -48,9 +49,9 @@ export default function OpenOrders() {
                   </TextField>
                  
                   <TextField sx={{mx:1,width:'180px'}}
-                    placeholder="filter" 
-                    
-                    label="filter"
+                    color="light"
+                    label="Pair"
+                    size="small"
                     select
                   >
                     {filter.map((item,idx)=>(
@@ -60,9 +61,9 @@ export default function OpenOrders() {
                     ))}
                   </TextField>
                   <TextField sx={{mx:1,width:'180px'}}
-                    placeholder="filter" 
-                    
-                    label="filter"
+                    color="light"
+                    size="small"
+                    label="Side"
                     select
                   >
                     {filter.map((item,idx)=>(
