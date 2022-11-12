@@ -108,7 +108,7 @@ export default function Navbar({open}) {
             
             <Box className="d-flex justify-content-between d-lg-block d-md-block d-none ">
               <Button color='inherit'>Login</Button>
-              <Button variant="contained" color="dark" sx={{mx:'15px'}}>Register</Button>
+              <Button variant="contained" color="dark" className="logo" sx={{mx:'15px'}} component={Link} to="/register">Register</Button>
             
             </Box>  
             <IconButton>

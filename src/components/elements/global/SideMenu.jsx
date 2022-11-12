@@ -73,7 +73,7 @@ export default function SideMenu({open,close}) {
         <BootstrapDialogTitle  id="customized-dialog-title" onClose={close}>
           <Box className="d-flex justify-content-center align-items-center">
             <Typography variant="h4"  sx={{color:'orange'}}>
-                BTC
+                BitMnc
           </Typography>
           </Box>
         </BootstrapDialogTitle>
@@ -92,7 +92,7 @@ export default function SideMenu({open,close}) {
                     <ListItem button sx={buttonStyle}  onClick={close}>
                         Login
                     </ListItem>
-                    <ListItem button sx={buttonStyle}  onClick={close}>
+                    <ListItem button component={Link} to="/register" className="logo" sx={buttonStyle}  onClick={close}>
                     Register
                     </ListItem>
                 </List>

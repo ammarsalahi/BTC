@@ -1,80 +1,79 @@
-import React from 'react'
-import {Button , Box ,TextField ,Container, IconButton, InputAdornment } from '@mui/material';
-import GoogleIcon from '@mui/icons-material/Google';
-import AppleIcon from '@mui/icons-material/Apple';
-import { VisibilityOff ,Visibility} from '@mui/icons-material'
-import {useState,useEffect} from 'react'
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import SwipeableViews from 'react-swipeable-views';
+import { Card ,Container ,AppBar , Tabs , Tab , Typography , Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import MobileNumber from '../elements/register/MobileNumber'
+import EmailAddress from '../elements/register/EmailAddress';
 
-export default function Register() {
 
-const [password, setPassword] = useState("")
-const [repassword, setRepassword] = useState("")
-const [errorpass,setErrorpass]=useState(false)
-const [show,setShow]=useState(false);
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
-const handleShow=(event)=>{
-    if(show){
-        setShow(false);
-    }else{
-        setShow(true)
-    }
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
 }
-const handlePassword = ()=>{
-  if(password!== repassword){
-    setErrorpass(true)
-  }else{
-    setErrorpass(false)
-  }
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `full-width-tab-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
+  };
 }
 
-    useEffect( ()=>{
-      handlePassword()
-     
-    },[repassword])
+export default function FullWidthTabs() {
+  const theme = useTheme();
+  const [value, setValue] = React.useState(0);
 
-    return (
-        <div>
-            <Container component="form" maxWidth="sm">
-                <Box sx={{ height: '60vh' }} margin="15%">
-                    <TextField label="Email or phone number" color="yellow" fullWidth sx={{height:'7ch', marginY:'1%'}} />
-                    <TextField label="Password" color="yellow" fullWidth sx={{height:'7ch', marginY:'1%'}} type={show?"text":"password"}
-          value={password}
-          onChange={(e)=>setPassword(e.target.value)}
-          InputProps={{
-            endAdornment:(
-                <InputAdornment position='end'>
-                  <IconButton
-                  onClick={handleShow}
-                  >
-                   {show?<VisibilityOff/>: <Visibility/>}
-                  </IconButton>
-                </InputAdornment>
-            ),
-          }}
-        />
-                    <TextField label="Repeat password" color="yellow" fullWidth sx={{height:'7ch', marginY:'1%'}} type={show?"text":"password"}
-          error={errorpass}
-          value={repassword}
-          onChange={(e)=>setRepassword(event.target.value)}
-          onBlur={handlePassword}
-          InputProps={{
-            endAdornment:(
-                <InputAdornment position='end'>
-                  <IconButton
-                  onClick={handleShow}
-                  >
-                   {show?<VisibilityOff/>: <Visibility/>}
-                  </IconButton>
-                </InputAdornment>
-            ),
-          }}
-        />
-                    <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'7ch', marginY:'1%'}} color="yellow" >Login</Button>
-                    <hr />
-                    <Button variant="contained" fullWidth sx={{color:'white' ,height:'7ch', marginY:'2%'}} color="btn"><GoogleIcon />  Continue with Google</Button>
-                    <Button variant="contained" fullWidth sx={{color:'white' ,height:'7ch', marginY:'1%'}} color="btn"><AppleIcon />  Continue with Apple</Button>
-                </Box>
-            </Container>
-        </div>
-    )
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
+
+  return (
+      <Container component="form" maxWidth="sm">
+            <Box sx={{ minWidth: 275 }}>
+            <Box variant="outlined" sx={{bgcolor:"#fff",px:3,pt:2.5,my:'2%'}}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
+              <Box className="d-flex justify-content-center align-items-center">
+              <Typography variant="h4" color="#000" sx={{mb:4}}>Create account</Typography>
+              </Box>
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Tab label="Mobile number" sx={{color:"#000"}} {...a11yProps(0)} />
+                <Tab label="Email address" sx={{color:"#000"}} {...a11yProps(1)} />
+            </Tabs>
+            </Box>
+            <TabPanel value={value} index={0}>
+            <MobileNumber />
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+            <EmailAddress />
+            </TabPanel>
+            </Box>
+            </Box>
+      </Container>
+    
+  );
 }

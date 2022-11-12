@@ -1,13 +1,16 @@
 import { Button, Typography ,Box, TableContainer, Table, TableHead, TableRow, TableCell, TableBody} from '@mui/material'
 import React from 'react'
 
-import binance from '../../../assets/icons/binance.svg'
-import bitcoin from '../../../assets/icons/bitcoin.svg'
-import eth from '../../../assets/icons/eth.svg'
-import greenm from '../../../assets/icons/greenm.svg'
+import {ReactComponent as binance} from '../../../assets/icons/binance.svg'
+import {ReactComponent as bitcoin} from '../../../assets/icons/bitcoin.svg'
+import {ReactComponent as eth} from '../../../assets/icons/eth.svg'
+import Svgs from '../global/Svgs'
 
 const trs={
-  '& td,& th': { border: 0,px:0},
+  '& td,& th': { border: 0,px:1,color:"grey"},
+}
+const trs2={
+  '& td,& th': { border: 0,px:1},
   '&:hover':{backgroundColor:"#3b3b3b"}
 }
 const headstyle={
@@ -16,15 +19,15 @@ const headstyle={
 }
 
 function createData(name,nick,lastprice,changes,market,icon){
-  return {name,nick,lastprice,changes,market}
+  return {name,nick,lastprice,changes,market,icon}
 }
 
 const rows=[
-  createData("BNB","BNB","$284.3","-3.37%","$45.868M",'binance'),
-  createData("Bitcoin","BTC","$19.990","-0.73%","$383.243M",'bitcoin'),
-  createData("Ethereum","ETH","$1.354","-0.38%","$166.163M",'eth'),
+  createData("BNB","BNB","$284.3","-3.37%","$45.868M",binance),
+  createData("Bitcoin","BTC","$19.990","-0.73%","$383.243M",bitcoin),
+  createData("Ethereum","ETH","$1.354","-0.38%","$166.163M",eth),
   // createData("Galxe","GAL","$2.6","-2.62%","$91M"),
-  createData("Green Metaverse Token","GMT","$0.6421","+2.41%","$385M",greenm),
+  // createData("Green Metaverse Token","GMT","$0.6421","+2.41%","$385M",eth),
 
 ]
 export default function CurrencyList() {
@@ -64,9 +67,9 @@ export default function CurrencyList() {
                 </TableHead>
                 <TableBody>
                    {rows.map((item,idx)=>(
-                      <TableRow key={idx} sx={trs}>
+                      <TableRow key={idx} sx={trs2}>
                           <TableCell className="text-start">
-                          <Box component="img" sx={{height:20,width:20,cursor:"pointer",mr:1 }}src={bitcoin} />
+                            <Svgs Component={item.icon} style={{height:"30px",width:"30px",marginRight:"10px"}}/>
                             {item.name}    <span style={{color:'grey'}}>{item.nick}</span>
 
                           </TableCell>
