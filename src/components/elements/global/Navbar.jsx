@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react'
 import BTCUSDT from './BTCUSDT';
 import MenuItemsComponents from './MenuItemsComponents';
 import { useLocation, useNavigate, Link } from 'react-router-dom'
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const menui = [
   { "name": "ByCrypto" },
   { "name": "Market" },
@@ -18,10 +17,12 @@ const tradeitem = [
 export default function Navbar({ open }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
+  // const [anchorEl3, setAnchorEl3] = useState(null);
 
   const [items, setitems] = useState([]);
   const openm = Boolean(anchorEl);
   const openbtc = Boolean(anchorEl2);
+  // const opendasboard = Boolean(anchorE3);
   let location = useLocation();
   let navigate = useNavigate();
   const handleClick = (data) => (event) => {
@@ -41,6 +42,10 @@ export default function Navbar({ open }) {
     setAnchorEl2(null);
   };
 
+  const orders = [
+    { "name": "Spot Order" }
+  ]
+
   return (
     <Box>
       <AppBar sx={{ height: "60px" }} color="dark" position="static">
@@ -52,7 +57,7 @@ export default function Navbar({ open }) {
               BitMnc
             </Typography>
 
-
+          
             {location.pathname === '/trade' ? <Box className='d-lg-block d-md-block d-none'>
               <IconButton onClick={handleClick(menui)}>
                 <Apps />
@@ -67,9 +72,10 @@ export default function Navbar({ open }) {
                 <Button color="inherit" sx={{ mx: '15px' }}>Discover</Button>
                 <Button color="inherit" onClick={() => navigate('/trade')}>Trade</Button>
                 <Button color="inherit" sx={{ mx: '15px' }}>Grow</Button>
+                <Button color="inherit" sx={{ mx: '15px' }}   onClick={handleClick(orders)}>Orders <ArrowDropDownIcon / ></Button>
 
               </Box>}
-           
+
             {location.pathname === '/trade' && <Box className='d-lg-block d-md-none d-none pt-2'>
               <div className='d-flex pb-1'>
                 <ListItemText
@@ -111,8 +117,9 @@ export default function Navbar({ open }) {
           </Box>
 
           <Box className="d-flex justify-content-between d-lg-block d-md-block d-none ">
+
             <Button color='inherit'>log in</Button>
-            <Button variant="contained" color="light" sx={{ mx: '15px', color: "#000", fontWeight: "bold" }}>sign up</Button>
+            <Button variant="contained" color="light" className="spacial" component={Link} to="/signup" sx={{ mx: '15px', color: "#000", fontWeight: "bold" }}>sign up</Button>
           </Box>
           <IconButton>
             <DarkMode sx={{ color: "white" }} />

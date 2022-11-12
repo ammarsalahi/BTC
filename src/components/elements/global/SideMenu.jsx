@@ -73,7 +73,7 @@ export default function SideMenu({open,close}) {
         <BootstrapDialogTitle  id="customized-dialog-title" onClose={close}>
           <Box className="d-flex justify-content-center align-items-center">
             <Typography variant="h4"  sx={{color:'orange'}}>
-                BTC
+                BitMnc
           </Typography>
           </Box>
         </BootstrapDialogTitle>
