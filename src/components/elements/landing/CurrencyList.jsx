@@ -9,7 +9,7 @@ const trs={
   '& td,& th': { border: 0,px:1,color:"grey"},
 }
 const trs2={
-  '& td,& th': { border: 0,px:1},
+  '& td,& th': { border: 0,px:1,fontSize:16},
   '&:hover':{backgroundColor:"rgb(43, 49, 57)"}
 }
 const headstyle={
@@ -24,13 +24,21 @@ function createData(name,nick,lastprice,changes,market,icon){
 }
 
 const rows=[
-  createData("BNB","BNB","$284.3","-3.37%","$45.868M",binance),
+  createData("BNB","BNB","$284.3","+3.37%","$45.868M",binance),
   createData("Bitcoin","BTC","$19.990","-0.73%","$383.243M",bitcoin),
   createData("Ethereum","ETH","$1.354","-0.38%","$166.163M",eth),
   // createData("Galxe","GAL","$2.6","-2.62%","$91M"),
   // createData("Green Metaverse Token","GMT","$0.6421","+2.41%","$385M",eth),
 
 ]
+
+const getColor=(numberText)=>{
+  if(numberText.includes("+")){
+    return "#05c48e";
+  }else{
+    return "#df473d";
+  }
+}
 export default function CurrencyList() {
   return (
     <Box sx={{py:5}} className="landlist-m container">
@@ -71,11 +79,11 @@ export default function CurrencyList() {
                       <TableRow key={idx} sx={trs2}>
                           <TableCell className="text-start">
                             <Svgs Component={item.icon} style={{height:"30px",width:"30px",marginRight:"10px"}}/>
-                            {item.name}    <span style={{color:'grey'}}>{item.nick}</span>
+                            {item.name}    <span style={{color:'grey',marginLeft:'1%',fontSize:"13px"}}>{item.nick}</span>
 
                           </TableCell>
-                          <TableCell className="text-center">{item.lastprice}</TableCell>
-                          <TableCell className="text-center">{item.changes}</TableCell>
+                          <TableCell className="text-center"  >{item.lastprice}</TableCell>
+                          <TableCell className="text-center" sx={{color:getColor(item.changes)}}>{item.changes}</TableCell>
                           <TableCell className="text-end">{item.market}</TableCell>
                      </TableRow>
                     

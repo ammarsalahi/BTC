@@ -109,7 +109,7 @@ export default function Navbar({open}) {
             <Box className="d-flex justify-content-between d-lg-block d-md-block d-none ">
 
               <Button color='inherit'>log in</Button>
-              <Button variant="contained" color="light" sx={{mx:'15px', color: "#000", fontWeight: "bold"}}>sign up</Button>
+              <Button variant="contained" color="light" className="spacial" component={Link} to="/signup" sx={{mx:'15px', color: "#000", fontWeight: "bold"}}>sign up</Button>
             </Box>  
             <IconButton>
                  <DarkMode sx={{color:"white"}}/>
