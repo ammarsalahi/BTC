@@ -45,10 +45,15 @@ export default function Navbar({ open }) {
   const orders = [
     { "name": "Spot Order" }
   ]
+  const wallet = [
+    { "name": "Asset Overview" },
+    { "name": "Deposit" },
+    { "name": "Withdraw" },
+  ]
 
   return (
     <Box>
-      <AppBar sx={{ height: "60px" }} color="dark" position="static">
+      <AppBar sx={{ height: "60px", backgroundImage: "none" }} color="dark" position="static">
         <Toolbar sx={{ width: "auto" }}>
           <Box sx={{ flexGrow: 1 }} className='d-flex align-items-center'>
             <Typography variant="h5" className="logo" component={Link} to="/"
@@ -57,7 +62,7 @@ export default function Navbar({ open }) {
               BitMnc
             </Typography>
 
-          
+
             {location.pathname === '/trade' ? <Box className='d-lg-block d-md-block d-none'>
               <IconButton onClick={handleClick(menui)}>
                 <Apps />
@@ -72,7 +77,6 @@ export default function Navbar({ open }) {
                 <Button color="inherit" sx={{ mx: '15px' }}>Discover</Button>
                 <Button color="inherit" onClick={() => navigate('/trade')}>Trade</Button>
                 <Button color="inherit" sx={{ mx: '15px' }}>Grow</Button>
-                <Button color="inherit" sx={{ mx: '15px' }}   onClick={handleClick(orders)}>Orders <ArrowDropDownIcon / ></Button>
 
               </Box>}
 
@@ -117,7 +121,8 @@ export default function Navbar({ open }) {
           </Box>
 
           <Box className="d-flex justify-content-between d-lg-block d-md-block d-none ">
-
+            <Button color="inherit" sx={{ mx: '15px' }} onClick={handleClick(wallet)}>Wallet <ArrowDropDownIcon /></Button>
+            <Button color="inherit" sx={{ mx: '15px' }} onClick={handleClick(orders)}>Orders <ArrowDropDownIcon /></Button>
             <Button color='inherit'>log in</Button>
             <Button variant="contained" color="light" className="spacial" component={Link} to="/signup" sx={{ mx: '15px', color: "#000", fontWeight: "bold" }}>sign up</Button>
           </Box>

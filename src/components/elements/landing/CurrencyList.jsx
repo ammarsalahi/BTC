@@ -41,7 +41,7 @@ const getColor=(numberText)=>{
 }
 export default function CurrencyList() {
   return (
-    <Box sx={{py:5}} className="landlist-m container">
+    <Box sx={{py:5 , px: 0}} className="landlist-m container">
       <div className="d-lg-block d-md-block d-none">
       <Box className=" d-flex justify-content-between " sx={{mb:4}}>
         <Typography sx={{fontSize:"40px" , fontWeight: "600"}} className="head-style">
@@ -68,23 +68,23 @@ export default function CurrencyList() {
             <Table>
                 <TableHead>
                     <TableRow sx={trs}>
-                        <TableCell className="text-start head-style" style={colorgray}>name</TableCell>
+                        <TableCell className="text-start head-style px-0" style={colorgray}>name</TableCell>
                         <TableCell className="text-center head-style" style={colorgray}>Last Price</TableCell>
                         <TableCell className="text-center head-style" style={colorgray}>24h Changes</TableCell>
-                        <TableCell className="text-end head-style" style={colorgray}>Market Cup</TableCell>
+                        <TableCell className="text-end head-style px-0" style={colorgray}>Market Cup</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                    {rows.map((item,idx)=>(
                       <TableRow key={idx} sx={trs2}>
-                          <TableCell className="text-start">
+                          <TableCell className="text-start px-0">
                             <Svgs Component={item.icon} style={{height:"30px",width:"30px",marginRight:"10px"}}/>
                             {item.name}    <span style={{color:'grey',marginLeft:'1%',fontSize:"13px"}}>{item.nick}</span>
 
                           </TableCell>
                           <TableCell className="text-center"  >{item.lastprice}</TableCell>
                           <TableCell className="text-center" sx={{color:getColor(item.changes)}}>{item.changes}</TableCell>
-                          <TableCell className="text-end">{item.market}</TableCell>
+                          <TableCell className="text-end px-0">{item.market}</TableCell>
                      </TableRow>
                     
                    ))}

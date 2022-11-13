@@ -12,7 +12,7 @@ const fontstyle2 = {
 }
 export default function LandDetail() {
   return (
-      <Box sx={{ py: 5 }} className="land-detail container">
+      <Box sx={{ py: 5 , px: 0 }} className="land-detail container">
         <Box className="row text-center">
           <div className="col-lg-3 col-6 text-start">
             <Typography variant="h4" component="div" style={fontstyle2}>
