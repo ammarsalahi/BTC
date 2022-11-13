@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import OpenOrders from '../elements/orders/OpenOrders';
 import OrderHistory from '../elements/orders/OrderHistory';
 import TradeHistory from '../elements/orders/TradeHistory';
-import TabPanel from '../elements/global/TabPanel';
+
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
@@ -27,7 +27,7 @@ export default function Orders() {
       sx={{height:"100vh"}}
       className="container-fluid row gx-0"
     >
-     <Box className='col-lg-3 g-0' sx={{borderRight:'1px solid',borderColor: 'divider'}}>
+     <Box className='col-lg-3 d-lg-block d-none g-0' sx={{borderRight:'1px solid',borderColor: 'divider'}}>
         <Tabs
             orientation="vertical"
             variant="scrollable"

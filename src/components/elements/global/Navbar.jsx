@@ -98,30 +98,30 @@ export default function Navbar({ open }) {
                   secondary={<Typography fontSize={11}>$20,637.99</Typography>}
                 />
                 <ListItemText
-                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={13}>24h changes</Typography>}
+                  primary={<Typography sx={{color :"#8c8e90"}} variant="p" fontSize={13}>24h changes</Typography>}
                   secondary={<Typography color="error" fontSize={11}>-86.10 -0.42%</Typography>}
                 />
 
                 <ListItemText
                   className='mx-4'
-                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={13}>24h High</Typography>}
+                  primary={<Typography sx={{color :"#8c8e90"}}  variant="p" fontSize={13}>24h High</Typography>}
                   secondary="20,822.00"
                   secondaryTypographyProps={{ fontSize: "11px", color: "#fff" }}
                 />
                 <ListItemText
-                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={13} >24h Low</Typography>}
+                  primary={<Typography sx={{color :"#8c8e90"}}  variant="p" fontSize={13} >24h Low</Typography>}
                   secondary="20,237.95"
                   secondaryTypographyProps={{ fontSize: "11px", color: "#fff" }}
                 />
 
                 <ListItemText
                   className='mx-4'
-                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={11}>24h Volume(BTC)</Typography>}
+                  primary={<Typography sx={{color :"#8c8e90"}} variant="p" fontSize={11}>24h Volume(BTC)</Typography>}
                   secondary="314,570.58"
                   secondaryTypographyProps={{ fontSize: "11px", color: "#fff" }}
                 />
                 <ListItemText
-                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={11}>24h Volume(USDT)</Typography>}
+                  primary={<Typography sx={{color :"#8c8e90"}}  variant="p" fontSize={11}>24h Volume(USDT)</Typography>}
                   secondaryTypographyProps={{ fontSize: "11px", color: "#fff" }}
                   secondary="6,451,473,834.19"
                 />
@@ -130,8 +130,8 @@ export default function Navbar({ open }) {
           </Box>
 
           <Box className="d-flex justify-content-between d-lg-block d-md-block d-none ">
-            <Button color="inherit" sx={{ mx: '15px' }} onClick={handleClick(wallet)}>Wallet <ArrowDropDownIcon /></Button>
-            <Button color="inherit" sx={{ mx: '15px' }} onClick={handleClick(orders)}>Orders <ArrowDropDownIcon /></Button>
+          {location.pathname != '/trade' && <Button color="inherit" sx={{ mx: '15px' }} onClick={handleClick(wallet)}>Wallet <ArrowDropDownIcon /></Button>}
+          {location.pathname != '/trade' && <Button color="inherit" sx={{ mx: '15px' }} onClick={handleClick(orders)}>Orders <ArrowDropDownIcon /></Button>}
             <Button color='inherit'>log in</Button>
             <Button variant="contained" color="light" className="spacial" component={Link} to="/signup" sx={{ mx: '15px', color: "#000", fontWeight: "bold" }}>sign up</Button>
           </Box>

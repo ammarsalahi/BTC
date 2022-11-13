@@ -5,16 +5,16 @@ import { ArrowUpward } from '@mui/icons-material';
 import {Link} from 'react-router-dom'
 const trs={
     '& td,& th': { border: 0 ,p:0.5,textAlign:"left",fontSize:"11px"},
-    '&:hover':{backgroundColor:"grey"}
+}
+const trs2={
+  '& td,& th': { border: 0 ,p:0.5,textAlign:"left",fontSize:"11px"},
+  '&:hover':{backgroundColor:"grey"}
 }
 
 function createData(price,amount,total) {
     return {price,amount,total};
 }
 const data=[
-    createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
-    createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
@@ -44,7 +44,7 @@ export default function PriceList() {
             </TableHead>
             <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
-                        <TableRow key={idx} sx={trs}>
+                        <TableRow key={idx} sx={trs2}>
                         <TableCell sx={getidx(idx)?{color:"#05c48e"}:{color:'#df473d'}}>{d.price}</TableCell>
                         <TableCell>{d.amount}</TableCell>
                         <TableCell>{d.total}</TableCell>
@@ -69,7 +69,7 @@ export default function PriceList() {
           <Table>
             <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
-                        <TableRow key={idx} sx={trs}>
+                        <TableRow key={idx} sx={trs2}>
                         <TableCell sx={{color:"#df473d"}}>{d.price}</TableCell>
                         <TableCell>{d.amount}</TableCell>
                         <TableCell>{d.total}</TableCell>

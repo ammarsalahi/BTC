@@ -9,7 +9,6 @@ import Register from '../pages/Register'
 import PrivateRoute from './PrivateRoute';
 import Theme from '../elements/global/Theme';
 import Navbar from '../elements/global/navbar';
-// import Axios from '../elements/landing/axiosTest';
 import CssBaseline from '@mui/material/CssBaseline';
 import Orders from '../pages/Orders';
 export default function Router() {
@@ -18,10 +17,7 @@ export default function Router() {
         path:"/orders",
         element:<PrivateRoute> <Orders/> </PrivateRoute>
     },
-    // {
-    //     path:"/Axios",
-    //     element:<PrivateRoute> <Axios/> </PrivateRoute>
-    // },
+   
     {
       path:"/trade",
       element:<PrivateRoute> <Trade/> </PrivateRoute>

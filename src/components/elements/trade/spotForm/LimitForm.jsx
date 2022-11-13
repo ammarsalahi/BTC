@@ -35,8 +35,8 @@ export default function LimitForm({ coin }) {
   return (
     <div className='pt-2'>
       <Box className='d-flex'>
-        <Typography fontSize={13}>Avbl-</Typography>
-        <Typography fontSize={13}>{coin}</Typography>
+        <Typography fontSize={13} sx={{color :"#8c8e90"}} >Avbl-</Typography>
+        <Typography fontSize={13} sx={{color :"#8c8e90"}} >{coin}</Typography>
       </Box>
       <FormGroup>
         <TextField

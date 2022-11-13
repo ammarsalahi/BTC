@@ -8,6 +8,9 @@ import {TableContainer,Table,TableBody,TableRow,TableHead,TableCell } from '@mui
 
 const trs={
   '& td,& th': { border: 0 ,py:1,px:0.5,textAlign:"left",fontSize:"11px"},
+}
+const trs2={
+  '& td,& th': { border: 0 ,py:1,px:0.5,textAlign:"left",fontSize:"11px"},
   '&:hover':{backgroundColor:"grey"}
 }
 
@@ -17,15 +20,11 @@ function createData(name,price,changes) {
 
 const data=[
   createData("Bitcoin","$20,728,00","+1.23"),
+  createData("USD","$3,009,120","+1"),
   createData("Ethereum","$1,900,010","+1.25"),
   createData("USD","$3,009,120","+1"),
   createData("Bitcoin","$20,728,00","+1.23"),
-  createData("Ethereum","$1,900,010","+1.25"),
   createData("USD","$3,009,120","+1"),
-  createData("Bitcoin","$20,728,00","+1.23"),
-  createData("Ethereum","$1,900,010","+1.25"),
-  createData("USD","$3,009,120","+1"),
-  createData("Bitcoin","$20,728,00","+1.23"),
   createData("Ethereum","$1,900,010","+1.25"),
 ]
 export default function CoinPriceTabs() {
@@ -43,7 +42,7 @@ export default function CoinPriceTabs() {
             </TableHead>
             <TableBody>
                     {data.map((d,idx)=>(
-                        <TableRow key={idx} sx={trs}>
+                        <TableRow key={idx} sx={trs2}>
                         <TableCell >{d.name}</TableCell>
                         <TableCell sx={{color:'#05c48e'}}>{d.price}</TableCell>
                         <TableCell>{d.changes}</TableCell>

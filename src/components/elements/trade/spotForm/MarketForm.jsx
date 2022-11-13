@@ -35,8 +35,8 @@ export default function MarketForm({coin}) {
     
     <div className='pt-2'>
             <Box className='d-flex'>
-                <Typography fontSize={13}>Avbl-</Typography>
-                <Typography fontSize={13}>{coin}</Typography>
+                <Typography fontSize={13} sx={{color :"#8c8e90"}} >Avbl-</Typography>
+                <Typography fontSize={13} sx={{color :"#8c8e90"}} >{coin}</Typography>
             </Box>
       <FormGroup>
         <TextField
@@ -88,7 +88,15 @@ export default function MarketForm({coin}) {
           color="dark"
           sx={mstyle}
         >
-          Login or Register
+          <Typography sx={{color: "#05c48e"}}>
+            Log in
+          </Typography>
+          <Typography sx={{marginInline: "5px"}}>
+            or
+          </Typography>
+          <Typography sx={{color: "#df473d"}}>
+            Sign up
+          </Typography>
         </Button>
       </FormGroup>
     </div>
