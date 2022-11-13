@@ -36,9 +36,9 @@ export default function CoinPriceTabs() {
           <Table>
             <TableHead>
                 <TableRow sx={trs}>
-                    <TableCell>Price(USDT)</TableCell>
-                    <TableCell>Amount(USDT)</TableCell>
-                    <TableCell>Time</TableCell>
+                    <TableCell sx={{color : "#909090"}}>Price(USDT)</TableCell>
+                    <TableCell sx={{color : "#909090"}}>Amount(USDT)</TableCell>
+                    <TableCell sx={{color : "#909090"}}>Time</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>

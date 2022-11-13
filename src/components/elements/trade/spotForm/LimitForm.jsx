@@ -70,23 +70,32 @@ export default function LimitForm({ coin }) {
             style: { fontSize: 14 }
           }}
         />
-       
-          <div className='px-1'>
-            <Slider
-                aria-label="Always visible"
-                defaultValue={80}
-                getAriaValueText={valuetext}
-                step={1}
-                marks={marks}
-                valueLabelDisplay="auto"
-            />
-            </div>
+
+        <div className='px-1'>
+          <Slider
+            aria-label="Always visible"
+            defaultValue={80}
+            getAriaValueText={valuetext}
+            step={1}
+            marks={marks}
+            valueLabelDisplay="auto"
+          />
+        </div>
         <Button
           variant="contained"
           color="dark"
           sx={mstyle}
         >
-          log in or sign up
+          <Typography sx={{color: "#05c48e"}}>
+            Log in
+          </Typography>
+          <Typography sx={{marginInline: "5px"}}>
+            or
+          </Typography>
+          <Typography sx={{color: "#df473d"}}>
+            Sign up
+          </Typography>
+
         </Button>
       </FormGroup>
     </div>

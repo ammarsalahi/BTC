@@ -37,9 +37,9 @@ export default function PriceList() {
           <Table>
             <TableHead>
                 <TableRow sx={trs}>
-                    <TableCell>Pair</TableCell>
-                    <TableCell>Price</TableCell>
-                    <TableCell>Changes</TableCell>
+                    <TableCell sx={{color : "#909090"}}>Price(USDT)</TableCell>
+                    <TableCell sx={{color : "#909090"}}>Amount(BTC)</TableCell>
+                    <TableCell sx={{color : "#909090"}}>Total(BTC)</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody sx={{cursor:"pointer"}}>

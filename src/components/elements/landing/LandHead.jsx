@@ -13,10 +13,10 @@ SwiperCore.use([Pagination, Navigation, EffectFlip, Autoplay]);
 export default function LandHead() {
     return (
         <Box className="row align-items-center">
-            <div className="col-lg-5 col-12 text-center">
+            <div className="col-lg-5 col-12 text-start">
                 <Box>
-                    <Typography sx={{ fontWeight: "600" }} className='land-head' variant="h3" gutterBottom>Trade at BitMnc<br />Invest in the Future</Typography>
-                    <Typography className='land-head' variant="h6">Buy, trade, and hold +200 cryptocurrencies on BitMnc</Typography>
+                    <Typography sx={{ fontWeight: "600" , fontFamily: "Harmony"}} className='land-head' variant="h2" gutterBottom>Trade at BitMnc<br />Invest in the Future</Typography>
+                    <Typography sx={{ fontWeight: "600" , fontFamily: "Harmony"}} className='land-head' variant="h6">Buy, trade, and hold +200 cryptocurrencies on BitMnc</Typography>
                     <Box sx={{ mt: 8 }} className='land-head'>
                         <div className="row">
                             <div className="col-12 text-center">

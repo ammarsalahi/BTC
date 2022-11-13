@@ -5,6 +5,8 @@ import BTCUSDT from './BTCUSDT';
 import MenuItemsComponents from './MenuItemsComponents';
 import { useLocation, useNavigate, Link } from 'react-router-dom'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import DarkLogo from '../../../assets/logodark.png'
+import LightLogo from '../../../assets/logolight.png'
 const menui = [
   { "name": "ByCrypto" },
   { "name": "Market" },
@@ -50,25 +52,33 @@ export default function Navbar({ open }) {
     { "name": "Deposit" },
     { "name": "Withdraw" },
   ]
-
+  const csfont = {
+    fontSize: "16px",
+    fontWeight: "600",
+    lineHeight: "20px",
+    marginRight: "4px",
+    userSelect: "none",
+    whiteSpace: "nowrap",
+  }
   return (
     <Box>
       <AppBar sx={{ height: "60px", backgroundImage: "none" }} color="dark" position="static">
         <Toolbar sx={{ width: "auto" }}>
           <Box sx={{ flexGrow: 1 }} className='d-flex align-items-center'>
             <Typography variant="h5" className="logo" component={Link} to="/"
-              sx={{ mr: 4, cursor: "pointer", textDecoration: "none", boxShadow: "none" ,backgroundImage:"none"}}
+              sx={{ mr: 4, cursor: "pointer", textDecoration: "none", boxShadow: "none", backgroundImage: "none" }}
             >
-              BitMnc
+              <img src={LightLogo} alt="light-logo" width={130} />
             </Typography>
 
 
             {location.pathname === '/trade' ? <Box className='d-lg-block d-md-block d-none'>
-              <IconButton onClick={handleClick(menui)}>
+              {/* <IconButton onClick={handleClick(menui)}>
                 <Apps />
-              </IconButton>
-              <Button color="inherit" sx={{ fontSize: "15px" }} onClick={handleClickBtc}>
+              </IconButton> */}
+              <Button color="inherit" sx={{ fontSize: "15px" }} style={csfont} onClick={handleClickBtc}>
                 BTC/USDT
+                <ArrowDropDownIcon />
               </Button>
 
             </Box> :
@@ -88,35 +98,34 @@ export default function Navbar({ open }) {
                   secondary={<Typography fontSize={11}>$20,637.99</Typography>}
                 />
                 <ListItemText
-                  primary={<Typography variant="p" fontSize={13}>24h changes</Typography>}
+                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={13}>24h changes</Typography>}
                   secondary={<Typography color="error" fontSize={11}>-86.10 -0.42%</Typography>}
                 />
 
                 <ListItemText
                   className='mx-4'
-                  primary={<Typography variant="p" fontSize={13}>24h High</Typography>}
+                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={13}>24h High</Typography>}
                   secondary="20,822.00"
-                  secondaryTypographyProps={{ fontSize: "11px" }}
+                  secondaryTypographyProps={{ fontSize: "11px", color: "#fff" }}
                 />
                 <ListItemText
-                  primary={<Typography variant="p" fontSize={13} >24h Low</Typography>}
+                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={13} >24h Low</Typography>}
                   secondary="20,237.95"
-                  secondaryTypographyProps={{ fontSize: "11px" }}
+                  secondaryTypographyProps={{ fontSize: "11px", color: "#fff" }}
                 />
 
                 <ListItemText
                   className='mx-4'
-                  primary={<Typography variant="p" fontSize={11}>24h Volume(BTC)</Typography>}
+                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={11}>24h Volume(BTC)</Typography>}
                   secondary="314,570.58"
-                  secondaryTypographyProps={{ fontSize: "11px" }}
+                  secondaryTypographyProps={{ fontSize: "11px", color: "#fff" }}
                 />
                 <ListItemText
-                  primary={<Typography variant="p" fontSize={11}>24h Volume(USDT)</Typography>}
-                  secondaryTypographyProps={{ fontSize: "11px" }}
+                  primary={<Typography sx={{color :"rgba(255, 255, 255, 0.7)"}} variant="p" fontSize={11}>24h Volume(USDT)</Typography>}
+                  secondaryTypographyProps={{ fontSize: "11px", color: "#fff" }}
                   secondary="6,451,473,834.19"
                 />
               </div>
-
             </Box>}
           </Box>
 
