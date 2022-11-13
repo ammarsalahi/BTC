@@ -20,6 +20,7 @@ export default function Login() {
         setTyping(props)
       }
     return (
+
         <div className="d-flex justify-content-center align-items-center card-container">
             <Container component="form" className="login-container" maxWidth="md">
             

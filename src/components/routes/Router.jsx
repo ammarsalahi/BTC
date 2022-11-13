@@ -11,12 +11,12 @@ import Theme from '../elements/global/Theme';
 import Navbar from '../elements/global/navbar';
 // import Axios from '../elements/landing/axiosTest';
 import CssBaseline from '@mui/material/CssBaseline';
-import SpotOrder from '../pages/SpotOrder';
+import Orders from '../pages/Orders';
 export default function Router() {
   const pagerouter= createBrowserRouter([
     {
-        path:"/index",
-        element:<PrivateRoute> <Index/> </PrivateRoute>
+        path:"/orders",
+        element:<PrivateRoute> <Orders/> </PrivateRoute>
     },
     // {
     //     path:"/Axios",
@@ -26,10 +26,7 @@ export default function Router() {
       path:"/trade",
       element:<PrivateRoute> <Trade/> </PrivateRoute>
     },
-    {
-      path:"/spotorder",
-      element:<PrivateRoute> <SpotOrder/> </PrivateRoute>
-    },
+   
     {
       path:"/",
       element:<PrivateRoute> <Landing/> </PrivateRoute>
