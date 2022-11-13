@@ -7,6 +7,8 @@ import Box from '@mui/material/Box';
 import {TableContainer,Table,TableBody,TableRow,TableHead,TableCell, FormGroup, InputAdornment, Button } from '@mui/material';
 import TabPanel from '../global/TabPanel';
 import LimitForm from './spotForm/LimitForm';
+import StopForm from './spotForm/StopForm'
+import MarketForm from './spotForm/MarketForm';
 
 function a11yProps(index) {
   return {
@@ -16,64 +18,66 @@ function a11yProps(index) {
 }
 export default function CoinPriceTabs() {
   const [value, setValue] = React.useState(0);
+  const [btn, setbtn] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
-    <Box sx={{py:2,px:0.5}}>
-    <Box>
+    <Box sx={{py:1,px:0.5}}>
       <Tabs value={value} onChange={handleChange}>
-        <Tab label="Spot" {...a11yProps(0)} />
-        <Tab label="Cross 3x" {...a11yProps(1)} />
-        <Tab label="Isolate 10x" {...a11yProps(2)} />
+        <Tab label="Spot" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid #fff"}}/>
       </Tabs>
-    </Box>
-    <TabPanel value={value} index={0}>
-        <Box className="d-flex">
-          <Button color="warning">Limit</Button>
-          <Button color="warning">Market</Button>
-          <Button color="warning">Stop-Limit</Button>
-        </Box>
-        <Box className="row px-2">
-          <div className='col-lg-6 col-12 g-0'>
-            <LimitForm  coin="USDT"/>
+      <TabPanel value={value} index={0}>
+         <Box>
+          <div className="d-flex pt-2">
+            <Button color="inherit" sx={btn===0?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(0)}}>
+              Limit
+            </Button>
+            <Button color="inherit" sx={btn===1?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(1)}}>
+            Market
+            </Button>
+            <Button color="inherit" sx={btn===2?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(2)}}>
+              Stop
+            </Button>
           </div>
-          <div className="col-lg-6 col-12 g-0">
-          <LimitForm coin="BTC"/>
+          <div className="pt-2">
+            {btn===0 && 
+            <Box className="row">
+            <div className='col-lg-6 col-12 g-0'>
+              <LimitForm  coin="USDT"/>
+            </div>
+            <div className="col-lg-6 col-12 g-0">
+            <LimitForm coin="BTC"/>
+            </div>
+          </Box>
+            }
+            {btn===1 && 
+            <Box className="row">
+            <div className='col-lg-6 col-12 g-0'>
+              <MarketForm  coin="USDT"/>
+            </div>
+            <div className="col-lg-6 col-12 g-0">
+            <MarketForm coin="BTC"/>
+            </div>
+          </Box>
+          
+            }
+            {btn===2 && 
+            <Box className="row">
+            <div className='col-lg-6 col-12 g-0'>
+              <StopForm  coin="USDT"/>
+            </div>
+            <div className="col-lg-6 col-12 g-0">
+            <StopForm coin="BTC"/>
+            </div>
+          </Box>
+            
+            }
           </div>
-        </Box>
-    </TabPanel>
-    <TabPanel value={value} index={1}>
-    <Box className="d-flex">
-    <Button color="warning">Limit</Button>
-          <Button color="warning">Market</Button>
-          <Button color="warning">Stop-Limit</Button>
-        </Box>
-        <Box className="row">
-          <div className='col-lg-6 col-12 g-0'>
-            <LimitForm  coin="USDT"/>
-          </div>
-          <div className="col-lg-6 col-12 g-0">
-          <LimitForm coin="BTC"/>
-          </div>
-        </Box>
-    </TabPanel>
-    <TabPanel value={value} index={2}>
-    <Box className="d-flex">
-          <Button color="warning">Limit</Button>
-          <Button color="warning">Market</Button>
-          <Button color="warning">Stop-Limit</Button>
-        </Box>
-        <Box className="row">
-          <div className='col-lg-6 col-12 g-0'>
-            <LimitForm  coin="USDT"/>
-          </div>
-          <div className="col-lg-6 col-12 g-0">
-          <LimitForm coin="BTC"/>
-          </div>
-        </Box>
-    </TabPanel>
+         </Box>
+      
+      </TabPanel>
    </Box>
   )
  } 

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider } from '@mui/material'
 
-export default function LimitForm({ coin }) {
+export default function StopForm({ coin }) {
+
   const mstyle = {
     m: 1,
     color: "white",
@@ -28,7 +29,6 @@ export default function LimitForm({ coin }) {
       // label: '100°C',
     },
   ];
-
   function valuetext(value) {
     return `${value}%`;
   }
@@ -40,7 +40,23 @@ export default function LimitForm({ coin }) {
       </Box>
       <FormGroup>
         <TextField
-          placeholder="Price"
+          placeholder="Stop"
+          size="small"
+          sx={mstyle}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <Typography fontSize={12}>
+                  USDT
+                </Typography>
+
+              </InputAdornment>
+            ),
+            style: { fontSize: 14 }
+          }}
+        />
+        <TextField
+          placeholder="Limit"
           size="small"
           sx={mstyle}
           InputProps={{
@@ -65,28 +81,29 @@ export default function LimitForm({ coin }) {
                 <Typography fontSize={12}>
                   BTC
                 </Typography>
+
               </InputAdornment>
             ),
             style: { fontSize: 14 }
           }}
         />
-       
-          <div className='px-1'>
-            <Slider
-                aria-label="Always visible"
-                defaultValue={80}
-                getAriaValueText={valuetext}
-                step={1}
-                marks={marks}
-                valueLabelDisplay="auto"
-            />
-            </div>
+        <div className='px-1'>
+          <Slider
+            aria-label="Always visible"
+            defaultValue={80}
+            getAriaValueText={valuetext}
+            step={1}
+            marks={marks}
+            valueLabelDisplay="auto"
+          />
+        </div>
+
         <Button
           variant="contained"
           color="dark"
           sx={mstyle}
         >
-          log in or sign up
+          Log in or Sign up Now
         </Button>
       </FormGroup>
     </div>

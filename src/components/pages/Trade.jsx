@@ -1,40 +1,62 @@
 import { Star } from '@mui/icons-material'
 import { ListItemText, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import ListCoinSearching from '../elements/trade/ListCoinSearching'
 import PriceList from '../elements/trade/PriceList'
 import TradeChart from '../elements/trade/TradeChart'
 import TradeHead from '../elements/trade/TradeHead'
 import SpotTabs from '../elements/trade/SpotTabs'
 import TradeFooter from '../elements/trade/TradeFooter'
+import CoinPriceTabs from '../elements/trade/CoinPriceTabs'
+
 export default function Trade() {
+  const [pageheight,setPageHeight]=useState('');
+  const [rowheight,setRowHeight]=useState('');
+  const [row2height,setRow2Height]=useState('');
+  const [row3height,setRow3Height]=useState('');
+
+  const getHeightofScreen=()=>{
+    let size=window.innerHeight;
+    setPageHeight(size-55);
+    setRowHeight(size-(size/2.8))
+    setRow2Height(size-(size/2+50))
+    setRow3Height((size-rowheight)/4.1)
+  }
+  useEffect(()=>{
+    getHeightofScreen()
+    window.addEventListener('resize',getHeightofScreen,false);
+    
+  },[pageheight,rowheight]);
+
   return (
-    <div className='container-btc'>
-     <div className="container-fluid row">
-        <div className="col-lg-9 col-md-8 col-12 g-0">
-             <TradeHead />
-            <div className="row g-0">
-              <div className="col-lg-4 col-md-5 col-12 g-0">
-                <PriceList/>
-              </div>
-              <div className="col-lg-8 col-md-7 col-12 g-0">
-               <TradeChart/>
-                <SpotTabs/>
-              </div>
+    <div className='container-fluid' style={{height:pageheight}}>
+
+       <div className="row">
+          <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12 p-0">
+            <div className="w-100">
+            <TradeChart sizing={rowheight} />
             </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-12 g-0">
-            <ListCoinSearching/>
-        </div>
-        
-      </div>
-      <hr/>
-      <div className='container-fluid row'>
-          <div className="col-12 overflow-auto">
-            <TradeFooter/>
+            <div className='bordertop'>
+            <TradeFooter height={row3height}/>
+            </div>
+           
           </div>
-      </div>
+          <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row  gx-0 borderingl h-100" >
+            <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-auto " style={{height:row2height}}>
+              <PriceList/>
+            </div>
+            <div className="col-lg-6 col-md-6 col-12 gx-0 overflow-auto" style={{height:row2height}}>
+              <CoinPriceTabs/>
+            </div>
+            <div className="col-12">
+              <SpotTabs/>
+            </div>
+          </div>
+
+        
+       </div>
+
     </div>
+         
   )
 }

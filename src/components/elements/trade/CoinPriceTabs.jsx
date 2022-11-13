@@ -5,34 +5,33 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import {TableContainer,Table,TableBody,TableRow,TableHead,TableCell } from '@mui/material'
-import TabPanel from '../global/TabPanel';
-const trs={
-  '& td,& th': { border: 0 ,p:1,pl:2,textAlign:"center",fontSize:"12px"},
-}
-const trs2={
-  '& td,& th': { border: 0 ,p:1,pl:2,textAlign:"left",fontSize:"12px"},
-}
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
-export default function CoinPriceTabs({data}) {
-  const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+const trs={
+  '& td,& th': { border: 0 ,py:1,px:0.5,textAlign:"left",fontSize:"11px"},
+  '&:hover':{backgroundColor:"grey"}
+}
+
+function createData(name,price,changes) {
+  return {  name,price,changes};
+}
+
+const data=[
+  createData("Bitcoin","$20,728,00","+1.23"),
+  createData("Ethereum","$1,900,010","+1.25"),
+  createData("USD","$3,009,120","+1"),
+  createData("Bitcoin","$20,728,00","+1.23"),
+  createData("Ethereum","$1,900,010","+1.25"),
+  createData("USD","$3,009,120","+1"),
+  createData("Bitcoin","$20,728,00","+1.23"),
+  createData("Ethereum","$1,900,010","+1.25"),
+  createData("USD","$3,009,120","+1"),
+  createData("Bitcoin","$20,728,00","+1.23"),
+  createData("Ethereum","$1,900,010","+1.25"),
+]
+export default function CoinPriceTabs() {
+
   return (
     <Box sx={{ width: 'auto' }}>
-    <Box sx={{px:2}}>
-      <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-        <Tab label="Market Trade" {...a11yProps(0)} />
-        <Tab label="My Trade" {...a11yProps(1)} />
-      </Tabs>
-    </Box>
-    <TabPanel value={value} index={0}>
     <TableContainer className='overflow-auto'>
           <Table>
             <TableHead>
@@ -45,37 +44,15 @@ export default function CoinPriceTabs({data}) {
             <TableBody>
                     {data.map((d,idx)=>(
                         <TableRow key={idx} sx={trs}>
-                        <TableCell>{d.name}</TableCell>
-                        <TableCell>{d.price}</TableCell>
+                        <TableCell >{d.name}</TableCell>
+                        <TableCell sx={{color:'#05c48e'}}>{d.price}</TableCell>
                         <TableCell>{d.changes}</TableCell>
                         </TableRow>
                     ))}
             </TableBody>
           </Table>
         </TableContainer>
-    </TabPanel>
-    <TabPanel value={value} index={1}>
-    <TableContainer className='overflow-auto'>
-          <Table>
-            <TableHead>
-                <TableRow sx={trs2}>
-                    <TableCell>Price(USDT)</TableCell>
-                    <TableCell>Amount(USDT)</TableCell>
-                    <TableCell>Time</TableCell>
-                </TableRow>
-            </TableHead>
-            <TableBody>
-                    {data.map((d,idx)=>(
-                        <TableRow key={idx} sx={trs2}>
-                        <TableCell sx={{color:"green"}}>{d.name}</TableCell>
-                        <TableCell>{d.price}</TableCell>
-                        <TableCell>{d.changes}</TableCell>
-                        </TableRow>
-                    ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-    </TabPanel>
+    
   </Box>
   );
 }
