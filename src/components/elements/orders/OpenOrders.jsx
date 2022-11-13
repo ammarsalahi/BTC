@@ -1,5 +1,8 @@
 import React from 'react'
-import { Container,Box ,Typography, Select, TextField, MenuItem, Button} from '@mui/material'
+import { IconButton , Collapse ,Container,Box ,Typography, Select, TextField, MenuItem, Button , Table , TableBody ,TableCell ,TableContainer ,TableHead ,TableRow ,Paper} from '@mui/material'
+import PropTypes from 'prop-types';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 export default function OpenOrders() {
    
@@ -77,7 +80,29 @@ export default function OpenOrders() {
                     Clear All Filters
                 </Button>
            </div>
-        </Box>   
+        </Box> 
+        <TableContainer sx={{mt:"2%"}} component={Paper}>
+      <Table aria-label="collapsible table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Data</TableCell>
+            <TableCell align="right">Pair</TableCell>
+            <TableCell align="right">Type</TableCell>
+            <TableCell align="right">Side</TableCell>
+            <TableCell align="right">Price</TableCell>
+            <TableCell align="right">Amount</TableCell>
+            <TableCell align="right">Filled</TableCell>
+            <TableCell align="right">Total</TableCell>
+            <TableCell align="right">Trigger Conditions</TableCell>
+            <TableCell align="right">Actions</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </TableContainer>
     </Box>
   )
 }
