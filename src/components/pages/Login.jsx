@@ -1,44 +1,83 @@
-import React from 'react'
-import {Button , Box ,TextField ,Container , Card , Typography} from '@mui/material';
-import GoogleIcon from '@mui/icons-material/Google';
-import AppleIcon from '@mui/icons-material/Apple';
+import React,{useState} from 'react'
+import {Button , Box ,TextField ,Container,Typography, InputAdornment} from '@mui/material';
+import PasswordStrengthBar from 'react-password-strength-bar';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import {Link} from 'react-router-dom'
+import { QrCode, Visibility, VisibilityOff } from '@mui/icons-material';
+import qrcode from '../../assets/qrcode.png';
+
 export default function Login() {
+    const lightTheme = createTheme({
+        palette: {
+          mode: 'light',
+        },
+      });
+
+      const [password, setPassword] = useState("")
+      const [typing,setTyping]=useState("password");
+      const handlePassword=(props)=>()=>{
+        setTyping(props)
+      }
     return (
-        <div>
-            <Container component="form" maxWidth="md" sx={{justifyContent: 'center' }}>
-            <Card sx={{height: 600,width: 600,marginY:"15%",marginX:"15%"}}>
-             <div className="row">
-             <div className="col-6">
-             <Box sx={{height: 600,width: 300  ,justifyContent: 'center' , marginY:"48%",marginX:"20%"}}>
-                    <Typography variant="h5" sx={{mb:""}}>Welcome to</Typography>
-                    <TextField label="Email/Phone/Sub-account" color="warning" fullWidth sx={{height:'7ch' , width:"30ch",ml:"2%",justifyContent: 'center' }}/>
-                    <TextField label="Password" color="warning" type="password" fullWidth sx={{height:'7ch', width:"30ch",ml:"2%" ,marginY:'1%',justifyContent: 'center' }}/>
-                    <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'7ch',ml:"2%", width:"32vh" ,justifyContent: 'center'}}  color="yellow" >Login</Button>
-                </Box>
-             </div>
-             <div className="col-lg-6">
-             <Box sx={{height: 600,width: 300 , margin:"3%",justifyContent: 'center'  }} alignItems="center">
-                    <TextField label="Email or phone number" color="warning" sx={{height:'7ch', marginY:'5%' , marginX:"20%"}}/>
-                    <Box
-                      display="flex"
-                      justifyContent="center"
-                      alignItems="center"
-                  
-                        component="img"
-                        sx={{
-                        height: 100,
-                        width: 100,
 
-                        }}
-                        alt="The house from the offer."
-                        src="https://miro.medium.com/max/375/1*t6n0cVeSyG2i_25z-9Mwfg.png"
-                    />
-                    <Button variant="contained"  sx={{fontWeight:'700',height:'7ch', marginY:'5%' , marginX:"20%"}}  color="yellow">Login</Button>
-                </Box>
+        <div className="d-flex justify-content-center align-items-center card-container">
+            <Container component="form" className="login-container" maxWidth="md">
+            
+                <Box className="row">
+                    <Box className="col-lg-8 col-md-8 col-12">
+                        <Box className="d-flex justify-content-center align-items-center my-4">
+                          <Typography variant="h4" color="#000" sx={{mb:4}}>Welcome to BitMnc</Typography>
+                        </Box>
+                        <TextField label="Phone/Email/Sub-Account" color="dark" fullWidth 
+                        focused sx={{textcolor:"#000",height:'7ch', my:1}} 
+                        variant="filled" type="email" 
+                        inputProps={{
+                            style:{color:"black"}
+                        }}/>
+                    
+                        <TextField onChange={(e)=>setPassword(e.target.value)} 
+                        label="password" color="dark" fullWidth focused 
+                        sx={{textcolor:"#000",height:'7ch', my:1}} 
+                        variant="filled" type={typing}
+                        InputProps={{
+                            style:{color:"black"},
+                            endAdornment:(
+                                <InputAdornment position="end" sx={{py:0}}>
+                                  {typing==="password"
+                                  ?<Visibility sx={{color:"#000",cursor:"pointer"}} onClick={handlePassword('type')}/>
+                                  :<VisibilityOff sx={{color:"#000",cursor:"pointer"}} onClick={handlePassword('password')}/>}
+                                </InputAdornment>
+                            )
+                        }}/>
+                        <Box className="d-flex justify-content-end align-items-center">
+                            <Link>forget password?</Link>
+                        </Box>    
+                        <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', my:4,fontSize:"18px"}} color="yellow" >Login</Button>
+                        <Box className="d-flex justify-content-center align-items-center">
+                            <Typography variant="p" component="div" color="#000">Don't have an Account? <Link to="/signup">Signup</Link></Typography>
+                        </Box>
+                    </Box>
 
-             </div>
-             </div>
-             </Card>
+                    <Box className="col-lg-4 col-md-4 d-lg-block d-md-block d-none pt-4">
+                        <Box className="d-flex justify-content-center align-items-center">
+                            <Typography variant="p" component="div" color="#000">
+                                QR Code Expired
+                            </Typography>
+                        </Box>
+                        <Box
+                         component="img"
+                         src={qrcode}
+                         sx={{width:"200px",height:"200px"}}
+                        />
+                        <Box className="d-flex justify-content-center align-items-center">
+                            <Typography variant="p" component="div" color="#000">
+                                refresh and scan again 
+                            </Typography>
+                        </Box>
+                    </Box>
+                </Box>
+                    
             </Container>
         </div>
     )

@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { Card ,Container ,AppBar , Tabs , Tab , Typography , Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import MobileNumber from './LoginFiles/MobileNumber'
-import EmailAddress from './LoginFiles/EmailAddress'
-
-
+import MobileNumber from '../elements/register/MobileNumber'
+import EmailAddress from '../elements/register/EmailAddress';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import {Link} from 'react-router-dom'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -38,10 +39,15 @@ function a11yProps(index) {
     id: `full-width-tab-${index}`,
     'aria-controls': `full-width-tabpanel-${index}`,
   };
+
 }
 
 export default function FullWidthTabs() {
-  const theme = useTheme();
+  const lightTheme = createTheme({
+    palette: {
+      mode: 'light',
+    },
+  });
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -53,13 +59,16 @@ export default function FullWidthTabs() {
   };
 
   return (
-      <Container component="form" maxWidth="sm">
-            <Box sx={{ minWidth: 275 }}>
-            <Card variant="outlined" sx={{bgcolor:"#fff",padding:"5%", marginY:"7%", marginX:"7%"}}>
+     <div className="d-flex justify-content-center align-items-center card-container">
+        
+        <Container component="form" maxWidth="sm" className="register-container">
+            <Box variant="outlined">
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
-            <Typography variant="h3" color="#000" sx={{mb:"5%"}}>Create account</Typography>
+              <Box className="d-flex justify-content-center align-items-center">
+              <Typography variant="h4" color="#000" sx={{mb:4}}>Create account</Typography>
+              </Box>
             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                <Tab label="Mobile number" sx={{color:"#000"}} {...a11yProps(0)} />
+                <Tab label="Mobile number" sx={{color:"#000",ml:3}} {...a11yProps(0)} />
                 <Tab label="Email address" sx={{color:"#000"}} {...a11yProps(1)} />
             </Tabs>
             </Box>
@@ -69,9 +78,15 @@ export default function FullWidthTabs() {
             <TabPanel value={value} index={1}>
             <EmailAddress />
             </TabPanel>
-            </Card>
+              <Box className="d-flex justify-content-center align-items-center">
+                  <Typography variant="p" component="div" color="#000">Already Have Account? <Link to="/login">login</Link></Typography>
+              </Box>
             </Box>
-      </Container>
+        </Container>
+     </div>
+
+     
     
   );
 }
+

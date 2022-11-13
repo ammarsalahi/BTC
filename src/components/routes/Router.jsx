@@ -9,27 +9,24 @@ import Register from '../pages/Register'
 import PrivateRoute from './PrivateRoute';
 import Theme from '../elements/global/Theme';
 import Navbar from '../elements/global/navbar';
+// import Axios from '../elements/landing/axiosTest';
 import CssBaseline from '@mui/material/CssBaseline';
+import Orders from '../pages/Orders';
 export default function Router() {
-
-  // const [mode , setMode] = useState('dark')
-  // const handleMode=(event)=>{
-  //   console.log(mode)
-  //   if(mode==='dark'){
-  //     setMode('light')
-  //   }else{
-  //     setMode('dark')
-  //   }
-  // }
   const pagerouter= createBrowserRouter([
     {
-        path:"/index",
-        element:<PrivateRoute> <Index/> </PrivateRoute>
+        path:"/orders",
+        element:<PrivateRoute> <Orders/> </PrivateRoute>
     },
+    // {
+    //     path:"/Axios",
+    //     element:<PrivateRoute> <Axios/> </PrivateRoute>
+    // },
     {
       path:"/trade",
       element:<PrivateRoute> <Trade/> </PrivateRoute>
     },
+   
     {
       path:"/",
       element:<PrivateRoute> <Landing/> </PrivateRoute>
@@ -39,7 +36,7 @@ export default function Router() {
       element: <Login/> 
     },
     {
-      path:"/register",
+      path:"/signup",
       element: <Register/> 
     },
    

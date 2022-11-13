@@ -6,7 +6,7 @@ import CurrencyList from '../elements/landing/CurrencyList';
 import LandFooter from '../elements/landing/LandFooter';
 export default function Landing() {
     return (
-        <Box className="container-fluid">       
+        <Box className="container">       
          <LandHead/>
          <LandDetail/>
          <CurrencyList/>

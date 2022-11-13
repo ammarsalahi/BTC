@@ -1,38 +1,50 @@
 import { Button, Typography ,Box, TableContainer, Table, TableHead, TableRow, TableCell, TableBody} from '@mui/material'
 import React from 'react'
-
-import binance from '../../../assets/icons/binance.svg'
-import bitcoin from '../../../assets/icons/bitcoin.svg'
-import eth from '../../../assets/icons/eth.svg'
-import greenm from '../../../assets/icons/greenm.svg'
+import {ReactComponent as binance} from '../../../assets/icons/binance.svg'
+import {ReactComponent as bitcoin} from '../../../assets/icons/bitcoin.svg'
+import {ReactComponent as eth} from '../../../assets/icons/eth.svg'
+import Svgs from '../global/Svgs'
 
 const trs={
-  '& td,& th': { border: 0,px:0},
-  '&:hover':{backgroundColor:"#3b3b3b"}
+  '& td,& th': { border: 0,px:1,color:"grey"},
+}
+const trs2={
+  '& td,& th': { border: 0,px:1,fontSize:16},
+  '&:hover':{backgroundColor:"rgb(43, 49, 57)"}
 }
 const headstyle={
   minWidth:"120px",
-  maxWidth:"150px"
+  maxWidth:"150px",
 }
-
+const colorgray = {
+  color: "rgb(132, 142, 156)"
+}
 function createData(name,nick,lastprice,changes,market,icon){
-  return {name,nick,lastprice,changes,market}
+  return {name,nick,lastprice,changes,market,icon}
 }
 
 const rows=[
-  createData("BNB","BNB","$284.3","-3.37%","$45.868M",'binance'),
-  createData("Bitcoin","BTC","$19.990","-0.73%","$383.243M",'bitcoin'),
-  createData("Ethereum","ETH","$1.354","-0.38%","$166.163M",'eth'),
+  createData("BNB","BNB","$284.3","+3.37%","$45.868M",binance),
+  createData("Bitcoin","BTC","$19.990","-0.73%","$383.243M",bitcoin),
+  createData("Ethereum","ETH","$1.354","-0.38%","$166.163M",eth),
   // createData("Galxe","GAL","$2.6","-2.62%","$91M"),
-  createData("Green Metaverse Token","GMT","$0.6421","+2.41%","$385M",greenm),
+  // createData("Green Metaverse Token","GMT","$0.6421","+2.41%","$385M",eth),
 
 ]
+
+const getColor=(numberText)=>{
+  if(numberText.includes("+")){
+    return "#05c48e";
+  }else{
+    return "#df473d";
+  }
+}
 export default function CurrencyList() {
   return (
-    <Box sx={{py:5,minWidth:"100%"}} className="landlist-m ">
+    <Box sx={{py:5}} className="landlist-m container">
       <div className="d-lg-block d-md-block d-none">
       <Box className=" d-flex justify-content-between " sx={{mb:4}}>
-        <Typography variant="h5" className="head-style">
+        <Typography sx={{fontSize:"40px" , fontWeight: "600"}} className="head-style">
             Popular cryptocurrencies
         </Typography>
         <Button color="inherit" className="head-style">
@@ -56,22 +68,22 @@ export default function CurrencyList() {
             <Table>
                 <TableHead>
                     <TableRow sx={trs}>
-                        <TableCell className="text-start head-style">name</TableCell>
-                        <TableCell className="text-center head-style">Last Price</TableCell>
-                        <TableCell className="text-center head-style">24h Changes</TableCell>
-                        <TableCell className="text-end head-style">Market Cup</TableCell>
+                        <TableCell className="text-start head-style" style={colorgray}>name</TableCell>
+                        <TableCell className="text-center head-style" style={colorgray}>Last Price</TableCell>
+                        <TableCell className="text-center head-style" style={colorgray}>24h Changes</TableCell>
+                        <TableCell className="text-end head-style" style={colorgray}>Market Cup</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                    {rows.map((item,idx)=>(
-                      <TableRow key={idx} sx={trs}>
+                      <TableRow key={idx} sx={trs2}>
                           <TableCell className="text-start">
-                          <Box component="img" sx={{height:20,width:20,cursor:"pointer",mr:1 }}src={bitcoin} />
-                            {item.name}    <span style={{color:'grey'}}>{item.nick}</span>
+                            <Svgs Component={item.icon} style={{height:"30px",width:"30px",marginRight:"10px"}}/>
+                            {item.name}    <span style={{color:'grey',marginLeft:'1%',fontSize:"13px"}}>{item.nick}</span>
 
                           </TableCell>
-                          <TableCell className="text-center">{item.lastprice}</TableCell>
-                          <TableCell className="text-center">{item.changes}</TableCell>
+                          <TableCell className="text-center"  >{item.lastprice}</TableCell>
+                          <TableCell className="text-center" sx={{color:getColor(item.changes)}}>{item.changes}</TableCell>
                           <TableCell className="text-end">{item.market}</TableCell>
                      </TableRow>
                     

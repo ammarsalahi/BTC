@@ -40,6 +40,10 @@ const Theme = createTheme({
         main:"rgb(128, 128, 128)",
         contrastText:"#000"
     },
+    greycolor:{
+        main:"rgb(132, 142, 156)",
+        contrastText:"#000"
+    },
     pink:{
         main:"rgb(255, 62, 136)",
         contrastText:"#000"
