@@ -10,23 +10,30 @@ export default function StopForm({ coin }) {
   }
   const mstylerange = {
     m: 1,
+    color: "white",
+    width: "90%",
+    mb: 2,
   }
   const marks = [
     {
+      value: 0,
+      label: '0',
+    },
+    {
       value: 25,
-      // label: '25%',
+      label: '25°%',
     },
     {
       value: 50,
-      // label: '20°C',
+      label: '50%',
     },
     {
       value: 75,
-      // label: '37°C',
+      label: '75%'
     },
     {
       value: 100,
-      // label: '100°C',
+      label: '100%',
     },
   ];
   function valuetext(value) {
@@ -35,8 +42,8 @@ export default function StopForm({ coin }) {
   return (
     <div className='pt-2'>
       <Box className='d-flex'>
-        <Typography fontSize={13} sx={{color :"#8c8e90"}} >Avbl-</Typography>
-        <Typography fontSize={13} sx={{color :"#8c8e90"}} >{coin}</Typography>
+        <Typography fontSize={13} sx={{ color: "#8c8e90" }} >Avbl-</Typography>
+        <Typography fontSize={13} sx={{ color: "#8c8e90" }} >{coin}</Typography>
       </Box>
       <FormGroup>
         <TextField
@@ -89,27 +96,17 @@ export default function StopForm({ coin }) {
         />
         <div className='px-1'>
           <Slider
-            aria-label="Always visible"
+            sx={mstylerange}
+            aria-label="Temperature"
             defaultValue={80}
             getAriaValueText={valuetext}
             step={1}
             marks={marks}
             valueLabelDisplay="auto"
+            min={0}
+            max={101}
+            style={{ marginBottom: "2rem" }}
           />
-           {/* <Slider
-            defaultValue={50}
-            step={1}
-            graduated
-            progress
-            min={1}
-            max={100}
-            renderMark={mark => {
-              if ([25, 50, 100].includes(mark)) {
-                return <span>{mark} GB</span>;
-              }
-              return null;
-            }}
-          /> */}
         </div>
 
         <Button
@@ -117,13 +114,13 @@ export default function StopForm({ coin }) {
           color="dark"
           sx={mstyle}
         >
-         <Typography sx={{color: "#05c48e"}}>
+          <Typography sx={{ color: "#05c48e" }}>
             Log in
           </Typography>
-          <Typography sx={{marginInline: "5px"}}>
+          <Typography sx={{ marginInline: "5px" }}>
             or
           </Typography>
-          <Typography sx={{color: "#df473d"}}>
+          <Typography sx={{ color: "#df473d" }}>
             Sign up
           </Typography>
         </Button>
