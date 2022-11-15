@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider } from '@mui/material'
+import BTCSlider from '../../global/BTCSlider';
 
 export default function MarketForm({coin}) {
     const mstyle = {
@@ -12,21 +13,18 @@ export default function MarketForm({coin}) {
       }
       const marks = [
         {
-          value: 25,
+          value: 20,
           // label: '25%',
         },
         {
-          value: 50,
+          value: 45,
           // label: '20°C',
         },
         {
-          value: 75,
+          value: 70,
           // label: '37°C',
         },
-        {
-          value: 100,
-          // label: '100°C',
-        },
+        
       ];
       function valuetext(value) {
         return `${value}%`;
@@ -73,15 +71,13 @@ export default function MarketForm({coin}) {
         />
        
        
-        <div className='px-1'>
-          <Slider
-              aria-label="Always visible"
-              defaultValue={80}
-              getAriaValueText={valuetext}
-              step={1}
+        <div className='px-3'>
+            <BTCSlider
+              max={100}
+              min={0}
               marks={marks}
-              valueLabelDisplay="auto"
-          />
+              value={0}
+            />
           </div>
         <Button
           variant="contained"

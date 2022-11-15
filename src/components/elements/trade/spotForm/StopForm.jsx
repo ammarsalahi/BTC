@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider } from '@mui/material'
-
+import { styled ,} from '@mui/system';
+import BTCSlider from '../../global/BTCSlider';
 export default function StopForm({ coin }) {
 
   const mstyle = {
@@ -8,30 +9,27 @@ export default function StopForm({ coin }) {
     color: "white",
     ml: 0
   }
-  const mstylerange = {
-    m: 1,
-  }
   const marks = [
     {
-      value: 25,
+      value: 20,
       // label: '25%',
     },
     {
-      value: 50,
+      value: 45,
       // label: '20°C',
     },
     {
-      value: 75,
+      value: 69,
       // label: '37°C',
     },
-    {
-      value: 100,
-      // label: '100°C',
-    },
+    
   ];
-  function valuetext(value) {
-    return `${value}%`;
-  }
+
+
+ 
+    
+
+
   return (
     <div className='pt-2'>
       <Box className='d-flex'>
@@ -87,29 +85,13 @@ export default function StopForm({ coin }) {
             style: { fontSize: 14 }
           }}
         />
-        <div className='px-1'>
-          <Slider
-            aria-label="Always visible"
-            defaultValue={80}
-            getAriaValueText={valuetext}
-            step={1}
-            marks={marks}
-            valueLabelDisplay="auto"
-          />
-           {/* <Slider
-            defaultValue={50}
-            step={1}
-            graduated
-            progress
-            min={1}
-            max={100}
-            renderMark={mark => {
-              if ([25, 50, 100].includes(mark)) {
-                return <span>{mark} GB</span>;
-              }
-              return null;
-            }}
-          /> */}
+        <div className='px-3'>
+           <BTCSlider
+              max={100}
+              min={0}
+              marks={marks}
+              value={0}
+            />
         </div>
 
         <Button
