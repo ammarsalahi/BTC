@@ -1,7 +1,9 @@
 import React from 'react'
 import { Button, TextField, Typography, Box } from '@mui/material'
-import landing from '../../../assets/landing.png';
-import space2 from '../../../assets/2.png';
+import landing from '../../../assets/slide1.jpg';
+import space2 from '../../../assets/slide2.jpg';
+import space3 from '../../../assets/slide3.jpg';
+import space4 from '../../../assets/slide4.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, EffectFlip, Navigation, Autoplay } from 'swiper';
@@ -13,13 +15,13 @@ SwiperCore.use([Pagination, Navigation, EffectFlip, Autoplay]);
 export default function LandHead() {
     return (
         <Box className="row align-items-center">
-            <div className="col-lg-5 col-12 text-start">
+            <div className="col-lg-4 col-12 text-start">
                 <Box>
-                    <Typography sx={{ fontWeight: "600" , fontFamily: "Harmony"}} className='land-head' variant="h2" gutterBottom>Trade at BitMnc<br />Invest in the Future</Typography>
-                    <Typography sx={{ fontWeight: "600" , fontFamily: "Harmony"}} className='land-head' variant="h6">Buy, trade, and hold +200 cryptocurrencies on BitMnc</Typography>
+                    <Typography sx={{ fontWeight: "600", fontFamily: "Harmony" }} className='land-head' variant="h2" gutterBottom>Trade at BitMnc<br />Invest in the Future</Typography>
+                    <Typography sx={{ fontWeight: "600", fontFamily: "Harmony" }} className='land-head' variant="h6">Buy, trade, and hold +200 cryptocurrencies on BitMnc</Typography>
                     <Box sx={{ mt: 8 }} className='land-head'>
                         <div className="row">
-                            <div className="col-12 text-center">
+                            <div className="col-12 text-start">
                                 <Button variant="contained" size="large" color="light" sx={{ px: 7, py: 2, fontSize: "large", fontWeight: "bold", cursor: "pointer", '&:hover': { backgroundColor: "#3b3b3b" } }} >
                                     Get Started
                                 </Button>
@@ -29,9 +31,9 @@ export default function LandHead() {
                 </Box>
             </div>
 
-            <div className="col-lg-7 d-lg-block d-none">
+            <div className="col-lg-8 d-lg-block d-none">
                 <Swiper
-                    className='text-center'
+                    className='text-end'
                     effect="fade"
                     spaceBetween={60}
                     slidesPerView={1}
@@ -49,8 +51,10 @@ export default function LandHead() {
                         <Box
                             component="img"
                             sx={{
-                                height: 450,
-                                width: 550,
+                                height: 700,
+                                width: "100%",
+                                objectFit: "cover",
+                                borderRadius: "5px"
                             }}
                             src={landing}
                         />
@@ -59,12 +63,39 @@ export default function LandHead() {
                         <Box
                             component="img"
                             sx={{
-                                height: 450,
-                                width: 450,
+                                height: 700,
+                                width: "100%",
+                                objectFit: "cover",
+                                borderRadius: "5px"
                             }}
                             src={space2}
                         />
                     </SwiperSlide>
+                    <SwiperSlide>
+                        <Box
+                            component="img"
+                            sx={{
+                                height: 700,
+                                width: "100%",
+                                objectFit: "cover",
+                                borderRadius: "5px"
+                            }}
+                            src={space3}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Box
+                            component="img"
+                            sx={{
+                                height: 700,
+                                width: "100%",
+                                objectFit: "cover",
+                                borderRadius: "5px"
+                            }}
+                            src={space4}
+                        />
+                    </SwiperSlide>
+
                 </Swiper>
                 {/* <Box
                 component="img"

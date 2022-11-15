@@ -24,28 +24,28 @@ export default function Orders() {
 
   return (
     <Box
-      sx={{height:"100vh"}}
+      sx={{ height: "100vh" }}
       className="container-fluid row gx-0"
     >
-     <Box className='col-lg-3 d-lg-block d-none g-0' sx={{borderRight:'1px solid',borderColor: 'divider'}}>
+      <Box className='col-lg-3 d-lg-block d-none g-0' sx={{ borderRight: '1px solid', borderColor: 'divider' }}>
         <Tabs
-            orientation="vertical"
-            variant="scrollable"
-            value={value}
-            onChange={handleChange}
-            aria-label="Vertical tabs example"
-            sx={{width:"100%" }}
-          >
-            <Tab label="Open Orders" sx={{py:3}} {...a11yProps(0)} />
-            <Tab label="Order History" sx={{py:3}} {...a11yProps(1)} />
-            <Tab label="Trade History" sx={{py:3}} {...a11yProps(2)} />
-          
-          </Tabs>
-     </Box>
-      <Box className="col-lg-9 gx-0" sx={{height:"100vh"}}>
-       {value===0 && <OpenOrders/>}
-       {value===1 && <OrderHistory/>}
-       {value===2 && <TradeHistory/>}
+          orientation="vertical"
+          variant="scrollable"
+          value={value}
+          onChange={handleChange}
+          aria-label="Vertical tabs example"
+          sx={{ width: "100%" }}
+        >
+          <Tab label="Open Orders" sx={{ py: 3 , maxWidth: "100%" }} {...a11yProps(0)} />
+          <Tab label="Order History" sx={{ py: 3 , maxWidth: "100%" }} {...a11yProps(1)} />
+          <Tab label="Trade History" sx={{ py: 3 , maxWidth: "100%" }} {...a11yProps(2)} />
+
+        </Tabs>
+      </Box>
+      <Box className="col-lg-9 gx-0" sx={{ height: "100vh" }}>
+        {value === 0 && <OpenOrders />}
+        {value === 1 && <OrderHistory />}
+        {value === 2 && <TradeHistory />}
       </Box>
     </Box>
   );
