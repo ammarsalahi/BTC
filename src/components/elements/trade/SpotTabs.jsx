@@ -9,7 +9,7 @@ import TabPanel from '../global/TabPanel';
 import LimitForm from './spotForm/LimitForm';
 import StopForm from './spotForm/StopForm'
 import MarketForm from './spotForm/MarketForm';
-
+import Theme from '../global/Theme'
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -26,18 +26,18 @@ export default function CoinPriceTabs() {
   return (
     <Box sx={{py:1,px:0.5}}>
       <Tabs value={value} onChange={handleChange}>
-        <Tab label="Spot" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid #fff"}}/>
+        <Tab style={{color: "#8c8e90"}} label="Spot" {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid #fff"}}/>
       </Tabs>
       <TabPanel value={value} index={0}>
          <Box>
-          <div className="d-flex pt-2">
-            <Button color="inherit" sx={btn===0?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(0)}}>
+          <div className="d-flex pt-2" >
+            <Button style={{color: "#8c8e90"}} sx={btn===0?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(0)}}>
               Limit
             </Button>
-            <Button color="inherit" sx={btn===1?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(1)}}>
+            <Button style={{color: "#8c8e90"}} sx={btn===1?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(1)}}>
             Market
             </Button>
-            <Button color="inherit" sx={btn===2?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(2)}}>
+            <Button style={{color: "#8c8e90"}} sx={btn===2?{mx:1,border:1}:{mx:1}} onClick={()=>{setbtn(2)}}>
               Stop
             </Button>
           </div>
@@ -72,11 +72,9 @@ export default function CoinPriceTabs() {
             <StopForm coin="BTC"/>
             </div>
           </Box>
-            
             }
           </div>
          </Box>
-      
       </TabPanel>
    </Box>
   )

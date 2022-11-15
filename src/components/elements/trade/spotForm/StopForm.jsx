@@ -23,13 +23,8 @@ export default function StopForm({ coin }) {
       value: 69,
       // label: '37°C',
     },
-    
- 
+
   ];
-
- 
-    
-
 
   return (
     <div className='pt-2'>

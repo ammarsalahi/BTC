@@ -41,7 +41,7 @@ const getColor=(numberText)=>{
 }
 export default function CurrencyList() {
   return (
-    <Box sx={{py:5 , px: 0}} className="landlist-m container">
+    <Box sx={{py:5 , px: 0}} className="landlist-m ">
       <div className="d-lg-block d-md-block d-none">
       <Box className=" d-flex justify-content-between " sx={{mb:4}}>
         <Typography sx={{fontSize:"40px" , fontWeight: "600"}} className="head-style">

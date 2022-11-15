@@ -13,8 +13,20 @@
   src: local("Harmony"),
     url(../fonts/HarmonyOS_Sans_Medium.woff2) format("truetype");
 }
+@font-face {
+  font-family: "Binance-medium";
+  src: local("Binance"),
+    url(../fonts/BinancePlex-Regular.otf) format("truetype");
+}
+@font-face {
+  font-family: "Binance-bold";
+  src: local("Binance"),
+    url(../fonts/BinancePlex-SemiBold.otf) format("truetype");
+}
 body {
   background-color: #000 !important;
+  font-family: "Binance-medium" !important;
+
 }
 a {
   color: grey !important;
@@ -25,9 +37,9 @@ a.spacial {
 a.logo {
   color: #fff !important;
 }
-.body {
-  font-family: "IBM-FONT" !important;
-}
+/* .body {
+  font-family: "Binance-medium";
+} */
 
 @media (min-width: 0px) and (max-width: 768px) {
   .container-btc {
