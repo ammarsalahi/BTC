@@ -2,14 +2,11 @@ import React from 'react'
 import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider } from '@mui/material'
 import BTCSlider from '../../global/BTCSlider';
 
-export default function LimitForm({ coin }) {
+export default function LimitForm() {
   const mstyle = {
     m: 1,
     color: "white",
     ml: 0
-  }
-  const mstylerange = {
-    m: 1,
   }
   const marks = [
     {
@@ -24,7 +21,6 @@ export default function LimitForm({ coin }) {
       value: 70,
       // label: '37°C',
     },
-    
   ];
 
   function valuetext(value) {
@@ -33,8 +29,8 @@ export default function LimitForm({ coin }) {
   return (
     <div className='pt-2'>
       <Box className='d-flex'>
-        <Typography fontSize={13} sx={{color :"#8c8e90"}} >Avbl-</Typography>
-        <Typography fontSize={13} sx={{color :"#8c8e90"}} >{coin}</Typography>
+        <Typography fontSize={13} sx={{ color: "#8c8e90" }} >Avbl-</Typography>
+        <Typography fontSize={13} sx={{ color: "#8c8e90" }} >{coin}</Typography>
       </Box>
       <FormGroup>
         <TextField
@@ -82,13 +78,13 @@ export default function LimitForm({ coin }) {
           color="dark"
           sx={mstyle}
         >
-          <Typography sx={{color: "#05c48e"}}>
+          <Typography sx={{ color: "#05c48e" }}>
             Log in
           </Typography>
-          <Typography sx={{marginInline: "5px"}}>
+          <Typography sx={{ marginInline: "5px" }}>
             or
           </Typography>
-          <Typography sx={{color: "#df473d"}}>
+          <Typography sx={{ color: "#df473d" }}>
             Sign up
           </Typography>
 

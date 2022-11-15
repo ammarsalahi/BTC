@@ -2,15 +2,13 @@ import React from 'react'
 import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider } from '@mui/material'
 import BTCSlider from '../../global/BTCSlider';
 
-export default function MarketForm({coin}) {
+export default function MarketForm() {
     const mstyle = {
         m: 1,
         color: "white",
         ml: 0
       }
-      const mstylerange = {
-        m: 1,
-      }
+     
       const marks = [
         {
           value: 20,
@@ -29,13 +27,14 @@ export default function MarketForm({coin}) {
       function valuetext(value) {
         return `${value}%`;
       }
+
   return (
-    
+
     <div className='pt-2'>
-            <Box className='d-flex'>
-                <Typography fontSize={13} sx={{color :"#8c8e90"}} >Avbl-</Typography>
-                <Typography fontSize={13} sx={{color :"#8c8e90"}} >{coin}</Typography>
-            </Box>
+      <Box className='d-flex'>
+        <Typography fontSize={13} sx={{ color: "#8c8e90" }} >Avbl-</Typography>
+        <Typography fontSize={13} sx={{ color: "#8c8e90" }} >{coin}</Typography>
+      </Box>
       <FormGroup>
         <TextField
           placeholder="Price"
@@ -61,7 +60,7 @@ export default function MarketForm({coin}) {
             endAdornment: (
               <InputAdornment position="end">
                 <Typography fontSize={12}>
-                   USDT
+                  USDT
                 </Typography>
 
               </InputAdornment>
@@ -69,6 +68,7 @@ export default function MarketForm({coin}) {
             style: { fontSize: 14 }
           }}
         />
+
        
        
         <div className='px-3'>
@@ -79,18 +79,19 @@ export default function MarketForm({coin}) {
               value={0}
             />
           </div>
+
         <Button
           variant="contained"
           color="dark"
           sx={mstyle}
         >
-          <Typography sx={{color: "#05c48e"}}>
+          <Typography sx={{ color: "#05c48e" }}>
             Log in
           </Typography>
-          <Typography sx={{marginInline: "5px"}}>
+          <Typography sx={{ marginInline: "5px" }}>
             or
           </Typography>
-          <Typography sx={{color: "#df473d"}}>
+          <Typography sx={{ color: "#df473d" }}>
             Sign up
           </Typography>
         </Button>
