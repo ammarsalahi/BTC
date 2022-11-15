@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider } from '@mui/material'
 import BTCSlider from '../../global/BTCSlider';
 
-export default function LimitForm() {
+export default function LimitForm({coin}) {
   const mstyle = {
     m: 1,
     color: "white",

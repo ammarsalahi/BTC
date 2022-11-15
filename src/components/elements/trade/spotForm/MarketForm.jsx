@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider } from '@mui/material'
 import BTCSlider from '../../global/BTCSlider';
 
-export default function MarketForm() {
+export default function MarketForm({coin}) {
     const mstyle = {
         m: 1,
         color: "white",
