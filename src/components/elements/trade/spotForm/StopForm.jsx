@@ -1,6 +1,5 @@
 import React from 'react'
-import { Box, Button, Typography, FormGroup, TextField, InputAdornment, Slider } from '@mui/material'
-import { styled ,} from '@mui/system';
+import { Box, Button, Typography, FormGroup, TextField, InputAdornment} from '@mui/material'
 import BTCSlider from '../../global/BTCSlider';
 
 export default function StopForm({ coin }) {

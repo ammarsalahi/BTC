@@ -8,7 +8,6 @@ import Landing from '../pages/Landing';
 import Register from '../pages/Register'
 import PrivateRoute from './PrivateRoute';
 import Theme from '../elements/global/Theme';
-import Navbar from '../elements/global/navbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Orders from '../pages/Orders';
 export default function Router() {
