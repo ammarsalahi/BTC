@@ -10,18 +10,20 @@ export default function LimitForm({coin}) {
   }
   const marks = [
     {
-      value: 20,
-      // label: '25%',
+      value: 23,
+      label: '25%',
     },
     {
-      value: 45,
-      // label: '20°C',
+      value: 50,
+      label: '50%',
     },
     {
-      value: 70,
-      // label: '37°C',
+      value: 75,
+      label: '75%',
     },
   ];
+
+   
 
   function valuetext(value) {
     return `${value}%`;

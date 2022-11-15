@@ -13,12 +13,12 @@ function TrideAny() {
                     <img src={trade} width="100%" style={{ objectFit: "cover" }} alt="" />
                 </Box>
             </Box>
-            <Box className="col-lg-4 col-12" sx={{ml: 20}}>
+            <Box className="col-lg-6 col-12 mt-lg-0 mt-5" sx={{textAlign:"center"}}>
                 <Typography variant="p" component="div" sx={{  fontSize: "40px", fontWeight: "bold", lineHeight: "3rem", pb: 4 }}>
                     Trade Anytime, Anywhere
                 </Typography>
                 <Box className='socialicon d-flex flex-wrap'>
-                    <Box className="col-6 py-3 d-flex flex-column">
+                    <Box className="col-6 py-3">
                        <AppleIcon sx={{fontSize: "3.5rem"}}/>
                     </Box>
                     <Box className="col-6 py-3">

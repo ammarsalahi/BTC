@@ -10,7 +10,7 @@ export default function LandFooter() {
     <Box className="row text-start landlist-m" sx={{py:10}}>
         <div className="col-lg-6 col-12">
             <Typography variant="h4" component="div">
-               BitMnc
+            BitMNC
             </Typography>
             <Typography variant="h5" component="div">
                making crypto trading easier

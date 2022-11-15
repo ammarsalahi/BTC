@@ -9,7 +9,7 @@ export default function MenuItemsComponents({ items, open, anchorEl, handleClose
          anchorEl={anchorEl}
          open={open}
          onClose={handleClose}
-         sx={{ width: "300px" }}
+         sx={{ width: "300px" ,mt:2}}
       >
          <Box sx={{ width: 200 }} >
             {items.map((i, idx) => (

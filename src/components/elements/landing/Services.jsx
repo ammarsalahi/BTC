@@ -24,7 +24,7 @@ function Services() {
                 <Typography variant="p" component="div" sx={{ fontSize: "40px", fontWeight: "bold", lineHeight: "3rem", pt: 8, pb: 4 }}>
                     BitMNC by Your Side
                 </Typography>
-                <Box className=' col-lg-3 col-md-6 col-12'>
+                <Box className=' col-lg-3 col-md-6 col-12 my-lg-0 my-4'>
                     <Box>
                         {/* <Svgs Component={customer} style={{ height: "30px", width: "30px", marginRight: "10px" }} />
                         <img src={test} alt="" /> */}
@@ -36,7 +36,7 @@ function Services() {
                         Contact KuCoin customer support with your questions at any time.
                     </Typography>
                 </Box>
-                <Box className=' col-lg-3 col-md-6 col-12 '>
+                <Box className=' col-lg-3 col-md-6 col-12 my-lg-0 my-4'>
                     <Box>
                         {/* <Svgs Component={customer} style={{ height: "30px", width: "30px", marginRight: "10px" }} />
                         <img src={test} alt="" /> */}
@@ -48,7 +48,7 @@ function Services() {
                         The KuCoin Global Community is home to millions of users from 200+ countries, with support for 20+ languages.
                     </Typography>
                 </Box>
-                <Box className=' col-lg-3 col-md-6 col-12 '>
+                <Box className=' col-lg-3 col-md-6 col-12 my-lg-0 my-4'>
                     <Box>
                         {/* <Svgs Component={customer} style={{ height: "30px", width: "30px", marginRight: "10px" }} />
                         <img src={test} alt="" /> */}

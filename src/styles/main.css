@@ -29,6 +29,7 @@ body {
 
 }
 a {
+  text-decoration: none;
   color: grey !important;
 }
 a.spacial {
@@ -84,16 +85,16 @@ a.logo {
     padding: 20px 0px !important;
   }
   .border-right {
-    border-right: 1px solid #3b3b3b;
+    border-right: 4px  solid #3b3b3b;
   }
   .bordering {
-    border-right: 1px solid #3b3b3b;
+    border-right: 4px  solid #3b3b3b;
   }
   .borderingl {
-    border-left: 1px solid #3b3b3b;
+    border-left: 4px  solid #3b3b3b;
   }
   .borderbottom {
-    border-bottom: 1px solid #3b3b3b;
+    border-bottom: 4px  solid #3b3b3b;
   }
   .searchpadding {
     padding-top: 20px;
@@ -123,10 +124,19 @@ a.logo {
 ::-webkit-scrollbar-thumb {
   background: rgb(58, 58, 58);
 }
+div.pricing::-webkit-scrollbar-thumb {
+  background: rgb(58, 58, 58);
+  display: none !important;
+}
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(117, 117, 117);
+}
+
+div.pricing::-webkit-scrollbar-thumb:hover {
+  background: rgb(117, 117, 117);
+  display: none !important;
 }
 
 .MuiTabs-indicator {
@@ -134,11 +144,14 @@ a.logo {
 }
 
 .bordertop {
-  border-top: 1px solid #3b3b3b;
+  border-top: 4px solid #3b3b3b;
 }
 
 .bccc {
   color: #161515;
+}
+.MuiPaper-root.MuiMenu-paper.MuiPaper-root.MuiPopover-paper{
+   background-image: none ;
 }
 @media all and (min-width: 1280px) {
   .noscroll {

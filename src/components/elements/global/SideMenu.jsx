@@ -77,22 +77,22 @@ export default function SideMenu({open,close}) {
           </Typography>
           </Box>
         </BootstrapDialogTitle>
-        <DialogContent  sx={{width:"100%"}}>
-            <Box sx={{ width: '100%'}}>
+        <DialogContent>
+            <Box >
                 <List component="nav" aria-label="main mailbox folders" sx={{py:"16px"}}>
-                    <ListItem button sx={buttonStyle} onClick={close}>
+                    <ListItem className="logo" component={Link} to="/" sx={buttonStyle} onClick={close}>
                         BuyCrypto
                     </ListItem>
-                    <ListItem button sx={buttonStyle}  onClick={close}>
-                        Markets
+                    <ListItem className="logo" component={Link} to="/orders" sx={buttonStyle}  onClick={close}>
+                        orders
                     </ListItem>
-                    <ListItem button sx={buttonStyle}  onClick={close}>
+                    <ListItem className="logo" component={Link} to="/trade" sx={buttonStyle}  onClick={close}>
                     Trade
                     </ListItem>
-                    <ListItem button sx={buttonStyle}  onClick={close}>
+                    <ListItem className="logo" component={Link} to="/login" sx={buttonStyle}  onClick={close}>
                         log in
                     </ListItem>
-                    <ListItem button sx={buttonStyle}  onClick={close}>
+                    <ListItem className="logo" component={Link} to="/signup" sx={buttonStyle}  onClick={close}>
                     sign up
                     </ListItem>
                 </List>

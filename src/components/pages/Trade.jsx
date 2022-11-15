@@ -31,8 +31,8 @@ export default function Trade() {
   return (
     <div className='container-fluid' style={{height:pageheight}}>
 
-       <div className="row">
-          <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12 p-0">
+       <div className="row bordertop">
+          <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12 p-0 borderingl  ">
             <div className="w-100">
             <TradeChart sizing={rowheight} />
             </div>
@@ -41,14 +41,14 @@ export default function Trade() {
             </div>
            
           </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row  gx-0 borderingl h-100" >
-            <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-auto " style={{height:row2height}}>
+          <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row  gx-0 borderingl  h-100" >
+            <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-auto pricing borderbottom" style={{height:row2height}}>
               <PriceList/>
             </div>
-            <div className="col-lg-6 col-md-6 col-12 gx-0 overflow-auto" style={{height:row2height}}>
+            <div className="col-lg-6 col-md-6 col-12 gx-0 overflow-auto borderbottom " style={{height:row2height}}>
               <CoinPriceTabs/>
             </div>
-            <div className="col-12">
+            <div className="col-12 ">
               <SpotTabs/>
             </div>
           </div>

@@ -73,9 +73,7 @@ export default function Navbar({ open }) {
 
 
             {location.pathname === '/trade' ? <Box className='d-lg-block d-md-block d-none'>
-              {/* <IconButton onClick={handleClick(menui)}>
-                <Apps />
-              </IconButton> */}
+             
               <Button color="inherit" sx={{ fontSize: "15px" }} style={csfont} onClick={handleClickBtc}>
                 BTC/USDT
                 <ArrowDropDownIcon />
@@ -83,10 +81,8 @@ export default function Navbar({ open }) {
 
             </Box> :
               <Box className='d-lg-block d-md-block d-none'>
-                <Button color="inherit">BuyCrypto</Button>
-                <Button color="inherit" sx={{ mx: '15px' }}>Discover</Button>
-                <Button color="inherit" onClick={() => navigate('/trade')}>Trade</Button>
-                <Button color="inherit" sx={{ mx: '15px' }}>Grow</Button>
+                <Link className="logo" to="/" style={{marginRight:"15px"}}>BuyCrypto</Link>
+                <Link className="logo" to="/trade">Trade</Link>
 
               </Box>}
 
@@ -130,9 +126,9 @@ export default function Navbar({ open }) {
           </Box>
 
           <Box className="d-flex justify-content-between d-lg-block d-md-block d-none ">
-          {location.pathname != '/trade' && <Button color="inherit" sx={{ mx: '15px' }} onClick={handleClick(wallet)}>Wallet <ArrowDropDownIcon /></Button>}
-          {location.pathname != '/trade' && <Button color="inherit" sx={{ mx: '15px' }} onClick={handleClick(orders)}>Orders <ArrowDropDownIcon /></Button>}
-            <Button color='inherit'>log in</Button>
+          {location.pathname != '/trade' && <Link className="logo" style={{ marginRight: '15px' }} onClick={handleClick(wallet)}>Wallet <ArrowDropDownIcon /></Link>}
+          {location.pathname != '/trade' && <Link className="logo" style={{ marginRight: '15px' }} onClick={handleClick(orders)}>Orders <ArrowDropDownIcon /></Link>}
+            <Link className='logo' to="/signup">log in</Link>
             <Button variant="contained" color="light" className="spacial" component={Link} to="/signup" sx={{ mx: '15px', color: "#000", fontWeight: "bold" }}>sign up</Button>
           </Box>
           <IconButton>

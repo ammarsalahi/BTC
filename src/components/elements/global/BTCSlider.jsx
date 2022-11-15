@@ -14,8 +14,8 @@ export default function BTCSlider({min,max,value,marks}) {
           border: 'none',
         },
         '& .MuiSlider-thumb': {
-          height: 20,
-          width: 20,
+          height: 10,
+          width: 10,
           backgroundColor: '#52af77',
           border: '2px solid currentColor',
           '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
@@ -27,9 +27,9 @@ export default function BTCSlider({min,max,value,marks}) {
         },
         '& .MuiSlider-mark': {
           backgroundColor: '#bfbfbf',
-          height: 20,
-          width: 20,
-          borderRadius:10,
+          height: 10,
+          width: 10,
+          borderRadius:5,
           '&.MuiSlider-markActive': {
             opacity: 1,
             backgroundColor: 'currentColor',

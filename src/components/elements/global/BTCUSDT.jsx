@@ -40,8 +40,9 @@ export default function BTCUSDT({open,anchorEl,handleClose}) {
         anchorEl={anchorEl}
         open={open}
        onClose={handleClose}
+       sx={{backgroundImage:"none"}}
      >
-      <div className='p-3' style={{width:"500px"}}>
+      <div className='p-3' style={{width:"500px",backgroundImage:"none"}}>
          <TextField
             size="small"
             fullWidth
@@ -55,14 +56,6 @@ export default function BTCUSDT({open,anchorEl,handleClose}) {
                 style:{height:"30px"}
             }}
          /> 
-         {/* <Box className="d-flex gx-0 pt-2 overflow-auto" sx={{width:"100%"}} >
-             
-             {coins.map((coin,idx)=>(
-               <Button color="inherit" sx={{m:0.6}} key={idx}>
-                        {coin.name}
-               </Button>
-             ))}   
-        </Box> */}
         <div className="d-flex justify-content-between align-items-center p-4">
             <Typography variant='p' conponent="div" sx={{cursor:"pointer"}}>
                  Markets
