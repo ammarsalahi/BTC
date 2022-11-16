@@ -45,7 +45,7 @@ export default function Trade() {
             <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-auto pricing borderbottom" style={{height:row2height}}>
               <PriceList/>
             </div>
-            <div className="col-lg-6 col-md-6 col-12 gx-0 overflow-auto borderbottom " style={{height:row2height}}>
+            <div className="col-lg-6 col-md-6 col-12 gx-0 overflow-auto borderbottom borderingl " style={{height:row2height}}>
               <CoinPriceTabs/>
             </div>
             <div className="col-12 ">

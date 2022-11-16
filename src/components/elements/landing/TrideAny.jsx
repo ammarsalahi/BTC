@@ -18,16 +18,16 @@ function TrideAny() {
                     Trade Anytime, Anywhere
                 </Typography>
                 <Box className='socialicon d-flex flex-wrap'>
-                    <Box className="col-6 py-3">
+                    <Box className="col-5 text-end py-3">
                        <AppleIcon sx={{fontSize: "3.5rem"}}/>
                     </Box>
-                    <Box className="col-6 py-3">
+                    <Box className="col-5 py-3">
                         <GoogleIcon sx={{fontSize: "3.5rem"}}/>
                     </Box>
-                    <Box className="col-6 py-3">
+                    <Box className="col-5 text-end py-3">
                         <AndroidIcon sx={{fontSize: "3.5rem"}}/>
                     </Box>
-                    <Box className="col-6 py-3">
+                    <Box className="col-5 py-3">
                        <LocalMallIcon sx={{fontSize: "3.5rem"}}/>
                     </Box>
                 </Box>

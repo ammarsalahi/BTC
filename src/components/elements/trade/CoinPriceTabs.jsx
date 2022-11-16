@@ -25,13 +25,18 @@ const data=[
   createData("USD","$3,009,120","+1"),
   createData("Bitcoin","$20,728,00","+1.23"),
   createData("USD","$3,009,120","+1"),
+  createData("USD","$3,009,120","+1"),
+  createData("USD","$3,009,120","+1"),
+  createData("USD","$3,009,120","+1"),
+  createData("USD","$3,009,120","+1"),
+  createData("USD","$3,009,120","+1"),
   createData("Ethereum","$1,900,010","+1.25"),
 ]
 export default function CoinPriceTabs() {
 
   return (
     <Box sx={{ width: 'auto' }}>
-    <TableContainer className='overflow-auto'>
+    <TableContainer className='overflow-auto '>
           <Table>
             <TableHead>
                 <TableRow sx={trs}>

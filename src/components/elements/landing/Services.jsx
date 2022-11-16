@@ -1,9 +1,10 @@
 import React from 'react'
 import { Box, Typography, TextField, Button } from '@mui/material';
 import { ReactComponent as customer } from '../../../assets/1.svg'
-import test from '../../../assets/33.png'
-import Svgs from '../global/Svgs';
-const titleStyle = {
+import test1 from '../../../assets/2302825.png'
+import test2 from '../../../assets/2983803.png'
+import test3 from '../../../assets/4121044.png'
+ const titleStyle = {
     fontWeight: "400",
     color: "rgb(153 153 153)",
     fontSize: "1.125rem",
@@ -25,9 +26,8 @@ function Services() {
                     BitMNC by Your Side
                 </Typography>
                 <Box className=' col-lg-3 col-md-6 col-12 my-lg-0 my-4'>
-                    <Box>
-                        {/* <Svgs Component={customer} style={{ height: "30px", width: "30px", marginRight: "10px" }} />
-                        <img src={test} alt="" /> */}
+                    <Box className='py-3'>
+                        <img src={test1} alt="support" width="50" />
                     </Box>
                     <Typography variant="p" style={titleStyle2}>
                         24/7 Customer Service
@@ -37,9 +37,8 @@ function Services() {
                     </Typography>
                 </Box>
                 <Box className=' col-lg-3 col-md-6 col-12 my-lg-0 my-4'>
-                    <Box>
-                        {/* <Svgs Component={customer} style={{ height: "30px", width: "30px", marginRight: "10px" }} />
-                        <img src={test} alt="" /> */}
+                    <Box className='py-3'>
+                        <img src={test2} alt="support" width="50" />
                     </Box>
                     <Typography variant="p" style={titleStyle2}>
                         Community
@@ -49,9 +48,8 @@ function Services() {
                     </Typography>
                 </Box>
                 <Box className=' col-lg-3 col-md-6 col-12 my-lg-0 my-4'>
-                    <Box>
-                        {/* <Svgs Component={customer} style={{ height: "30px", width: "30px", marginRight: "10px" }} />
-                        <img src={test} alt="" /> */}
+                    <Box className='py-3'>
+                        <img src={test3} alt="support" width="50" />
                     </Box>
                     <Typography variant="p" style={titleStyle2}>
                         BitMNC News
