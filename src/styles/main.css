@@ -153,9 +153,13 @@ div.pricing::-webkit-scrollbar-thumb:hover {
 .MuiPaper-root.MuiMenu-paper.MuiPaper-root.MuiPopover-paper{
    background-image: none ;
 }
+.css-6pai2x-MuiTableCell-root , .css-1ijrop1-MuiTableCell-root , .css-qnurb9-MuiTypography-root , .css-17893no-MuiTypography-root , .css-1othcul-MuiTableCell-root{
+  font-family: "Binance-medium" !important;
+}
 @media all and (min-width: 1280px) {
   .noscroll {
     overflow: hidden !important;
     height: 100%;
   }
 }
+ 

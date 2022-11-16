@@ -97,6 +97,7 @@ export default function OpenOrders() {
               <TableCell align="right">Actions</TableCell>
             </TableRow>
           </TableHead>
+        
         </Table>
       </TableContainer>
       <Box>
