@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Public+Sans:wght@200;300&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Public+Sans:wght@200;300&family=Source+Serif+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BTC</title>
+    <style>
+      .img-support {
+        position: fixed;
+        right: 2%;
+        z-index: 999999999;
+        bottom: 5%;
+        background: #fff;
+        border-radius: 5px;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <div class="img-support">
+      <img src="src/assets/robot.svg" alt="" />
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

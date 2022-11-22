@@ -38,14 +38,24 @@ export default function LandHead() {
                     spaceBetween={60}
                     slidesPerView={1}
                     loop={true}
-                    // pagination={{
-                    //     clickable: true,
-                    //   }}
+                    pagination={{
+                        clickable: true,
+                    }}
                     autoplay={{
                         delay: 5000,
                         disableOnInteraction: false,
                     }}
-
+                    // breakpoints={{
+                    //     // when window width is >= 640px
+                    //     1220: {
+                    //         height: "450px"
+                    //     },
+                    //     // when window width is >= 768px
+                    //     768: {
+                    //         width: 768,
+                    //         slidesPerView: 2,
+                    //     },
+                    // }}
                 >
                     <SwiperSlide>
                         <Box
@@ -57,6 +67,7 @@ export default function LandHead() {
                                 borderRadius: "5px"
                             }}
                             src={landing}
+
                         />
                     </SwiperSlide>
                     <SwiperSlide>
