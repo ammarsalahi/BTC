@@ -78,7 +78,7 @@ export default function OrderHistory() {
                   </TextField>
 
                   
-                <Button variant="contained" size="small" color="light" sx={{ml:"1%"}}>
+                <Button variant="outlined" size="small" color="light" sx={{ml:"1%"}}>
                     Search
                 </Button>
                 <Button variant="contained" size="small" color="light" sx={{ml:'2%'}}>
@@ -92,7 +92,7 @@ export default function OrderHistory() {
                  <Typography component="body2" sx={{fontSize:15}}></Typography> */}
                   
                 </Box>
-                <FormControlLabel control={<Checkbox defaultChecked />} label="Hide all canceled" />
+                <FormControlLabel control={<Checkbox defaultChecked color="light" />} label="Hide all canceled" />
                 <Button variant="contained" color="light" disabled>
                     clear all filters
                 </Button>

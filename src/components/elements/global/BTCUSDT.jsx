@@ -2,7 +2,7 @@ import { Menu, MenuItem ,TextField,InputAdornment, Button,Box, List, ListItem, L
 import {ArrowDropDown, ArrowDropUp, ArrowUpward, CurrencyBitcoin, Search, Star, Upcoming} from '@mui/icons-material';
 import React from 'react'
 import { Tab } from 'bootstrap';
-
+import {Link} from "react-router-dom"
 const trs={
    '& td,& th': { border: 0 ,px:1,textAlign:"center",fontSize:"15px"},
    cursor:"pointer",
@@ -45,6 +45,7 @@ export default function BTCUSDT({open,anchorEl,handleClose}) {
       <div className='p-3' style={{width:"500px",backgroundImage:"none"}}>
          <TextField
             size="small"
+            color="light"
             fullWidth
             
             InputProps={{
@@ -56,7 +57,7 @@ export default function BTCUSDT({open,anchorEl,handleClose}) {
                 style:{height:"30px"}
             }}
          /> 
-        <div className="d-flex justify-content-between align-items-center p-4">
+        <div className="d-flex justify-content-between align-items-center p-3 borderbottom">
             <Typography variant='p' conponent="div" sx={{cursor:"pointer"}}>
                  Markets
             </Typography>
@@ -71,9 +72,12 @@ export default function BTCUSDT({open,anchorEl,handleClose}) {
         <Box className="row">
            <div className="col-4 bordering">
              {coins.map((item,idx)=>(
-                <Button key={idx} color="inherit" fullWidth>
+               <div key={idx} className="py-2">
+                  <Link  className="logo">
                    {item.name}
-                </Button>
+                </Link>
+               </div>
+               
              ))} 
            </div>
            <div className="col-8">
@@ -89,7 +93,7 @@ export default function BTCUSDT({open,anchorEl,handleClose}) {
                                     {item.name}
                                  </div>
                                  </TableCell>
-                                 <TableCell sx={{color:"#008800"}}>{item.changes}</TableCell>
+                                 <TableCell sx={{color:"#05c48e"}}>{item.changes}</TableCell>
                               </TableRow>
                            ))}
                         </TableBody>

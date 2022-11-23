@@ -82,13 +82,13 @@ export default function LimitForm({coin}) {
           color="light"
           sx={mstyle}
         >
-          <Typography sx={{ color: "#05c48e" }}>
+          <Typography sx={{ color: "#fff" }}>
             Log in
           </Typography>
           <Typography sx={{ marginInline: "5px" ,color:"#8c8e90"}}>
             or
           </Typography>
-          <Typography sx={{ color: "#df473d" }}>
+          <Typography sx={{ color: "#fff" }}>
             Sign up
           </Typography>
 

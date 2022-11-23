@@ -1,10 +1,11 @@
 import React from 'react'
-import { Box, Typography  } from '@mui/material';
+import { Box, Typography,Tooltip } from '@mui/material';
 import trade from '../../../assets/trade.png'
-import AppleIcon from '@mui/icons-material/Apple';
-import GoogleIcon from '@mui/icons-material/Google';
-import AndroidIcon from '@mui/icons-material/Android';
-import LocalMallIcon from '@mui/icons-material/LocalMall';
+import googleplay from '../../../assets/googleplay.png';
+import apple from '../../../assets/apple.png';
+import android from '../../../assets/android.png';
+import appstore from '../../../assets/appstore.png';
+
 function TrideAny() {
     return (
         <Box className="row" sx={{py: 15}}>
@@ -18,17 +19,74 @@ function TrideAny() {
                     Trade Anytime, Anywhere
                 </Typography>
                 <Box className='socialicon d-flex flex-wrap'>
-                    <Box className="col-5 text-end py-3">
-                       <AppleIcon sx={{fontSize: "3.5rem"}}/>
+                    <Box className="col-5 text-end py-3 ">
+                    <Tooltip title="comming soon" placement='top-end'>
+                            <Box sx={{cursor:"pointer"}}>
+                                <Box component="img" 
+                                    src={googleplay}
+                                    sx={{
+                                        width:"60px",
+                                        mb:1
+                                    }}
+                                />
+                                <Typography variant="p" component="div" fontSize={13} >
+                                    Google Play
+                                </Typography>
+                            </Box>
+                       </Tooltip>
                     </Box>
                     <Box className="col-5 py-3">
-                        <GoogleIcon sx={{fontSize: "3.5rem"}}/>
+                    <Tooltip title="comming soon" placement='top'>
+                            <Box sx={{cursor:"pointer"}}>
+                                <Box component="img" 
+                                src={android}
+                                sx={{
+                                    width:"60px",
+                                    mb:1
+                                }}
+                                 />
+                                 <Typography variant="p" component="div" fontSize={13} >
+                                Android APK
+                                </Typography>
+                            </Box>
+                       </Tooltip>
+
                     </Box>
                     <Box className="col-5 text-end py-3">
-                        <AndroidIcon sx={{fontSize: "3.5rem"}}/>
+                    <Tooltip title="comming soon" placement='bottom-end'>
+                            <Box sx={{cursor:"pointer"}}>
+                                <Box component="img" 
+                                    src={appstore}
+                                    sx={{
+                                        width:"60px",
+                                        mb:1
+                                    }}
+                                />
+                                <Typography variant="p" component="div" fontSize={13} >
+                                    App Store
+                                </Typography>
+                            </Box>
+                    </Tooltip>            
+                        
                     </Box>
                     <Box className="col-5 py-3">
-                       <LocalMallIcon sx={{fontSize: "3.5rem"}}/>
+                        <Tooltip title="comming soon">
+                            <Box sx={{cursor:"pointer"}}>
+                                <Box component="img" 
+                                    src={apple}
+                                    sx={{
+                                        width:"60px",
+                                        mb:1
+                                    }}
+                                />
+                                <Typography variant="p" component="div" fontSize={13} >
+                                    iOS App
+                                </Typography>
+                            </Box>
+                        </Tooltip>
+                                
+                           
+
                     </Box>
                 </Box>
             </Box>

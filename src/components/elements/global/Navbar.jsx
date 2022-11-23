@@ -74,7 +74,7 @@ export default function Navbar({ open }) {
 
             {location.pathname === '/trade' ? <Box className='d-lg-block d-md-block d-none'>
 
-              <Button color="inherit" sx={{ fontSize: "15px" }} style={csfont} onClick={handleClickBtc}>
+              <Button color="inherit" className="btcusdt" sx={{ fontSize: "15px" }} style={csfont} onClick={handleClickBtc}>
                 BTC/USDT
                 <ArrowDropDownIcon />
               </Button>
