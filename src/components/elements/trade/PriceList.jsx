@@ -17,7 +17,10 @@ const data = [
   createData("20640.1", "0.00880", "181.6323",'g'),
   createData("20640.1", "0.00880", "181.6323",'g'),
   createData("20640.1", "0.00880", "181.6323",'g'),
-
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
 ]
 
 const data2 = [
@@ -34,7 +37,7 @@ const data2 = [
 
 export default function PriceList() {
   return (
-    <div className="px-1 py-0">
+    <div className="px-1 py-0" style={{height:"100%"}}>
       <Box className="d-flex justify-content-center align-items-center">
         <Typography>Order Book</Typography>
       </Box>
