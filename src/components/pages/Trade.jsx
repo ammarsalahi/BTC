@@ -46,7 +46,7 @@ export default function Trade() {
             <PriceList />
           </div>
           <div className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl " style={{ height: row2height }}>
-            <div className='sticky-top d-flex justify-content-center'>
+            <div className='d-flex justify-content-center'>
               <Typography variant="p" component="div">
                 Trade History
               </Typography>

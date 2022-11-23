@@ -29,11 +29,6 @@ const data2 = [
   createData("20640.1", "0.00880", "181.6323",'n'),
 
 ]
-const heads=[
-  "Price(USDT)",
-  "Amount(BTC)",
-  "Total"
-]
 
 
 
