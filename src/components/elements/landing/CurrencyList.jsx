@@ -71,7 +71,7 @@ export default function CurrencyList() {
             <Table>
                 <TableHead>
                     <TableRow sx={trs} >
-                        <TableCell className="text-start head-style pr-5" style={colorgray}>name</TableCell>
+                        <TableCell className="text-start head-style px-2"  style={colorgray}>name</TableCell>
                         <TableCell className="text-center head-style" style={colorgray}>Last Price</TableCell>
                         <TableCell className="text-center head-style" style={colorgray}>24h Changes</TableCell>
                         <TableCell className="text-end head-style px-1" style={colorgray}>Market Cup</TableCell>
