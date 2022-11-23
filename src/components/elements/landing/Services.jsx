@@ -33,7 +33,7 @@ function Services() {
                         24/7 Customer Service
                     </Typography>
                     <Typography variant="p" component="div" style={titleStyle}>
-                        Contact KuCoin customer support with your questions at any time.
+                        Contact BiTMNC customer support with your questions at any time.
                     </Typography>
                 </Box>
                 <Box className=' col-lg-3 col-md-6 col-12 my-lg-0 my-4'>
@@ -44,7 +44,7 @@ function Services() {
                         Community
                     </Typography>
                     <Typography variant="p" component="div" style={titleStyle}>
-                        The KuCoin Global Community is home to millions of users from 200+ countries, with support for 20+ languages.
+                        The BiTMNC Global Community is home to millions of users from 200+ countries, with support for 20+ languages.
                     </Typography>
                 </Box>
                 <Box className=' col-lg-3 col-md-6 col-12 my-lg-0 my-4'>

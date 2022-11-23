@@ -48,7 +48,7 @@ export default function Trade() {
             <div className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl " style={{height:row2height}}>
               <div className='sticky-top d-flex justify-content-center'>
                 <Typography variant="p" component="div">
-                  Recent Trades
+                   Trade History
                 </Typography>
               </div>
               <div className=" overflow-auto pricing " style={{height:"90%"}}>

@@ -78,7 +78,7 @@ export default function TradeHistory() {
                         </MenuItem>
                     ))}
                   </TextField>
-                  <Button variant="contained" size="small" color="light" sx={{ml:"1%"}}>
+                  <Button variant="outlined" size="small" color="light" sx={{ml:"1%"}}>
                     Search
                 </Button>
                 <Button variant="contained" size="small" color="light" sx={{ml:'2%'}}>

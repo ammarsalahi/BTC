@@ -10,7 +10,9 @@ const trs={
 }
 const trs2={
   '& td,& th': { border: 0,px:1,fontSize:16},
-  '&:hover':{backgroundColor:"rgb(43, 49, 57)"}
+  '&:hover':{
+    backgroundColor:"rgb(43, 49, 57)"
+  }
 }
 const headstyle={
   minWidth:"120px",
@@ -27,9 +29,10 @@ const rows=[
   createData("BNB","BNB","$284.3","+3.37%","$45.868M",binance),
   createData("Bitcoin","BTC","$19.990","-0.73%","$383.243M",bitcoin),
   createData("Ethereum","ETH","$1.354","-0.38%","$166.163M",eth),
-  // createData("Galxe","GAL","$2.6","-2.62%","$91M"),
-  // createData("Green Metaverse Token","GMT","$0.6421","+2.41%","$385M",eth),
-
+  createData("Tether","USDT","$1.354","-0.38%","$166.163M",eth),
+  createData("Tron","TRX","$1.354","-0.38%","$166.163M",eth),
+  createData("LiteCoin","LTC","$1.354","-0.38%","$166.163M",eth),
+  
 ]
 
 const getColor=(numberText)=>{
@@ -76,15 +79,15 @@ export default function CurrencyList() {
                 </TableHead>
                 <TableBody>
                    {rows.map((item,idx)=>(
-                      <TableRow key={idx} sx={trs2}>
-                          <TableCell className="text-start px-0">
+                      <TableRow key={idx} sx={trs2} style={{borderRadius:"20px"}}>
+                          <TableCell className="text-start">
                             <Svgs Component={item.icon} style={{height:"30px",width:"30px",marginRight:"10px"}}/>
                             {item.name}    <span style={{color:'grey',marginLeft:'1%',fontSize:"13px"}}>{item.nick}</span>
 
                           </TableCell>
-                          <TableCell className="text-center"  >{item.lastprice}</TableCell>
+                          <TableCell className="text-center">{item.lastprice}</TableCell>
                           <TableCell className="text-center" sx={{color:getColor(item.changes)}}>{item.changes}</TableCell>
-                          <TableCell className="text-end px-0">{item.market}</TableCell>
+                          <TableCell className="text-end ">{item.market}</TableCell>
                      </TableRow>
                     
                    ))}

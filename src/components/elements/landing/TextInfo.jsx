@@ -10,7 +10,7 @@ function TextInfo() {
                 </h1>
             </div>
             <div className='py-5'>
-                <Button variant="contained" size="large" color="light" sx={{ px: 7, py: 1.5, fontSize: "large", fontWeight: "bold", cursor: "pointer", mr: 5, '&:hover': { backgroundColor: "#3b3b3b" } }} >
+                <Button variant="outlined" size="large" color="light" sx={{ px: 7, py: 1.5, fontSize: "large", fontWeight: "bold", cursor: "pointer", mr: 5, '&:hover': { backgroundColor: "#3b3b3b" } }} >
                     Log in
                 </Button>
                 <Button variant="contained" size="large" color="light" sx={{ px: 7, py: 1.5, fontSize: "large", fontWeight: "bold", cursor: "pointer", '&:hover': { backgroundColor: "#3b3b3b" } }} >

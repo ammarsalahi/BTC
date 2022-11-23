@@ -30,7 +30,6 @@
     url(../fonts/iconfont-OKX-header-footer.woff2) format("truetype");
 }
 
-
 body {
   background-color: #000 !important;
   font-family: "Binance-medium" !important;
@@ -61,6 +60,10 @@ a.logo {
 /* .body {
   font-family: "Binance-medium";
 } */
+
+.btcusdt{
+    font-family: "IconFont" !important;
+}
 
 @media (min-width: 0px) and (max-width: 768px) {
   .container-btc {
