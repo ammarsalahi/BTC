@@ -58,7 +58,7 @@ export default function Trade() {
               <CoinPriceTabs  heights={row2height}/>
             </div>
           </div>
-          <div className="col-12 " style={{height:row4height}}>
+          <div className="col-12 " style={{height:row2height}}>
             <SpotTabs />
           </div>
         </div>
