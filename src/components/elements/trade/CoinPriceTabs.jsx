@@ -10,7 +10,7 @@ const trs={
   '& td,& th': { border: 0 ,p:0.5,textAlign:"left",fontSize:"11px"},
 }
 const trs2={
-  '& td,& th': { border: 0 ,px:0.5,py:0.2,textAlign:"left",fontSize:"11px"},
+  '& td,& th': { border: 0 ,p:0.5,textAlign:"left",fontSize:"11px"},
   '&:hover':{backgroundColor:"rgb(43,49,57)",cursor:"pointer"}
 }
 

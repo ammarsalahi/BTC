@@ -22,7 +22,7 @@ export default function Trade() {
     setRowHeight(size - (size / 2.8))
     setRow2Height(size - (size / 2 + 20))
     setRow3Height((size - (rowheight+80)))
-    setRow4Height((size - (rowheight+85)))
+    setRow4Height((size - (rowheight+0)))
 
   }
   useEffect(() => {
@@ -45,20 +45,20 @@ export default function Trade() {
 
         </div>
         <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row teeeeeet gx-0   " >
-          <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-hidden pricing borderbottom" style={{ height: row2height }}>
+          <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-hidden pricing borderbottom" style={{ height: rowheight }}>
             <PriceList />
           </div>
-          <div className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl " style={{ height: row2height }}>
+          <div className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl " style={{ height: rowheight }}>
             <div className='d-flex justify-content-center'>
               <Typography variant="p" component="div">
                 Trade History
               </Typography>
             </div>
             <div>
-              <CoinPriceTabs  heights={row2height}/>
+              <CoinPriceTabs  heights={rowheight}/>
             </div>
           </div>
-          <div className="col-12 " style={{height:row4height}}>
+          <div className="col-12 ">
             <SpotTabs />
           </div>
         </div>
