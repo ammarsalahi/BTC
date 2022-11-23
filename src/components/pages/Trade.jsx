@@ -20,7 +20,7 @@ export default function Trade() {
     setPageHeight(size - 55);
     setRowHeight(size - (size / 2.8))
     setRow2Height(size - (size / 2 + 20))
-    setRow3Height((size - (rowheight+35)))
+    setRow3Height((size - (rowheight+70)))
   }
   useEffect(() => {
     getHeightofScreen()
@@ -46,7 +46,7 @@ export default function Trade() {
             <PriceList />
           </div>
           <div className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl " style={{ height: row2height }}>
-            <div className='sticky-top d-flex justify-content-center'>
+            <div className='d-flex justify-content-center'>
               <Typography variant="p" component="div">
                 Trade History
               </Typography>
