@@ -20,7 +20,7 @@ export default function Trade() {
     setPageHeight(size - 55);
     setRowHeight(size - (size / 2.8))
     setRow2Height(size - (size / 2 + 20))
-    setRow3Height((size - (rowheight+35)))
+    setRow3Height((size - (rowheight+70)))
   }
   useEffect(() => {
     getHeightofScreen()
