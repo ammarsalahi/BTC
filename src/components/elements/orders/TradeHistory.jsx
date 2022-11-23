@@ -35,7 +35,7 @@ export default function TradeHistory() {
         <Box className="row gx-0 p-4">
         <Typography>Spot</Typography>
             <Typography variant="h4">
-                Order History
+                Trade History
             </Typography>
         </Box>
         <Box className="row mt-5">
@@ -78,16 +78,16 @@ export default function TradeHistory() {
                         </MenuItem>
                     ))}
                   </TextField>
-                  <Button variant="contained" color="yellow">
+                  <Button variant="contained" size="small" color="light" sx={{ml:"1%"}}>
                     Search
                 </Button>
-                <Button variant="contained" sx={{ml:"1%", bgcolor:"#808080"}}>
+                <Button variant="contained" size="small" color="light" sx={{ml:'2%'}}>
                     Reset
                 </Button>
                 
                 </Box>
-                <Button variant="contained" disabled>
-                    Clear All Filters
+                <Button variant="contained" color="light" disabled>
+                    clear all filters
                 </Button>
            </div>
         </Box> 
@@ -95,16 +95,16 @@ export default function TradeHistory() {
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow>
-            <TableCell>Data</TableCell>
-            <TableCell align="right">Pair</TableCell>
-            <TableCell align="right">Type</TableCell>
-            <TableCell align="right">Side</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Amount</TableCell>
-            <TableCell align="right">Filled</TableCell>
-            <TableCell align="right">Total</TableCell>
-            <TableCell align="right">Trigger Conditions</TableCell>
-            <TableCell align="right">Actions</TableCell>
+            <TableCell sx={{color:"#8c8e90"}}>data</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>pair</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>type</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>side</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>price</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>amount</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>filled</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>total</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>trigger conditions</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

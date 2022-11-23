@@ -19,7 +19,7 @@ export default function Trade() {
     let size=window.innerHeight;
     setPageHeight(size-55);
     setRowHeight(size-(size/2.8))
-    setRow2Height(size-(size/2+50))
+    setRow2Height(size-(size/2+60))
     setRow3Height((size-rowheight)/4.1)
   }
   useEffect(()=>{
@@ -42,11 +42,18 @@ export default function Trade() {
            
           </div>
           <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row  gx-0 borderingl  h-100" >
-            <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-auto pricing borderbottom" style={{height:row2height}}>
+            <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-hidden pricing borderbottom" style={{height:row2height}}>
               <PriceList/>
             </div>
-            <div className="col-lg-6 col-md-6 col-12 gx-0 overflow-auto borderbottom borderingl " style={{height:row2height}}>
+            <div className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl " style={{height:row2height}}>
+              <div className='sticky-top d-flex justify-content-center'>
+                <Typography variant="p" component="div">
+                  Recent Trades
+                </Typography>
+              </div>
+              <div className=" overflow-auto pricing " style={{height:"90%"}}>
               <CoinPriceTabs/>
+              </div>
             </div>
             <div className="col-12 ">
               <SpotTabs/>

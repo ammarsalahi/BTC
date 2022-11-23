@@ -38,6 +38,7 @@ export default function LimitForm({coin}) {
         <TextField
           placeholder="Price"
           size="small"
+          color="light"
           sx={mstyle}
           InputProps={{
             endAdornment: (
@@ -54,6 +55,7 @@ export default function LimitForm({coin}) {
         <TextField
           placeholder="Amount"
           size="small"
+          color="light"
           sx={mstyle}
           InputProps={{
             endAdornment: (
@@ -76,14 +78,14 @@ export default function LimitForm({coin}) {
             />
         </div>
         <Button
-          variant="contained"
-          color="dark"
+          variant="outlined"
+          color="light"
           sx={mstyle}
         >
           <Typography sx={{ color: "#05c48e" }}>
             Log in
           </Typography>
-          <Typography sx={{ marginInline: "5px" }}>
+          <Typography sx={{ marginInline: "5px" ,color:"#8c8e90"}}>
             or
           </Typography>
           <Typography sx={{ color: "#df473d" }}>

@@ -11,18 +11,18 @@ export default function StopForm({ coin }) {
   }
   const marks = [
     {
-      value: 20,
-      // label: '25%',
+      value: 23,
+      label: '25%',
     },
     {
-      value: 45,
-      // label: '20°C',
+      value: 48,
+      label: '50%',
     },
     {
-      value: 69,
-      // label: '37°C',
+      value: 73,
+      label: '75%',
     },
-
+    
   ];
 
   return (
@@ -35,6 +35,7 @@ export default function StopForm({ coin }) {
         <TextField
           placeholder="Stop"
           size="small"
+          color="light"
           sx={mstyle}
           InputProps={{
             endAdornment: (
@@ -51,6 +52,7 @@ export default function StopForm({ coin }) {
         <TextField
           placeholder="Limit"
           size="small"
+          color="light"
           sx={mstyle}
           InputProps={{
             endAdornment: (
@@ -67,6 +69,7 @@ export default function StopForm({ coin }) {
         <TextField
           placeholder="Amount"
           size="small"
+          color="light"
           sx={mstyle}
           InputProps={{
             endAdornment: (
@@ -90,19 +93,20 @@ export default function StopForm({ coin }) {
         </div>
 
         <Button
-          variant="contained"
-          color="dark"
+          variant="outlined"
+          color="light"
           sx={mstyle}
         >
           <Typography sx={{ color: "#05c48e" }}>
             Log in
           </Typography>
-          <Typography sx={{ marginInline: "5px" }}>
+          <Typography sx={{ marginInline: "5px" ,color:"#8c8e90"}}>
             or
           </Typography>
           <Typography sx={{ color: "#df473d" }}>
             Sign up
           </Typography>
+
         </Button>
       </FormGroup>
     </div>

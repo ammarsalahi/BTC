@@ -10,12 +10,14 @@ const trs2={
   '& td,& th': { border: 0 ,p:0.5,textAlign:"left",fontSize:"11px"},
   '&:hover':{backgroundColor:"grey"}
 }
-
+const trs3={
+  '& td,& th': { border: 0 ,p:0.5,pr:3.7,textAlign:"left",fontSize:"11px"},
+  '&:hover':{backgroundColor:"grey"}
+}
 function createData(price,amount,total) {
     return {price,amount,total};
 }
 const data=[
-    createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
     createData("20640.1","0.00880","181.6323"),
@@ -38,13 +40,17 @@ const getidx=(idx)=>{
 export default function PriceList() {
   return (
     <div className="px-2 ">
-        <TableContainer sx={{width:"auto"}}>
+      <Box className="d-flex justify-content-center align-items-center sticky-top">
+        <Typography>Order Book</Typography>
+      </Box>
+      <Box className=" pricing" sx={{height:"100%"}}>
+      <TableContainer sx={{width:"auto"}}>
           <Table>
             <TableHead>
                 <TableRow sx={trs}>
-                    <TableCell sx={{color : "#909090"}}>Price(USDT)</TableCell>
-                    <TableCell sx={{color : "#909090"}}>Amount(BTC)</TableCell>
-                    <TableCell sx={{color : "#909090"}}>Total(BTC)</TableCell>
+                    <TableCell sx={{color : "#8c8e90"}}>Price(USDT)</TableCell>
+                    <TableCell sx={{color : "#8c8e90"}}>Amount(BTC)</TableCell>
+                    <TableCell sx={{color : "#8c8e90"}}>Total(BTC)</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody sx={{cursor:"pointer"}}>
@@ -74,7 +80,7 @@ export default function PriceList() {
           <Table>
             <TableBody sx={{cursor:"pointer"}}>
                     {data.map((d,idx)=>(
-                        <TableRow key={idx} sx={trs2}>
+                        <TableRow key={idx} sx={trs3}>
                         <TableCell sx={{color:"#df473d"}}>{d.price}</TableCell>
                         <TableCell>{d.amount}</TableCell>
                         <TableCell>{d.total}</TableCell>
@@ -83,6 +89,8 @@ export default function PriceList() {
             </TableBody>
           </Table>
         </TableContainer>
+      </Box>
+       
     </div>
   )
 }

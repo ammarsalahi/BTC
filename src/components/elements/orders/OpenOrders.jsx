@@ -91,19 +91,18 @@ export default function OpenOrders() {
       <TableContainer sx={{ mt: "2%" }} component={Paper}>
         <Table aria-label="collapsible table">
           <TableHead>
-            <TableRow>
-              <TableCell>Data</TableCell>
-              <TableCell align="right">Pair</TableCell>
-              <TableCell align="right">Type</TableCell>
-              <TableCell align="right">Side</TableCell>
-              <TableCell align="right">Average</TableCell>
-              <TableCell align="right">Price</TableCell>
-              <TableCell align="right">Executed</TableCell>
-              <TableCell align="right">Amount</TableCell>
-              <TableCell align="right">Total</TableCell>
-              <TableCell align="right">Trigger Conditions</TableCell>
-              <TableCell align="right">Status</TableCell>
-            </TableRow>
+          <TableRow>
+            <TableCell sx={{color:"#8c8e90"}}>data</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>pair</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>type</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>side</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>price</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>amount</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>filled</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>total</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>trigger conditions</TableCell>
+            <TableCell align="right" sx={{color:"#8c8e90"}}>actions</TableCell>
+          </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
@@ -130,6 +129,7 @@ export default function OpenOrders() {
           </TableBody>
         </Table>
       </TableContainer>
+      
     </Box>
   )
 }
