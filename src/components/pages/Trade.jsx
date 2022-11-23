@@ -22,7 +22,7 @@ export default function Trade() {
     setRowHeight(size - (size / 2.8))
     setRow2Height(size - (size / 2 + 20))
     setRow3Height((size - (rowheight+80)))
-    setRow4Height((size - (rowheight+400)))
+    setRow4Height((size - (rowheight+0)))
 
   }
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function Trade() {
               <CoinPriceTabs  heights={row2height}/>
             </div>
           </div>
-          <div className="col-12 " style={{height:row2height}}>
+          <div className="col-12 ">
             <SpotTabs />
           </div>
         </div>
