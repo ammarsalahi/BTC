@@ -14,13 +14,16 @@ export default function Trade() {
   const [rowheight, setRowHeight] = useState('');
   const [row2height, setRow2Height] = useState('');
   const [row3height, setRow3Height] = useState('');
+  const [row4height, setRow4Height] = useState('');
 
   const getHeightofScreen = () => {
     let size = window.innerHeight;
     setPageHeight(size - 55);
     setRowHeight(size - (size / 2.8))
     setRow2Height(size - (size / 2 + 20))
-    setRow3Height((size - (rowheight+110)))
+    setRow3Height((size - (rowheight+80)))
+    setRow4Height((size - (rowheight+0)))
+
   }
   useEffect(() => {
     getHeightofScreen()
@@ -37,7 +40,7 @@ export default function Trade() {
             <TradeChart sizing={rowheight} />
           </div>
           <div className='bordertop'>
-            <TradeFooter height={row3height} />
+            <TradeFooter height={230} />
           </div>
 
         </div>
@@ -55,7 +58,7 @@ export default function Trade() {
               <CoinPriceTabs  heights={row2height}/>
             </div>
           </div>
-          <div className="col-12 ">
+          <div className="col-12 " style={{height:row4height}}>
             <SpotTabs />
           </div>
         </div>
