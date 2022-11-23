@@ -20,9 +20,9 @@ export default function Trade() {
     let size = window.innerHeight;
     setPageHeight(size - 55);
     setRowHeight(size - (size / 2.8))
-    setRow2Height(size - (size / 2.2))
+    setRow2Height(size - (size / 2 + 20))
     setRow3Height((size - (rowheight+80)))
-    setRow4Height((size - (rowheight+0)))
+    setRow4Height((size - (rowheight)))
 
   }
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function Trade() {
               <CoinPriceTabs  heights={rowheight}/>
             </div>
           </div>
-          <div className="col-12 ">
+          <div className="col-12 " style={{height:row4height}}>
             <SpotTabs />
           </div>
         </div>
