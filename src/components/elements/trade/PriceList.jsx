@@ -17,7 +17,10 @@ const data = [
   createData("20640.1", "0.00880", "181.6323",'g'),
   createData("20640.1", "0.00880", "181.6323",'g'),
   createData("20640.1", "0.00880", "181.6323",'g'),
-
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
 ]
 
 const data2 = [
@@ -27,7 +30,10 @@ const data2 = [
   createData("20640.1", "0.00880", "181.6323",'n'),
   createData("20640.1", "0.00880", "181.6323",'n'),
   createData("20640.1", "0.00880", "181.6323",'n'),
-
+  createData("20640.1", "0.00880", "181.6323",'n'),
+  createData("20640.1", "0.00880", "181.6323",'n'),
+  createData("20640.1", "0.00880", "181.6323",'n'),
+  createData("20640.1", "0.00880", "181.6323",'n'),
 ]
 
 
@@ -51,7 +57,7 @@ export default function PriceList() {
         <TableComponent  bodys={data}/>
 
 
-        <Box className="d-flex justify-content-between  py-1 gx-0">
+        <Box className="d-flex justify-content-between align-items-center  py-1 gx-0">
           <Box>
             <Typography variant="p" sx={{ fontSize: "14px", color: "rgb(14, 203, 129)", pr: 1 }}>
               20,637.99 <ArrowUpward fontSize="small" />
@@ -62,7 +68,7 @@ export default function PriceList() {
               $20,637.99
             </Typography>
           </Box>
-          <Link style={{ paddingLeft: "10%", fontSize: "11px" }}>more</Link>
+          <Link style={{ paddingLeft: "10%", fontSize: "11px"}}>more</Link>
         </Box>
         <TableComponent  bodys={data2}/>
 

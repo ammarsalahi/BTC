@@ -24,7 +24,7 @@ export default function CoinPriceTabs() {
     setValue(newValue);
   };
   return (
-    <Box sx={{py:1,px:0.5}}>
+    <Box sx={{pb:1,px:0.5}}>
       <Tabs value={value} onChange={handleChange}>
         <Tab style={{color: "#8c8e90"}} label={<p className='text-light m-0 g-0 p-0'>Spot</p>} {...a11yProps(0)} sx={value===0 && {borderTop:"2px solid #fff",color:"#fff"}}/>
       </Tabs>
