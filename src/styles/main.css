@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: "IBM-FONT";
   src: local("IBM-FONT"),
     url(../fonts/IBMPlexSansCondensed-Regular.ttf) format("truetype");
@@ -22,7 +22,7 @@
   font-family: "Binance-bold";
   src: local("Binance"),
     url(../fonts/BinancePlex-SemiBold.otf) format("truetype");
-} */
+}
 
 @font-face {
   font-family: "IconFont";
@@ -30,24 +30,28 @@
     url(../fonts/iconfont-OKX-header-footer.woff2) format("truetype");
 }
 
-
 body {
   background-color: #000 !important;
-  font-family: "IconFont" !important;
-
+  font-family: "Binance-medium" !important;
 }
-p,h1,h2,h3,h4,h5,h6,a{
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
   font-family: "IconFont" !important;
-
-}
-[class^="Mui"],
+} */
+/* [class^="Mui"],
 [class^="Mui"] * {
   font-family: "IconFont" !important;
 }
 [class*="Mui"],
 [class*="Mui"] * {
   font-family: "IconFont" !important;
-}
+} */
 a {
   text-decoration: none;
   color: grey !important;
@@ -105,16 +109,16 @@ a.logo {
     padding: 20px 0px !important;
   }
   .border-right {
-    border-right: 4px  solid #3b3b3b;
+    border-right: 4px solid #3b3b3b;
   }
   .bordering {
-    border-right: 4px  solid #3b3b3b;
+    border-right: 4px solid #3b3b3b;
   }
   .borderingl {
-    border-left: 4px  solid #3b3b3b;
+    border-left: 4px solid #3b3b3b;
   }
   .borderbottom {
-    border-bottom: 4px  solid #3b3b3b;
+    border-bottom: 4px solid #3b3b3b;
   }
   .searchpadding {
     padding-top: 20px;
@@ -170,10 +174,14 @@ div.pricing::-webkit-scrollbar-thumb:hover {
 .bccc {
   color: #161515;
 }
-.MuiPaper-root.MuiMenu-paper.MuiPaper-root.MuiPopover-paper{
-   background-image: none ;
+.MuiPaper-root.MuiMenu-paper.MuiPaper-root.MuiPopover-paper {
+  background-image: none;
 }
-.css-6pai2x-MuiTableCell-root , .css-1ijrop1-MuiTableCell-root , .css-qnurb9-MuiTypography-root , .css-17893no-MuiTypography-root , .css-1othcul-MuiTableCell-root{
+.css-6pai2x-MuiTableCell-root,
+.css-1ijrop1-MuiTableCell-root,
+.css-qnurb9-MuiTypography-root,
+.css-17893no-MuiTypography-root,
+.css-1othcul-MuiTableCell-root {
   font-family: "Binance-medium" !important;
 }
 @media all and (min-width: 1280px) {
@@ -182,4 +190,3 @@ div.pricing::-webkit-scrollbar-thumb:hover {
     height: 100%;
   }
 }
- 
