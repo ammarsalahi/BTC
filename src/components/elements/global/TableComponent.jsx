@@ -10,7 +10,7 @@ export default function TableComponent({heads,bodys}) {
   return (
 
     <Box sx={{ width: 'auto' }}>
-        <TableContainer className='overflow-hidden' sx={{maxHeight:100}}>
+        <TableContainer className='overflow-hidden' sx={{maxHeight:150}}>
             <Table>
                 <TableBody sx={{height:"200px"}}>
                         {bodys.map((d,idx)=>(
