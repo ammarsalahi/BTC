@@ -22,9 +22,13 @@
   font-family: "Binance-bold";
   src: local("Binance"),
     url(../fonts/BinancePlex-SemiBold.otf) format("truetype");
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> e0c921a5ec8f7e8bc0d8e8a169e7df48eb197ecd
 
-@font-face {
+ @font-face {
   font-family: "IconFont";
   src: local("IconFont"),
     url(../fonts/iconfont-OKX-header-footer.woff2) format("truetype");
@@ -33,6 +37,7 @@
 body {
   background-color: #000 !important;
   font-family: "Binance-medium" !important;
+<<<<<<< HEAD
 }
 /* p,
 h1,
@@ -45,13 +50,27 @@ a {
   font-family: "IconFont" !important;
 } */
 /* [class^="Mui"],
+=======
+
+}
+p,h1,h2,h3,h4,h5,h6,a{
+  font-family: "Binance-medium" !important;
+
+}
+[class^="Mui"],
+>>>>>>> e0c921a5ec8f7e8bc0d8e8a169e7df48eb197ecd
 [class^="Mui"] * {
-  font-family: "IconFont" !important;
+  font-family: "Binance-medium" !important;
 }
 [class*="Mui"],
 [class*="Mui"] * {
+<<<<<<< HEAD
   font-family: "IconFont" !important;
 } */
+=======
+  font-family: "Binance-medium" !important;
+}
+>>>>>>> e0c921a5ec8f7e8bc0d8e8a169e7df48eb197ecd
 a {
   text-decoration: none;
   color: grey !important;
