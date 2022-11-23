@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: "IBM-FONT";
   src: local("IBM-FONT"),
     url(../fonts/IBMPlexSansCondensed-Regular.ttf) format("truetype");
@@ -22,9 +22,9 @@
   font-family: "Binance-bold";
   src: local("Binance"),
     url(../fonts/BinancePlex-SemiBold.otf) format("truetype");
-} */
+} 
 
-@font-face {
+ @font-face {
   font-family: "IconFont";
   src: local("IconFont"),
     url(../fonts/iconfont-OKX-header-footer.woff2) format("truetype");
@@ -33,20 +33,20 @@
 
 body {
   background-color: #000 !important;
-  font-family: "IconFont" !important;
+  font-family: "Binance-medium" !important;
 
 }
 p,h1,h2,h3,h4,h5,h6,a{
-  font-family: "IconFont" !important;
+  font-family: "Binance-medium" !important;
 
 }
 [class^="Mui"],
 [class^="Mui"] * {
-  font-family: "IconFont" !important;
+  font-family: "Binance-medium" !important;
 }
 [class*="Mui"],
 [class*="Mui"] * {
-  font-family: "IconFont" !important;
+  font-family: "Binance-medium" !important;
 }
 a {
   text-decoration: none;
