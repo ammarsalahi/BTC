@@ -32,7 +32,7 @@ const rows=[
   createData("Tether","USDT","$1.354","-0.38%","$166.163M",eth),
   createData("Tron","TRX","$1.354","-0.38%","$166.163M",eth),
   createData("LiteCoin","LTC","$1.354","-0.38%","$166.163M",eth),
-  
+
 ]
 
 const getColor=(numberText)=>{
@@ -70,24 +70,24 @@ export default function CurrencyList() {
         <TableContainer className="overflow-auto">
             <Table>
                 <TableHead>
-                    <TableRow sx={trs}>
-                        <TableCell className="text-start head-style px-0" style={colorgray}>name</TableCell>
+                    <TableRow sx={trs} >
+                        <TableCell className="text-start head-style pr-5" style={colorgray}>name</TableCell>
                         <TableCell className="text-center head-style" style={colorgray}>Last Price</TableCell>
                         <TableCell className="text-center head-style" style={colorgray}>24h Changes</TableCell>
-                        <TableCell className="text-end head-style px-0" style={colorgray}>Market Cup</TableCell>
+                        <TableCell className="text-end head-style px-1" style={colorgray}>Market Cup</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                    {rows.map((item,idx)=>(
-                      <TableRow key={idx} sx={trs2} style={{borderRadius:"20px"}}>
-                          <TableCell className="text-start">
+                      <TableRow key={idx} sx={trs2}>
+                          <TableCell className="text-start" sx={{borderRadius:"10px 0px 0px 10px"}}>
                             <Svgs Component={item.icon} style={{height:"30px",width:"30px",marginRight:"10px"}}/>
                             {item.name}    <span style={{color:'grey',marginLeft:'1%',fontSize:"13px"}}>{item.nick}</span>
 
                           </TableCell>
                           <TableCell className="text-center">{item.lastprice}</TableCell>
                           <TableCell className="text-center" sx={{color:getColor(item.changes)}}>{item.changes}</TableCell>
-                          <TableCell className="text-end ">{item.market}</TableCell>
+                          <TableCell className="text-end " sx={{borderRadius:"0px 10px 10px 0px"}}>{item.market}</TableCell>
                      </TableRow>
                     
                    ))}
