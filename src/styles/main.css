@@ -120,16 +120,16 @@ a.logo {
     padding: 20px 0px !important;
   }
   .border-right {
-    border-right: 4px solid #3b3b3b;
+    border-right: 3px solid #252a44;
   }
   .bordering {
-    border-right: 4px solid #3b3b3b;
+    border-right: 3px solid #252a44;
   }
   .borderingl {
-    border-left: 4px solid #3b3b3b;
+    border-left: 3px solid #252a44;
   }
   .borderbottom {
-    border-bottom: 4px solid #3b3b3b;
+    border-bottom: 3px solid #252a44;
   }
   .searchpadding {
     padding-top: 20px;
@@ -179,7 +179,7 @@ div.pricing::-webkit-scrollbar-thumb:hover {
 }
 
 .bordertop {
-  border-top: 4px solid #3b3b3b;
+  border-top: 3px solid #252a44;
 }
 
 .bccc {

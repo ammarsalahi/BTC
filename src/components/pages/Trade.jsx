@@ -10,60 +10,60 @@ import TradeFooter from '../elements/trade/TradeFooter'
 import CoinPriceTabs from '../elements/trade/CoinPriceTabs'
 
 export default function Trade() {
-  const [pageheight,setPageHeight]=useState('');
-  const [rowheight,setRowHeight]=useState('');
-  const [row2height,setRow2Height]=useState('');
-  const [row3height,setRow3Height]=useState('');
+  const [pageheight, setPageHeight] = useState('');
+  const [rowheight, setRowHeight] = useState('');
+  const [row2height, setRow2Height] = useState('');
+  const [row3height, setRow3Height] = useState('');
 
-  const getHeightofScreen=()=>{
-    let size=window.innerHeight;
-    setPageHeight(size-55);
-    setRowHeight(size-(size/2.8))
-    setRow2Height(size-(size/2+60))
-    setRow3Height((size-rowheight)/4.1)
+  const getHeightofScreen = () => {
+    let size = window.innerHeight;
+    setPageHeight(size - 55);
+    setRowHeight(size - (size / 2.8))
+    setRow2Height(size - (size / 2 + 60))
+    setRow3Height((size - rowheight) / 4.1)
   }
-  useEffect(()=>{
+  useEffect(() => {
     getHeightofScreen()
-    window.addEventListener('resize',getHeightofScreen,false);
-    
-  },[pageheight,rowheight]);
+    window.addEventListener('resize', getHeightofScreen, false);
+
+  }, [pageheight, rowheight]);
 
   return (
-    <div className='container-fluid' style={{height:pageheight}}>
+    <div className='container-fluid' style={{ height: pageheight }}>
 
-       <div className="row bordertop">
-          <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12 p-0 borderingl  ">
-            <div className="w-100">
+      <div className="row bordertop">
+        <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12 p-0   ">
+          <div className="w-100">
             <TradeChart sizing={rowheight} />
-            </div>
-            <div className='bordertop'>
-            <TradeFooter height={row3height}/>
-            </div>
-           
           </div>
-          <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row  gx-0 borderingl  h-100" >
-            <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-hidden pricing borderbottom" style={{height:row2height}}>
-              <PriceList/>
-            </div>
-            <div className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl " style={{height:row2height}}>
-              <div className='sticky-top d-flex justify-content-center'>
-                <Typography variant="p" component="div">
-                   Trade History
-                </Typography>
-              </div>
-              <div className=" overflow-auto pricing " style={{height:"90%"}}>
-              <CoinPriceTabs/>
-              </div>
-            </div>
-            <div className="col-12 ">
-              <SpotTabs/>
-            </div>
+          <div className='bordertop'>
+            <TradeFooter height={row3height} />
           </div>
 
-        
-       </div>
+        </div>
+        <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row  gx-0 borderingl  h-100" >
+          <div className="col-lg-6 col-md-6 col-12 gx-0  overflow-hidden pricing borderbottom" style={{ height: row2height }}>
+            <PriceList />
+          </div>
+          <div className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl " style={{ height: row2height }}>
+            <div className='sticky-top d-flex justify-content-center'>
+              <Typography variant="p" component="div">
+                Trade History
+              </Typography>
+            </div>
+            <div className=" overflow-auto pricing " style={{ height: "90%" }}>
+              <CoinPriceTabs />
+            </div>
+          </div>
+          <div className="col-12 ">
+            <SpotTabs />
+          </div>
+        </div>
+
+
+      </div>
 
     </div>
-         
+
   )
 }

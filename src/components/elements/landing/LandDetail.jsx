@@ -14,48 +14,6 @@ export default function LandDetail() {
   return (
       <Box sx={{ pt: 15 , px: 0 }} className="land-detail ">
         <Box className="row">
-          {/* <div className="col-lg-6 col-12 d-flex justify-content-between">
-             <Box className="my-3">
-             <Typography variant="h4" component="div" style={fontstyle2}>
-              $1 Billion
-            </Typography>
-            
-            <Typography variant="span" component="div" style={fontstyle}>
-              24h tranding volume on BitMnc <br /> exchange
-            </Typography>
-             </Box>
-             <Box className="my-3">
-             <Typography variant="h4" component="div" style={fontstyle2}>
-              $1 Billion
-            </Typography>
-            
-            <Typography variant="span" component="div" style={fontstyle}>
-              24h tranding volume on BitMnc <br /> exchange
-            </Typography>
-             </Box>
-          </div>
-          <div className="col-lg-6 col-12 d-flex justify-content-between">
-             <Box className="my-3">
-             <Typography variant="h4" component="div" style={fontstyle2}>
-              $1 Billion
-            </Typography>
-            
-            <Typography variant="span" component="div" style={fontstyle}>
-              24h tranding volume on BitMnc <br /> exchange
-            </Typography>
-             </Box>
-             <Box className="my-3">
-             <Typography variant="h4" component="div" style={fontstyle2}>
-              $1 Billion
-            </Typography>
-            
-            <Typography variant="span" component="div" style={fontstyle}>
-              24h tranding volume on BitMnc <br /> exchange
-            </Typography>
-             </Box>
-          </div> */}
-
-
           <Box className="col-lg-3 col-md-6 col-12 my-lg-0 my-4">
           <Typography variant="h4" component="div" style={fontstyle2}>
               $1 Billion
