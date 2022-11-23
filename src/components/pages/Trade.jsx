@@ -51,8 +51,8 @@ export default function Trade() {
                 Trade History
               </Typography>
             </div>
-            <div className=" overflow-auto pricing " style={{ height: "90%" }}>
-              <CoinPriceTabs />
+            <div>
+              <CoinPriceTabs  heights={row2height}/>
             </div>
           </div>
           <div className="col-12 ">

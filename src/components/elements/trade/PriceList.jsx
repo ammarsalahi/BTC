@@ -3,69 +3,58 @@ import React from 'react';
 import { TableContainer, Table, TableBody, TableRow, TableHead, TableCell } from '@mui/material'
 import { ArrowUpward } from '@mui/icons-material';
 import { Link } from 'react-router-dom'
+import TableComponent from '../global/TableComponent';
 const trs = {
-  '& td,& th': { border: 0, p: 0.5, textAlign: "center", fontSize: "11px" },
+  '& td,& th': { border: 0, py:0.4,px:0, textAlign: "left", fontSize: "11px" },
 }
-const trs2 = {
-  '& td,& th': { border: 0, p: 0.5, textAlign: "center", fontSize: "11px" },
-  '&:hover': { backgroundColor: "grey" }
-}
-const trs3 = {
-  '& td,& th': { border: 0, p: 0.5, pr: 0, textAlign: "center", fontSize: "11px" },
-  '&:hover': { backgroundColor: "grey" }
-}
-function createData(price, amount, total) {
-  return { price, amount, total };
+function createData(first, second, third,forth) {
+  return { first, second, third ,forth};
 }
 const data = [
-  createData("20640.1", "0.00880", "181.6323"),
-  createData("20640.1", "0.00880", "181.6323"),
-  createData("20640.1", "0.00880", "181.6323"),
-  createData("20640.1", "0.00880", "181.6323"),
-  createData("20640.1", "0.00880", "181.6323"),
-  createData("20640.1", "0.00880", "181.6323"),
-  createData("20640.1", "0.00880", "181.6323"),
-
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
+  createData("20640.1", "0.00880", "181.6323",'g'),
 
 ]
 
-const getidx = (idx) => {
-  if (idx % 2 == 0) {
-    return true
-  } else {
-    return false;
-  }
-}
+const data2 = [
+  createData("20640.1", "0.00880", "181.6323",'n'),
+  createData("20640.1", "0.00880", "181.6323",'n'),
+  createData("20640.1", "0.00880", "181.6323",'n'),
+  createData("20640.1", "0.00880", "181.6323",'n'),
+  createData("20640.1", "0.00880", "181.6323",'n'),
+
+]
+const heads=[
+  "Price(USDT)",
+  "Amount(BTC)",
+  "Total"
+]
+
+
 
 export default function PriceList() {
   return (
-    <div className="px-2 ">
-      <Box className="d-flex justify-content-center align-items-center sticky-top">
+    <div className="px-1 py-0">
+      <Box className="d-flex justify-content-center align-items-center">
         <Typography>Order Book</Typography>
       </Box>
-      <Box className=" pricing" sx={{ height: "100%" }}>
-        <TableContainer sx={{ width: "auto" }}>
           <Table>
             <TableHead>
               <TableRow sx={trs}>
-                <TableCell sx={{ color: "#8c8e90"}}>Price(USDT)</TableCell>
-                <TableCell sx={{ color: "#8c8e90" }}>Amount(BTC)</TableCell>
-                <TableCell sx={{ color: "#8c8e90" }}>Total(BTC)</TableCell>
+                <TableCell>Price(USDT)</TableCell>
+                <TableCell>Amount(BTC)</TableCell>
+                <TableCell>Total</TableCell>
+
               </TableRow>
             </TableHead>
-            <TableBody sx={{ cursor: "pointer" }}>
-              {data.map((d, idx) => (
-                <TableRow key={idx} sx={trs2}>
-                  <TableCell sx={getidx(idx) ? { color: "#05c48e" } : { color: '#df473d' }}>{d.price}</TableCell>
-                  <TableCell>{d.amount}</TableCell>
-                  <TableCell>{d.total}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-
           </Table>
-        </TableContainer>
-        <Box className="d-flex  py-2 gx-0">
+        <TableComponent  bodys={data}/>
+
+
+        <Box className="d-flex justify-content-between  py-1 gx-0">
           <Box>
             <Typography variant="p" sx={{ fontSize: "14px", color: "rgb(14, 203, 129)", pr: 1 }}>
               20,637.99 <ArrowUpward fontSize="small" />
@@ -78,20 +67,8 @@ export default function PriceList() {
           </Box>
           <Link style={{ paddingLeft: "10%", fontSize: "11px" }}>more</Link>
         </Box>
-        <TableContainer>
-          <Table>
-            <TableBody sx={{ cursor: "pointer" , textAlign: "center"}}>
-              {data.map((d, idx) => (
-                <TableRow key={idx} sx={trs3}>
-                  <TableCell sx={{ color: "#df473d" }}>{d.price}</TableCell>
-                  <TableCell>{d.amount}</TableCell>
-                  <TableCell>{d.total}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Box>
+        <TableComponent  bodys={data2}/>
+
     </div>
   )
 }

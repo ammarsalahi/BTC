@@ -1,36 +1,28 @@
 import React from 'react'
-import { Table,TableContainer,TableHead,TableBody,TableRow,TableCell } from '@mui/material'
+import { Table,TableContainer,TableHead,TableBody,TableRow,TableCell,Box } from '@mui/material'
 export default function TableComponent({heads,bodys}) {
-    const trs = {
-        '& td,& th': { border: 0, p: 0.5, textAlign: "center", fontSize: "11px" },
-    }
-    const trs2 = {
-        '& td,& th': { border: 0, p: 0.5, textAlign: "center", fontSize: "11px" },
-        '&:hover': { backgroundColor: "grey" }
-      }
-  return (
-    <TableContainer>
-        <Table>
-            <TableHead>
-                <TableRow sx={trs}>
-                {heads.map((item,idx)=>(
-                    <TableCell sx={{ color: "#8c8e90"}} key={idx}>
-                       {item.name}
-                    </TableCell>
-                ))}
-                </TableRow>
-            </TableHead>
-            <TableBody>
-                <TableRow sx={trs2}>
-                  {bodys.map((item,idx)=>(
-                    <TableCell key={idx}>
-                    {item.name}
-                    </TableCell>
-                  ))}
-                </TableRow>
-            </TableBody>
-        </Table>
-    </TableContainer>
 
+      const trs2={
+        '& td,& th': { border: 0 ,p:0.1,textAlign:"left",fontSize:"11px"},
+        '&:hover':{backgroundColor:"rgb(43,49,57)",cursor:"pointer"}
+    }
+     
+  return (
+
+    <Box sx={{ width: 'auto' }}>
+        <TableContainer className='overflow-auto '>
+            <Table>
+                <TableBody>
+                        {bodys.map((d,idx)=>(
+                            <TableRow key={idx} sx={trs2}>
+                            <TableCell sx={d.forth==='g' ? { color: "#05c48e",fontSize:"17px" } : { color: '#df473d',fontSize:"17px" }}>{d.first}</TableCell>
+                            <TableCell className='text-end' >{d.second}</TableCell>
+                            <TableCell className='text-end'>{d.third}</TableCell>
+                            </TableRow>
+                        ))}
+                </TableBody>
+            </Table>
+            </TableContainer>
+    </Box>
   )
 }
