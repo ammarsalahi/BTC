@@ -22,7 +22,7 @@ export default function Trade() {
     setRowHeight(size - (size / 2.8))
     setRow2Height(size - (size / 2 + 20))
     setRow3Height((size - (rowheight+80)))
-    setRow4Height((size - (rowheight+0)))
+    setRow4Height((size - (rowheight+85)))
 
   }
   useEffect(() => {
