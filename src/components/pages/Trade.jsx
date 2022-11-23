@@ -19,8 +19,8 @@ export default function Trade() {
     let size = window.innerHeight;
     setPageHeight(size - 55);
     setRowHeight(size - (size / 2.8))
-    setRow2Height(size - (size / 2 + 60))
-    setRow3Height((size - rowheight) / 4.1)
+    setRow2Height(size - (size / 2 + 20))
+    setRow3Height((size - (rowheight+35)))
   }
   useEffect(() => {
     getHeightofScreen()
