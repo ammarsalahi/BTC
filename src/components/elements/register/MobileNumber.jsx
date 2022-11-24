@@ -39,7 +39,7 @@ export default function MobileNumber() {
             }}/>
             </FormGroup>
 
-            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', mt:1,fontSize:"17px"}} color="yellow" >Signup</Button>
+            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', mt:1,fontSize:"17px"}} color="light" >Signup</Button>
         </div>
     )
 }
