@@ -19,7 +19,7 @@ export default function LandHead() {
             <div className="col-lg-4 col-12 text-start">
                 <Box>
                     <Typography sx={{ fontWeight: "600", fontFamily: "Harmony" }} className='land-head' variant="h2" gutterBottom>Trade at BitMNC<br />Invest in the Future</Typography>
-                    <Typography sx={{ fontWeight: "600", fontFamily: "Harmony" }} className='land-head' variant="h6">Buy, trade, and hold +250 cryptocurrencies on  <img src={LightLogo} alt="light-logo" width={80} className="gx-0 px-0 mx-0"/> </Typography>
+                    <Typography sx={{ fontWeight: "600", fontFamily: "Harmony" }} className='land-head' variant="h6">Buy, trade, and hold 250+ cryptocurrencies on  <img src={LightLogo} alt="light-logo" width={80} className="gx-0 px-0 mx-0"/> </Typography>
                           
                     <Box sx={{ mt: 8 }} className='land-head'>
                         <div className="row">

@@ -5,12 +5,14 @@ import twitter from '../../../assets/icons/twitter.svg'
 import instagram from '../../../assets/icons/instagram.svg'
 import youtube from '../../../assets/icons/youtube.svg'
 import email from '../../../assets/icons/email.svg'
+import LightLogo from '../../../assets/logolight.png'
+
 export default function LandFooter() {
   return (
     <Box className="row text-start landlist-m" sx={{py:10}}>
         <div className="col-lg-6 col-12">
             <Typography variant="h4" component="div">
-            BitMNC
+            <img src={LightLogo} alt="light-logo" width={120} className=" "/>
             </Typography>
             <Typography variant="h5" component="div">
                making crypto trading easier
