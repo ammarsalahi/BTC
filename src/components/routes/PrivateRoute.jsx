@@ -9,7 +9,7 @@ export default function PrivateRoute({children}) {
     console.log(props)
   }
   return (
-      <div>
+      <div style={{ height: '100vh' }}>
         <Navbar open={handle(true)}/>
         <div>
             {children}

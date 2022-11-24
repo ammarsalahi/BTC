@@ -31,7 +31,6 @@ export default function MobileNumber() {
             }}/>
             <PasswordStrengthBar password={password} />
             </Box>
-            <TextField label="Referral code (optional)" color="light" fullWidth  sx={{textcolor:"#000",height:'7ch', my:2}} variant="outlined" type="text"/>
             <FormGroup>
             <FormControlLabel control={<Checkbox sx={{mb:3}} color="light"/>} 
             label="I have read and agree to Binance’s Terms of Service and Privacy Policy" sx={{size:'20hv'}} inputProps={{
@@ -39,7 +38,7 @@ export default function MobileNumber() {
             }}/>
             </FormGroup>
 
-            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', mt:1,fontSize:"17px"}} color="yellow" >Signup</Button>
+            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', mt:1,fontSize:"17px"}} color="light" >Login</Button>
         </div>
     )
 }

@@ -29,11 +29,6 @@ export default function EmailAddress() {
             }}/>
             <PasswordStrengthBar password={password} />
             </Box>
-            <TextField label="Referral code (optional)" color="light" fullWidth  sx={{height:'7ch', my:2}} 
-            variant="outlined" type="text" 
-            inputProps={{
-                style:{color:"black"}
-            }}/>
             <FormGroup>
             <FormControlLabel control={<Checkbox sx={{mb:3,fontSize:"10px"}} color="light"/>} 
             label="I have read and agree to Binance’s Terms of Service and Privacy Policy" 
@@ -42,7 +37,7 @@ export default function EmailAddress() {
             }}/>
             </FormGroup>
 
-            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', mt:1,fontSize:"17px"}} color="yellow" >Signup</Button>
+            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', mt:1,fontSize:"17px"}} color="light" >Login</Button>
         </div>
         
     )

@@ -3,13 +3,11 @@
         padding: 30px 10px !important;
         width: 100% !important;
         height:100vh !important;
-        background-color: #fff;
     }
     .register-container{
         padding: 10px 10px !important;
         width: 100%;
         height: 100vh !important;
-        background-color: #fff;
     }
     .card-container{
         height: auto !important;
@@ -18,15 +16,12 @@
 @media all and (min-width:768px){
     .login-container{
         padding: 50px 30px !important;
-        width: 650px !important;
-        background-color: #fff;
-
+        width: 800px !important;
     }
     .register-container{
         padding: 20px 10px !important;
         width: 600px;
         height: auto !important;
-        background-color: #fff;
     }
     .card-container{
         height: 100vh !important;

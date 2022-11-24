@@ -6,79 +6,109 @@ import CssBaseline from '@mui/material/CssBaseline';
 import {Link} from 'react-router-dom'
 import { QrCode, Visibility, VisibilityOff } from '@mui/icons-material';
 import qrcode from '../../assets/qrcode.png';
-
+import MobileNumber from '../elements/login/MobileNumber';
+import EmailAddress from '../elements/login/EmailAddress';
+import logo from '../../assets/logolight.png'
+import qrcodes from '../../assets/qr-code-xxl.png'
 export default function Login() {
-    const lightTheme = createTheme({
-        palette: {
-          mode: 'light',
+    const [value, setValue] = React.useState(0);
+
+    const handleChange =(props)=>(event) => {
+      setValue(props);
+    };
+  
+    const theme = createTheme({
+      palette: {
+        primary: {
+          main: '#36454F',
         },
-      });
-
-      const [password, setPassword] = useState("")
-      const [typing,setTyping]=useState("password");
-      const handlePassword=(props)=>()=>{
-        setTyping(props)
-      }
+        
+      },
+    });
+    
+     const boxbtnstyle={
+      border:"1px solid #a4a6b4",
+      borderRadius:"10px",
+      height:"58px",
+      width:"100%",
+      px:"5px",
+      py:"5px",
+      display:"flex",
+      color:"#fff",
+    }
+   
+    const darkbtnstyle={
+      height: "46px",
+      width: "50%",
+      borderRadius:"7px",
+      textTransform:"none",
+      '&:hover':{backgroundColor:"#36454F",color:"#fff"}
+    }
     return (
-
-        <div className="d-flex justify-content-center align-items-center card-container">
-            <Container component="form" className="login-container" maxWidth="md">
-            
-                <Box className="row">
-                    <Box className="col-lg-8 col-md-8 col-12">
-                        <Box className="d-flex justify-content-center align-items-center my-4">
-                          <Typography variant="h4" color="#000" sx={{mb:4}}>Welcome to BitMnc</Typography>
-                        </Box>
-                        <TextField label="Phone/Email/Sub-Account" color="dark" fullWidth 
-                        focused sx={{textcolor:"#000",height:'7ch', my:1}} 
-                        variant="filled" type="email" 
-                        inputProps={{
-                            style:{color:"black"}
-                        }}/>
-                    
-                        <TextField onChange={(e)=>setPassword(e.target.value)} 
-                        label="password" color="dark" fullWidth focused 
-                        sx={{textcolor:"#000",height:'7ch', my:1}} 
-                        variant="filled" type={typing}
-                        InputProps={{
-                            style:{color:"black"},
-                            endAdornment:(
-                                <InputAdornment position="end" sx={{py:0}}>
-                                  {typing==="password"
-                                  ?<Visibility sx={{color:"#000",cursor:"pointer"}} onClick={handlePassword('type')}/>
-                                  :<VisibilityOff sx={{color:"#000",cursor:"pointer"}} onClick={handlePassword('password')}/>}
-                                </InputAdornment>
-                            )
-                        }}/>
-                        <Box className="d-flex justify-content-end align-items-center">
-                            <Link>forget password?</Link>
-                        </Box>    
-                        <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', my:4,fontSize:"18px"}} color="yellow" >Login</Button>
-                        <Box className="d-flex justify-content-center align-items-center">
-                            <Typography variant="p" component="div" color="#000">Don't have an Account? <Link to="/signup">Signup</Link></Typography>
-                        </Box>
-                    </Box>
-
-                    <Box className="col-lg-4 col-md-4 d-lg-block d-md-block d-none pt-4">
-                        <Box className="d-flex justify-content-center align-items-center">
-                            <Typography variant="p" component="div" color="#000">
-                                QR Code Expired
-                            </Typography>
-                        </Box>
-                        <Box
-                         component="img"
-                         src={qrcode}
-                         sx={{width:"200px",height:"200px"}}
-                        />
-                        <Box className="d-flex justify-content-center align-items-center">
-                            <Typography variant="p" component="div" color="#000">
-                                refresh and scan again 
-                            </Typography>
-                        </Box>
-                    </Box>
+        <div className="d-flex justify-content-center align-items-center card-container pt-2">
+        
+        <Container component="form" maxWidth="md" className="register-container">
+          <div className='container row'>
+          <Box variant="outlined" className='col-lg-8 col-12'>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
+                <Box className="d-flex justify-content-start align-items-center">
+                <Typography variant="h4" sx={{mb:4,ml:3}}>Welcome in to 
+                   <Box
+                      component="img"
+                      src={logo}
+                      sx={{height:"45px"}}
+                   />
+                </Typography>
                 </Box>
-                    
-            </Container>
-        </div>
+                  <Box sx={{px:2}}>
+                      <ThemeProvider theme={theme}>
+                        <Box sx={boxbtnstyle}>
+                            <Button variant={value===0?"contained":"standard"} 
+                              sx={darkbtnstyle} 
+                              onClick={handleChange(0)}
+                              style={{marginRight:"1%"}}
+                            >Mobile</Button>
+                            <Button 
+                              variant={value===1?"contained":"standard"} 
+                              sx={darkbtnstyle} 
+                              color="primary"
+                              onClick={handleChange(1)}
+                            >Email</Button>
+                        </Box>
+                        </ThemeProvider>   
+                      <Box sx={{py:3}}>
+                        {value===0 && <MobileNumber />}
+                        {value===1 && <EmailAddress />}
+                      </Box>  
+                      <Box className="d-flex justify-content-center align-items-center">
+                            <Typography variant="p" component="div">Already Have Account? <Link to="/signup">signup</Link></Typography>
+                      </Box>
+                  </Box>
+                </Box>
+            </Box>
+            <Box className="col-lg-4 d-lg-block d-none p-2">
+                <div className="d-flex justify-content-center align-items-center h-100 w-100" >
+                  <div>
+                    <Box
+                      component="img"
+                      src={qrcodes}
+                      sx={{width:"75%",mx:2}}
+                    />
+                    <Typography variant="p" component="div" sx={{py:2,px:5}}>
+                        Login with QR Code
+                    </Typography>
+                    <Typography variant="p" component="div" sx={{py:2,px:2,fontSize:"12px"}}>
+                        Scan this QR Code and Login with App
+                    </Typography>
+                    <Button variant="contained" color="light" sx={{mx:6}}>
+                        Download App
+                    </Button>
+                  </div>                   
+                </div>
+            </Box>
+          </div>
+        </Container>
+     </div>
+       
     )
 }
