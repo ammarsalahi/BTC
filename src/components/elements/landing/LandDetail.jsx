@@ -25,7 +25,7 @@ export default function LandDetail() {
           </Box>
           <Box className="col-lg-3 col-md-6 col-12 my-lg-0 my-4">
             <Typography variant="h4" component="div" style={fontstyle2}>
-              200+
+              250+
             </Typography>
             <Typography variant="span" component="div" style={fontstyle}>
               Cryptocurrencies listed
