@@ -51,7 +51,7 @@ export default function FullWidthTabs() {
         <Container component="form" maxWidth="lg" className="register-container">
           <div className='container row'>
           <Box variant="outlined" className='col-lg-6 col-12'>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
+                <Box>
                     <Box className="d-flex justify-content-start align-items-start">
                 <Typography variant="h4" sx={{mb:4,ml:3}}>Create account</Typography>
                 </Box>

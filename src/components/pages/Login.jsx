@@ -50,7 +50,7 @@ export default function Login() {
         <Container component="form" maxWidth="md" className="register-container">
           <div className='container row'>
           <Box variant="outlined" className='col-lg-8 col-12'>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
+                <Box >
                 <Box className="d-flex justify-content-start align-items-center">
                 <Typography variant="h4" sx={{mb:4,ml:3}}>Welcome in to 
                    <Box
