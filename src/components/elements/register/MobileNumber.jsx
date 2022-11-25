@@ -5,11 +5,12 @@ import { useState, useEffect } from 'react'
 import MuiPhoneNumber from 'material-ui-phone-number';
 import { QrCode, Visibility, VisibilityOff } from '@mui/icons-material';
 import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 
 export default function MobileNumber() {
     const [password, setPassword] = useState("");
     const [typing, setTyping] = useState("password");
-
+    const [value,setValue]=useState("");
     const handlePassword = (props) => () => {
         setTyping(props)
     }
@@ -18,10 +19,9 @@ export default function MobileNumber() {
             <Box color="whtie">
                 <Box>
                     <PhoneInput
-                        international
                         defaultCountry="RU"
-                        // value={value}
-                        // onChange={setValue} 
+                         value={value}
+                        onChange={setValue} 
                         />
 
                 </Box>
