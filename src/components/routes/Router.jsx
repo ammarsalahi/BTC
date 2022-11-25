@@ -28,11 +28,11 @@ export default function Router() {
     },
     {
       path:"/login",
-      element: <Login/> 
+      element: <PrivateRoute><Login/> </PrivateRoute> 
     },
     {
       path:"/signup",
-      element: <Register/> 
+      element: <PrivateRoute> <Register/> </PrivateRoute>
     },
    
   ])  

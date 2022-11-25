@@ -36,13 +36,13 @@ export default function EmailAddress() {
             }}/>
             <FormGroup>
             <FormControlLabel control={<Checkbox sx={{mb:3,fontSize:"10px"}} color="light"/>} 
-            label="I have read and agree to Binance’s Terms of Service and Privacy Policy" 
+            label="I have read and agree to BitMNC Terms of Service and Privacy Policy" 
             sx={{fontSize:10}} inputProps={{
                 style:{dir:"rtl"}
             }}/>
             </FormGroup>
 
-            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', mt:1,fontSize:"17px"}} color="light" >Signup</Button>
+            <Button variant="contained" fullWidth sx={{fontWeight:'700',height:'5ch', mt:1,fontSize:"17px"}} color="light" >Sign up</Button>
         </div>
         
     )

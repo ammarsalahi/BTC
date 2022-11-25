@@ -33,7 +33,7 @@ export default function LandDetail() {
           </Box>
           <Box className="col-lg-3 col-md-6 col-12 my-lg-0 my-1 land-title">
             <Typography variant="h4" component="div" style={fontstyle2}>
-              250+
+              200+
             </Typography>
             <Typography variant="span" component="div" style={fontstyle}>
               Regional service centers
